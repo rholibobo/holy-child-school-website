@@ -1,1 +1,43 @@
+.div_1{
+    background-color: white;
+    width: 100%;
+    height: 50vh;
+}
+.div_2{
+    background-color: #e130a7;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
 
+.div_2::before{
+    content: "";
+    background-image: url(../../public/images/DesignImages/cropped_div2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 15vh;
+    transform: rotate(180deg);
+    display: block;
+    position: absolute;
+    top: -20px;
+}
+.div_3{
+    background-color: #bb56e2;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+
+.div_3::before{
+    content: "";
+    background-image: url(../../public/images/DesignImages/cropped_div.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 10vh;
+    transform: rotate(180deg);
+    display: block;
+    position: absolute;
+    top: -20px;
+}
