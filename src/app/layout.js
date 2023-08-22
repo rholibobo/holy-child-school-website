@@ -1,17 +1,19 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import "./globals.css";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+import Header from "./components/Header/Header";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Holy Child School',
-  description: 'Holy Child School Website',
-}
+  title: "Holy Child School",
+  description: "Holy Child School Website",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }
