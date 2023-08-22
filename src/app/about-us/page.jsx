@@ -1,7 +1,9 @@
+
+
 export default function AboutUs() {
     return (
         <div>
-            Enter
+            About Us Page
         </div>
     );
 }

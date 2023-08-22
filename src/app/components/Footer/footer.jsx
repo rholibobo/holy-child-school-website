@@ -11,23 +11,26 @@ const Footer = () => {
         <Link href="/" className={Styles.link}>
           Home
         </Link>
-        <Link href="/" className={Styles.link}>
-          Administration
+        <Link href="/blog" className={Styles.link}>
+          Blog
         </Link>
-        <Link href="/" className={Styles.link}>
-          Faculty
+        <Link href="/about-us" className={Styles.link}>
+          About Us
         </Link>
-        <Link href="/" className={Styles.link}>
-          parents & students
+        <Link href="/teachers" className={Styles.link}>
+         Meet Our Teachers
         </Link>
-        <Link href="/" className={Styles.link}>
-          Photo gallery
+        <Link href="/services" className={Styles.link}>
+          Services
         </Link>
-        <Link href="/" className={Styles.link}>
-          bookmarks
+        <Link href="/gallery" className={Styles.link}>
+          Gallery
         </Link>
-        <Link href="/" className={Styles.link}>
-          calender
+        <Link href="/contact-us" className={Styles.link}>
+          Contact Us
+        </Link>
+        <Link href="#" className={Styles.link}>
+          School Portal
         </Link>
       </div>
       <div className={Styles.iconContainer}>

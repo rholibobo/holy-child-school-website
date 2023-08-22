@@ -3,3 +3,10 @@
   padding: 0;
   margin: 0;
 }
+
+.wholepage{
+  width: 100%;
+  background-color: #e130a7;
+  /* margin: 0 auto; */
+}
+
