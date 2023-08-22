@@ -44,12 +44,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&family=Titan+One&display=swap");
 
-.navbar {
-  /* background-color: #9d2a77; */
-  width: 80%;
-  margin: 0 auto;
-  /* height: 20vh; */
-}
+
+
 .section1 {
   width: 100%;
   height: 100vh;
@@ -61,6 +57,7 @@
   font-family: "Titan One", cursive;
   color: antiquewhite;
   font-size: 15rem;
+  /* font-size: 100%; */
   font-weight: bold;
   line-height: 150px;
   position: absolute;
@@ -68,5 +65,45 @@
   left: 50%;
   transform: translate(-50%,-50%);
   opacity: 0.05;
+
+}
+
+.section1::after{
+  content: "";
+  background-image: url(../../public/images/DesignImages/crop-cloud.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  bottom: -230px;
   
+
+}
+.section2{
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.navbar {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .section1{
+    overflow: hidden;
+  }
+  .section1::before{
+    content: "Prep School";
+    font-size: 8rem;
+    line-height: 100px;
+
+  }
+  .navbar{
+    width: 90%;
+    
+  }
 }
