@@ -1,0 +1,9 @@
+COLORS
+
+primary COLORS
+#ffffff >> white
+#1faded  >> blue
+#e130a7  >> pink
+#fff200 >> yellow
+#bb56e2 >> purple
+#81d742 >> green
