@@ -1,0 +1,80 @@
+.container {
+  background: #39385a;
+  position: absolute;
+  width: 100%;
+}
+
+.linkContainer {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 18px;
+  gap: 10px;
+  margin-top: 200px;
+
+  justify-content: center;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.link {
+  text-decoration: none;
+  height: fit;
+  color: white;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.iconHeader {
+  color: #329999;
+  font-size: 18px;
+}
+
+.icons {
+  color: white;
+  font-size: 24px;
+}
+
+.icons:hover {
+  transform: scale(1.1);
+}
+
+.link:hover {
+  color: #329999;
+}
+
+.custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom svg {
+  position: relative;
+  display: block;
+  width: calc(129% + 1.3px);
+  height: 174px;
+}
+
+.custom .shape {
+  fill: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .linkContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
