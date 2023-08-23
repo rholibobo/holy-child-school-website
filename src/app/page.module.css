@@ -51,6 +51,7 @@
   height: 100vh;
   background-image: linear-gradient(#9d2a77, #e130a7);
   position: relative;
+  
 }
 .section1::before {
   content: "PREP SCHOOL";
@@ -67,25 +68,57 @@
   opacity: 0.05;
 
 }
+/* .test{
+  /* border: 1px solid black; */
+  /* height: 85vh; 
+  display: flex;
+  align-items: end;
+}
+.testd{
+  background-image: url(../../public/images/DesignImages/crop-cloud.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* object-fit: cover; 
+  width: 100%;
+  height: 23vh;
+  /* display: block; 
+  border: 1px solid black; 
+} */
 
 .section1::after{
   content: "";
   background-image: url(../../public/images/DesignImages/crop-cloud.png);
   background-repeat: no-repeat;
   background-size: contain;
+  /* object-fit: cover; */
   width: 100%;
-  height: 100vh;
+  height: 18.88%;
   display: block;
   position: absolute;
-  bottom: -230px;
-  
-
+  bottom: -1px;
+  left: 0;
+  /* border: 1px solid black;  */
 }
 .section2{
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
+  
 }
+/* .section2::before{
+  content: "";
+  background-image: url(../../public/images/DesignImages/crop-cloud.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  /* bottom: -39%; 
+  top: -61%;
+  
+
+} */
 
 .navbar {
   width: 80%;
@@ -93,15 +126,16 @@
 }
 
 @media screen and (max-width: 600px) {
-  .section1{
-    overflow: hidden;
-  }
+  
   .section1::before{
     content: "Prep School";
     font-size: 8rem;
     line-height: 100px;
 
   }
+  /* .section1::after{
+    bottom: -83%;
+  } */
   .navbar{
     width: 90%;
     
