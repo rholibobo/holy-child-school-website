@@ -10,6 +10,9 @@ export default function Home() {
         <div className={styles.navbar}>
           <Header />
         </div>
+        {/* <div className={styles.test}>
+          <div className={styles.testd}></div>
+        </div> */}
       </div>
       <div className={styles.section2}></div>
     </main>
