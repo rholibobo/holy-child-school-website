@@ -1,7 +1,9 @@
 .section1 {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(#9d2a77, #e130a7);
+  /* background-image: linear-gradient(#9d2a77, #e130a7); */
+  /* background-image: linear-gradient(#1c1464, #919497); */
+  background-image: linear-gradient( #919497, #1c1464);
   position: relative;
 }
 .section1::before {
