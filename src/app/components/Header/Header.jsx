@@ -7,6 +7,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 import LinkRoute from "./LinkRoute";
 import HamburgerMenu from "../MobileView/Hamburger";
+import Image from "next/image";
 
 export default function Header() {
   const isMobileView = useMediaQuery("(max-width:1000px)");
@@ -36,7 +37,7 @@ export default function Header() {
         }}
       >
         {!isMobileView ? null : <HamburgerMenu />}
-        <Typography
+        {/* <Typography
           variant="h6"
           noWrap
           component="a"
@@ -51,7 +52,13 @@ export default function Header() {
           }}
         >
           LOGO
-        </Typography>
+        </Typography> */}
+        <Image
+          src="/HCLogo.png"
+          width={60}
+          height={60}
+          alt="logo"
+        />
 
         <Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>

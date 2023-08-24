@@ -1,57 +1,10 @@
-/* .div_1{
-    background-color: white;
-    width: 100%;
-    height: 50vh;
-}
-.div_2{
-    background-color: #e130a7;
-    width: 100%;
-    height: 50vh;
-    position: relative;
-}
-
-.div_2::before{
-    content: "";
-    background-image: url(../../public/images/DesignImages/cropped_div2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 15vh;
-    transform: rotate(180deg);
-    display: block;
-    position: absolute;
-    top: -20px;
-}
-.div_3{
-    background-color: #bb56e2;
-    width: 100%;
-    height: 50vh;
-    position: relative;
-}
-
-.div_3::before{
-    content: "";
-    background-image: url(../../public/images/DesignImages/cropped_div.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 10vh;
-    transform: rotate(180deg);
-    display: block;
-    position: absolute;
-    top: -20px;
-} */
-
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&family=Titan+One&display=swap");
-
-
-
 .section1 {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(#9d2a77, #e130a7);
+  /* background-image: linear-gradient(#9d2a77, #e130a7); */
+  /* background-image: linear-gradient(#1c1464, #919497); */
+  background-image: linear-gradient( #919497, #1c1464);
   position: relative;
-  
 }
 .section1::before {
   content: "PREP SCHOOL";
@@ -64,28 +17,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   opacity: 0.05;
-
 }
-/* .test{
-  /* border: 1px solid black; */
-  /* height: 85vh; 
-  display: flex;
-  align-items: end;
-}
-.testd{
-  background-image: url(../../public/images/DesignImages/crop-cloud.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* object-fit: cover; 
-  width: 100%;
-  height: 23vh;
-  /* display: block; 
-  border: 1px solid black; 
-} */
 
-.section1::after{
+.section1::after {
   content: "";
   background-image: url(../../public/images/DesignImages/crop-cloud.png);
   background-repeat: no-repeat;
@@ -99,45 +35,188 @@
   left: 0;
   /* border: 1px solid black;  */
 }
-.section2{
-  width: 100%;
-  height: 100vh;
-  background-color: #ffffff;
-  
-}
-/* .section2::before{
-  content: "";
-  background-image: url(../../public/images/DesignImages/crop-cloud.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  /* bottom: -39%; 
-  top: -61%;
-  
 
-} */
-
-.navbar {
+.section_container {
   width: 80%;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 600px) {
-  
-  .section1::before{
+.info {
+  width: 20%;
+  height: 15vh;
+  padding: 1rem;
+  border-radius: 50% 20%;
+  background-color: rgba(255, 165, 0);
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: white;
+  box-shadow: rgba(33, 36, 37, 0.48) 6px 2px 16px 0px,
+    rgba(115, 110, 110, 0.8) -6px -2px 16px 0px;
+}
+.info2 {
+  width: 20%;
+  height: 15vh;
+  padding: 1rem;
+  border-radius: 50% 20%;
+  background-color: #bb56e2;
+  position: absolute;
+  top: 80px;
+  right: 150px;
+  color: white;
+  box-shadow: rgba(33, 36, 37, 0.48) 6px 2px 16px 0px,
+    rgba(115, 110, 110, 0.8) -6px -2px 16px 0px;
+}
+.info3 {
+  width: 22%;
+  height: 15vh;
+  padding: 1rem;
+  border-radius: 50% 20%;
+  background-color: #1faded;
+  position: absolute;
+  right: 35px;
+  bottom: -10px;
+  color: white;
+  box-shadow: rgba(33, 36, 37, 0.48) 6px 2px 16px 0px,
+    rgba(115, 110, 110, 0.8) -6px -2px 16px 0px;
+}
+.stars_div {
+  position: absolute;
+  top: -60px;
+  right: -80px;
+}
+
+.section2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.icons_div {
+  padding: 1rem;
+  border-radius: 50% 30%;
+  background-color: pink;
+  border: 1px solid pink;
+}
+.icons_div2 {
+  padding: 1rem;
+  border-radius: 50% 30%;
+  background-color: #1faded;
+  border: 1px solid #1faded;
+}
+.icons_div3 {
+  padding: 1rem;
+  border-radius: 50% 30%;
+  background-color: #81d742;
+  border: 1px solid #81d742;
+}
+.icons_div4 {
+  padding: 1rem;
+  border-radius: 50% 30%;
+  background-color: #e130a7;
+  border: 1px solid #e130a7;
+}
+.icons_div5 {
+  padding: 1rem;
+  border-radius: 50% 30%;
+  background-color: #fff200;
+  border: 1px solid #fff200;
+}
+.icons_div6 {
+  padding: 1rem;
+  border-radius: 50% 30%;
+  background-color: #919497;
+  border: 1px solid #919497;
+}
+
+.section2_img {
+  width: 70%;
+  height: 70vh;
+  border-radius: 20% 30% 40% 50%;
+  /* background-color: #e130a7; */
+  background-image: url(../../public/images/HomePage/slider2-img1a.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* transform: rotate(90deg); */
+  transform: scaleX(-1);
+  position: absolute;
+  top: 15%;
+  right: -20%;
+}
+
+
+
+
+/* ///////////// Media Queries //////////////// */
+
+@media screen and (max-width: 820px) {
+  .section1 {
+    width: 100%;
+  }
+  .section1::before {
     content: "Prep School";
     font-size: 8rem;
     line-height: 100px;
-
   }
-  /* .section1::after{
-    bottom: -83%;
-  } */
-  .navbar{
+  .section1::after {
+    height: 11.5vh;
+    /* bottom: -5px; */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section1::before {
+    content: "Prep School";
+    font-size: 7rem;
+    line-height: 100px;
+  }
+  .section1::after {
+    height: 5%;
+    bottom: -10px;
+  }
+  .navbar {
     width: 90%;
-    
+  }
+}
+@media screen and (max-width: 426px) {
+  .section1::before {
+    content: "Prep School";
+    font-size: 5rem;
+    line-height: 100px;
+  }
+  .section1::after {
+    height: 9.5vh;
+    /* bottom: -10px; */
+  }
+  .navbar {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .section1::before {
+    content: "Prep School";
+    font-size: 5rem;
+    line-height: 100px;
+  }
+  .section1::after {
+    height: 8.5vh;
+    /* bottom: -8px; */
+  }
+  .navbar {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 321px) {
+  .section1::before {
+    content: "Prep School";
+    font-size: 5rem;
+    line-height: 100px;
+  }
+  .section1::after {
+    height: 7.5%;
+    /* bottom: -8px; */
+  }
+  .navbar {
+    width: 90%;
   }
 }
