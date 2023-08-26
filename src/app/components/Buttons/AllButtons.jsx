@@ -35,6 +35,14 @@ export function ViewAllWhiteButton() {
     );
 }
 
+export function ViewGallery() {
+    return (
+        <main>
+           <button type="button" className={styles.view_all_btn}>View Gallery</button> 
+        </main>
+    );
+}
+
 export function CarouselLeftButton() {
     return (
         <main>

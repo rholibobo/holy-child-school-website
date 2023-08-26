@@ -166,6 +166,50 @@
   transform: rotate(180deg);
 }
 
+.section4{
+  width: 100%;
+  height: 100vh;
+  /* background-color: #919497; */
+  background-color: #ffffff;
+  position: relative;
+}
+.section4::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url(../../public/HCLogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: opacity(0.1);
+  z-index: 0;
+}
+
+.section4_div{
+  width: 80%;
+  margin: 0 auto;
+  position: inherit;
+  /* z-index: 4; */
+}
+.section4_text{
+  color: #1c1464;
+  font-size: 1.2rem;
+}
+
+.section5{
+  width: 100%;
+  height: 100vh;
+  /* background-color: #919497; */
+  background-color: #ffffff;
+}
+.section5_div{
+  width: 50%;
+  margin: 0 auto;
+}
 
 
 

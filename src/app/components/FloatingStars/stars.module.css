@@ -1,0 +1,6 @@
+.designs{
+    width: 95%;
+    display: flex;
+    /* gap: 50px; */
+    justify-content: space-between;
+}

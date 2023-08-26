@@ -24,93 +24,132 @@ const CustomLeftArrow = ({ onClick }) => {
 export function MediaCard() {
   return (
     <Carousel
-    additionalTransfrom={0}
-    arrows
-    autoPlaySpeed={3000}
-    centerMode={false}
-    className=""
-    containerClass="container"
-    dotListClass=""
-    draggable
-    focusOnSelect={false}
-    infinite={false}
-    itemClass=""
-    keyBoardControl
-    minimumTouchDrag={80}
-    pauseOnHover
-    renderArrowsWhenDisabled={false}
-    renderButtonGroupOutside={false}
-    renderDotsOutside={false}
-    responsive={{
-      desktop: {
-        breakpoint: {
-          max: 3000,
-          min: 1024
+      additionalTransfrom={0}
+      arrows
+      autoPlaySpeed={3000}
+      centerMode={false}
+      className=""
+      containerClass="container"
+      dotListClass=""
+      draggable
+      focusOnSelect={false}
+      infinite={false}
+      itemClass=""
+      keyBoardControl
+      minimumTouchDrag={80}
+      pauseOnHover
+      renderArrowsWhenDisabled={false}
+      renderButtonGroupOutside={false}
+      renderDotsOutside={false}
+      responsive={{
+        desktop: {
+          breakpoint: {
+            max: 3000,
+            min: 1024,
+          },
+          items: 1,
+          partialVisibilityGutter: 40,
         },
-        items: 1,
-        partialVisibilityGutter: 40
-      },
-      mobile: {
-        breakpoint: {
-          max: 464,
-          min: 0
+        mobile: {
+          breakpoint: {
+            max: 464,
+            min: 0,
+          },
+          items: 1,
+          partialVisibilityGutter: 30,
         },
-        items: 1,
-        partialVisibilityGutter: 30
-      },
-      tablet: {
-        breakpoint: {
-          max: 1024,
-          min: 464
+        tablet: {
+          breakpoint: {
+            max: 1024,
+            min: 464,
+          },
+          items: 2,
+          partialVisibilityGutter: 30,
         },
-        items: 2,
-        partialVisibilityGutter: 30
-      }
-    }}
-    rewind={false}
-    rewindWithAnimation={false}
-    rtl={false}
-    shouldResetAutoplay
-    showDots={false}
-    sliderClass=""
-    slidesToSlide={1}
-    swipeable
+      }}
+      rewind={false}
+      rewindWithAnimation={false}
+      rtl={false}
+      shouldResetAutoplay
+      showDots={false}
+      sliderClass=""
+      slidesToSlide={1}
+      swipeable
     >
-      <Card sx={{ width: "93%" }}>
+      <Card
+        sx={{
+          width: "93%",
+          border: "2px solid #ffffff",
+          borderRadius: "30% 20% 40% 10%",
+        }}
+      >
         <CardMedia
           sx={{ height: "55vh" }}
           image="/images/HomePage/prenursery-1.jpg"
           title="girl child"
         />
 
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Pre Nursery
+        <CardContent sx={{ backgroundColor: "#1faded" }}>
+          <Typography
+            gutterBottom
+            variant="h6"
+            textAlign="center"
+            component="div"
+            fontWeight="bold"
+            color="#ffffff"
+          >
+            Pre-Nursery
           </Typography>
         </CardContent>
       </Card>
-      <Card sx={{ width: "93%" }}>
+      <Card
+        sx={{
+          width: "93%",
+          border: "2px solid #ffffff",
+          borderRadius: "30% 20% 40% 10%",
+        }}
+      >
         <CardMedia
           sx={{ height: "55vh" }}
           image="/images/HomePage/nursery.jpg"
           title="girl child"
         />
 
-        <CardContent sx={{backgroundColor: "#919497"}}>
-          <Typography gutterBottom variant="h5" component="div">
+        <CardContent sx={{ backgroundColor: "#bb56e2" }}>
+          <Typography
+            gutterBottom
+            variant="h6"
+            textAlign="center"
+            component="div"
+            fontWeight="bold"
+            color="#ffffff"
+          >
             Nursery
           </Typography>
         </CardContent>
       </Card>
-      <Card sx={{ width: "93%" }}>
+      <Card
+        sx={{
+          width: "93%",
+          border: "2px solid #ffffff",
+          borderRadius: "30% 20% 40% 10%",
+        }}
+      >
         <CardMedia
           sx={{ height: "55vh" }}
           image="/images/HomePage/primary.jpg"
           title="girl child"
         />
 
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+        <CardContent sx={{ backgroundColor: "#919497" }}>
+          <Typography
+            gutterBottom
+            variant="h6"
+            textAlign="center"
+            component="div"
+            fontWeight="bold"
+            color="#ffffff"
+          >
             Primary
           </Typography>
         </CardContent>
