@@ -8,6 +8,9 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import LinkRoute from "./LinkRoute";
 import HamburgerMenu from "../MobileView/Hamburger";
 import Image from "next/image";
+import Logo from "../../../../public/HCLogo.png";
+
+import styles from "./header.module.css";
 
 export default function Header() {
   const isMobileView = useMediaQuery("(max-width:1000px)");
@@ -29,40 +32,35 @@ export default function Header() {
   return (
     <Box position="static" sx={{ boxShadow: "none", width: "100%" }}>
       <Container
-        maxWidth="xl"
+        // maxWidth="xl"
         sx={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
         }}
       >
-        {!isMobileView ? null : <HamburgerMenu />}
-        {/* <Typography
-          variant="h6"
-          noWrap
-          component="a"
-          href="/"
+        <Box
           sx={{
-            mr: 2,
-            fontFamily: "monospace",
-            fontWeight: 700,
-            letterSpacing: ".3rem",
-            color: "inherit",
-            textDecoration: "none",
+            width: { xs: "100%", md: "10%" },
+            display: "flex",
+            justifyContent: { xs: "space-between", md: "space-between" },
+            alignItems: "center",
           }}
         >
-          LOGO
-        </Typography> */}
-        <Image
-          src="/HCLogo.png"
-          width={60}
-          height={60}
-          alt="logo"
-        />
+          {!isMobileView ? null : <HamburgerMenu />}
+
+          <Image
+            src={Logo}
+            alt="logo"
+            // width={50}
+            // height={50}
+           className={styles.logo}
+          />
+        </Box>
 
         <Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <LinkRoute  />
+            <LinkRoute />
           </Box>
         </Box>
       </Container>
