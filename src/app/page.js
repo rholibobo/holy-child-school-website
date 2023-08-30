@@ -1,10 +1,20 @@
 "use client";
 import Image from "next/image";
+
+import ProprietorImage from "../../public/images/HomePage/pp.jpg";
+import BlueStar from "../../public/images/DesignImages/blueStar.png";
+import Ballon from "../../public/images/DesignImages/ballon.png";
+import RedStar from "../../public/images/DesignImages/redStar.png";
+import YellowStar from "../../public/images/DesignImages/yellowStar.png";
+import Globe from "../../public/images/DesignImages/globe.png";
+import Kids from "../../public/images/HomePage/kids1.jpg";
+
 import styles from "./page.module.css";
 
 import { motion } from "framer-motion";
 
 import { Box, Grid, Stack, Typography } from "@mui/material";
+import {useMediaQuery} from "@mui/material";
 
 /////// Components ////////////
 import Header from "./components/Header/Header";
@@ -16,7 +26,7 @@ import {
 } from "./components/Buttons/AllButtons";
 import { MediaCard } from "./components/Carousels/Carousels";
 import FloatingStars from "./components/FloatingStars/Stars";
-import WovenImageList from "./components/HomeImageList/ImageList";
+import {WovenImageList, WovenImageListMobileView} from "./components/HomeImageList/ImageList";
 
 //////// Icons //////////
 import { FcGraduationCap } from "react-icons/fc";
@@ -27,17 +37,11 @@ import { BsPencilSquare } from "react-icons/bs";
 import { FaBook } from "react-icons/fa";
 import Link from "next/link";
 
-/////////////// Image Styles ///////////////
-const imageSection1 = {
-  marginTop: "-4rem",
-};
-const imageSection4 = {
-  border: "2px solid #1c1464",
-  borderRadius: "20% 30%",
-  // boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-};
+
 
 export default function Home() {
+  const isMobileView = useMediaQuery("(max-width:850px)");
+
   return (
     <main>
       {/* ////////// SECTION 1 //////////// */}
@@ -55,13 +59,15 @@ export default function Home() {
           >
             <Grid item xs={12} md={6}>
               <Box
-                sx={{
-                  width: "100%",
-                  height: "50vh",
-                  // border: "1px solid red",
-                  display: "flex",
-                  alignItems: "center",
-                }}
+                sx={
+                  {
+                    // width: "100%",
+                    // height: "50vh",
+                    // border: "1px solid red",
+                    // display: "flex",
+                    // alignItems: "center",
+                  }
+                }
               >
                 <div>
                   <Typography
@@ -91,7 +97,9 @@ export default function Home() {
                     Learning
                   </Typography>
                   <br />
-                  <EnrollNowButton />
+                  <Link href="#">
+                    <EnrollNowButton />
+                  </Link>
                 </div>
               </Box>
               <br />
@@ -104,18 +112,18 @@ export default function Home() {
               />
             </Grid>
 
-            <Grid
+            {/* <Grid
               item
               xs={12}
               md={6}
               sx={{ display: { xs: "none", md: "grid" } }}
             >
-              <Box sx={{ width: "100%", height: "50vh", position: "relative" }}>
+              <Box sx={{width: "70%", position: "relative" }}>
                 <Image
                   src="/images/DesignImages/d5.png"
                   alt="School boy"
                   width={370}
-                  height={530}
+                  height={200}
                   // layout="responsive"
                   quality={90}
                   style={imageSection1}
@@ -161,7 +169,7 @@ export default function Home() {
                   </div>
                 </div>
               </Box>
-            </Grid>
+            </Grid> */}
           </Grid>
         </div>
       </div>
@@ -170,12 +178,13 @@ export default function Home() {
       <div className={styles.section2}>
         <Box
           sx={{
-            width: "60%",
+            width: { xs: "90%", md: "70%" },
             margin: "0 auto",
-            // display: "flex",
+            display: "flex",
             // alignItems: "center",
-            // justifyContent: "space-between",
-            position: "relative",
+            justifyContent: "space-between",
+            flexDirection: { xs: "column", md: "row" },
+            // position: "relative",
           }}
         >
           <Box sx={{ width: "50%", marginTop: "4rem" }}>
@@ -183,7 +192,7 @@ export default function Home() {
               Why Holy Child?
             </Typography>
             <br />
-            <Stack direction="row" spacing={4}>
+            <Stack direction="row" spacing={3}>
               <Box
                 sx={{
                   display: "flex",
@@ -224,7 +233,7 @@ export default function Home() {
               </Box>
             </Stack>
             <br />
-            <Stack direction="row" spacing={4}>
+            <Stack direction="row" spacing={3}>
               <Box
                 sx={{
                   display: "flex",
@@ -266,7 +275,7 @@ export default function Home() {
               </Box>
             </Stack>
             <br />
-            <Stack direction="row" spacing={4}>
+            <Stack direction="row" spacing={3}>
               <Box
                 sx={{
                   display: "flex",
@@ -317,15 +326,21 @@ export default function Home() {
 
       {/* ////////// Section 3 //////////////// */}
       <div className={styles.section3}>
-        <Box sx={{ width: "80%", margin: "0 auto" }}>
+        <Box sx={{ width: { xs: "90%", md: "80%" }, margin: "0 auto" }}>
           <Box
             sx={{
               width: "100%",
               display: "flex",
               justifyContent: "space-between",
+              flexDirection: { xs: "column", md: "row" },
             }}
           >
-            <Box sx={{ marginTop: "10rem", width: "40%" }}>
+            <Box
+              sx={{
+                marginTop: { xs: "4rem", md: "10rem" },
+                width: { xs: "90%", md: "40%" },
+              }}
+            >
               <Typography variant="h3" sx={{ color: "#ffffff" }} gutterBottom>
                 Kids Centered Activities
               </Typography>
@@ -345,9 +360,8 @@ export default function Home() {
             </Box>
             <Box
               sx={{
-                width: "40%",
-
-                marginTop: "7rem",
+                width: { xs: "100%", md: "40%" },
+                marginTop: { xs: "2rem", md: "7rem" },
               }}
             >
               <MediaCard />
@@ -358,24 +372,34 @@ export default function Home() {
 
       {/* ////////////// Section 4 //////////// */}
       <div className={styles.section4}>
-        <FloatingStars />
         <div className={styles.section4_div}>
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              flexDirection: { xs: "column", md: "row" },
+            }}
+          >
             <Box
               sx={{
-                width: "50%",
+                width: { xs: "100%", md: "50%" },
+               height: "100%"
               }}
             >
               <Image
-                src="/images/HomePage/kids1.jpg"
-                width={500}
-                height={400}
-                layout="responsive"
+                src={Kids}
                 alt="students"
-                style={imageSection4}
+                className={styles.section4_img}
               />
             </Box>
-            <Box sx={{ width: "40%" }}>
+            <Box
+              sx={{
+                width: { xs: "100%", md: "40%" },
+                marginTop: { xs: "2rem", md: "" },
+                position: "inherit",
+                zIndex: "1",
+              }}
+            >
               <Box sx={{ borderRadius: "20% 40% 10%" }}>
                 <Typography
                   variant="h4"
@@ -424,12 +448,148 @@ export default function Home() {
       {/* ///////////// Section 5 ///////////// */}
       <div className={styles.section5}>
         <div className={styles.section5_div}>
-          <WovenImageList />
+        {!isMobileView ? <WovenImageList /> : <WovenImageListMobileView />}
+          
           <br />
           <Link href="/gallery">
             <ViewGallery />
           </Link>
         </div>
+      </div>
+
+      {/* /////////////// Section 6 ///////////// */}
+      <div className={styles.section6}>
+        <Box
+          sx={{
+            width: "90%",
+            margin: "0 auto",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              flexDirection: {xs: "column", md: "row"}
+            }}
+          >
+            <Box
+              sx={{
+                width: {xs: "100%",md:"35%"},
+                height: {xs: "70vh", sm: "50vh",md:"80vh"},
+                backgroundColor: "#1faded",
+                borderRadius: "20% 35% 20% 15%",
+                border: "2px solid #ffffff",
+                marginTop: {xs: "2rem",md:"9rem"},
+                color: "#ffffff",
+                padding: {xs: "2rem", sm: "3rem",md: "3rem"},
+              }}
+            >
+              <Box>
+                <Typography variant="h5" textAlign="center" gutterBottom>
+                  Our Core Value
+                </Typography>
+                <Typography textAlign="center" gutterBottom>
+                  Good character and a love for leisure reading. Objectives: to
+                  raise children who not only fear God but are able to hold
+                  their own in any circumstance.
+                </Typography>
+              </Box>
+              <br />
+              <Box>
+                <Typography variant="h5" textAlign="center" gutterBottom>
+                  Our Belief
+                </Typography>
+                <Typography textAlign="center" gutterBottom>
+                  Because “talent is not enough,”brilliance must be matched by
+                  good charater.
+                </Typography>
+              </Box>
+              <br />
+              <Box>
+                <Typography variant="h5" textAlign="center" gutterBottom>
+                  Our Vision
+                </Typography>
+                <Typography textAlign="center" gutterBottom>
+                  To become a first rate educational institution with a
+                  reputation for excellent character and strong academic
+                  learning.
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                width: {xs: "100%",md:"30%"},
+                height:{sm:"50vh",md:"80vh"},
+                backgroundColor: "#ffffff",
+                borderRadius: "20% 35% 20% 15%",
+                border: "2px solid #1c1464",
+                marginTop: {xs: "2rem",md:"9rem"},
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                color: "#1c1464",
+                padding: "2rem",
+              }}
+            >
+              <Box>
+                <Typography variant="h4" textAlign="center" gutterBottom>
+                  Meet our Educational Consultant
+                </Typography>
+
+                <Typography
+                  variant="h6"
+                  textAlign="center"
+                  fontWeight="bold"
+                  gutterBottom
+                >
+                  Dr. Mrs. O. Nnamani
+                </Typography>
+              </Box>
+              <Typography gutterBottom>
+                B.A English, U.N.N; M.A English, U.N.N, best Graduating Student
+                85/ 86 session; Ph.d English, Ebonyi State University,
+                Abakaliki. Founder, Holy Child Preparatory School. Senior
+                Lecturer, Enugu State University of Sciene & Technology, Enugu.
+                1990- Date.
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                width: {xs: "100%",md:"30%"},
+                height: {sm: "60vh",md:"70vh"},
+                // backgroundColor: "#81d742",
+                marginTop: {xs: "2rem",md:"7rem"},
+              }}
+            >
+              <Image
+                src={ProprietorImage}
+                alt="Proprietor"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            </Box>
+          </Box>
+        </Box>
+      </div>
+
+      {/* ////////// Section 7 /////////////// */}
+      <div className={styles.section7}>
+        <Box sx={{}}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15858.205064690168!2d7.531379!3d6.451606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a5aae5e5b3d1%3A0xb1a3fb1573962ad7!2sHoly%20Child%20Preparatory%20School!5e0!3m2!1sen!2sus!4v1693227391900!5m2!1sen!2sus"
+            style={{ width: "100%", height: "100vh", border: "0", marginTop: "2rem" }}
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </Box>
+      </div>
+
+      {/* ////// Section 8 //////////// */}
+      <div className={styles.section8}>
+        
       </div>
     </main>
   );

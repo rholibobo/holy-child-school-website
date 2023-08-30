@@ -1,4 +1,15 @@
-.active{
-    background-color: #ffffff;
-    
+.active {
+  background-color: #ffffff;
+}
+
+.logo {
+  width: 60%;
+  height: auto;
+}
+
+@media screen and (max-width: 820px) {
+  .logo {
+    width: 20%;
+    margin-top: 1rem;
+  }
 }
