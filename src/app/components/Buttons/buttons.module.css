@@ -1,8 +1,8 @@
 /* Enroll Now Button */
 .enroll_now_btn {
   padding: 1rem 2.5rem;
-  /* background-color: #1faded ; */
-  background-image: linear-gradient(to right, #1faded, #fff200);
+  background-color: #1c1464 ;
+  /* background-image: linear-gradient(to right, #1faded, #fff200); */
   border: none;
   text-align: center;
   color: #ffffff;

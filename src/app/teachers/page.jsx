@@ -13,8 +13,8 @@ export default function Teachers() {
     <main>
       <section>
         {/* ////////// SECTION 1 //////////// */}
-        <div className={`${styles.section1}  `}>
-          <div className={`${styles.section_container} `}>
+        <div className={styles.section1} >
+          <div className={styles.section_container}>
             <div className={styles.navbar}>
               <Header />
             </div>
