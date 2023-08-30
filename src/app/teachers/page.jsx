@@ -2,10 +2,11 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
 import { FcGraduationCap } from "react-icons/fc";
-import {
-  Blob,
-  IconDiv,
-} from "../components/TeachersComponents/TeachersComponents";
+import { FcNext } from "react-icons/fc";
+import { FcPrevious } from "react-icons/fc";
+//
+import { Blob } from "../components/TeachersComponents/TeachersComponents";
+import { TeachersCarousel } from "../components/Carousels/Carousels";
 
 export default function Teachers() {
   return (
@@ -110,15 +111,22 @@ export default function Teachers() {
       <section className="grid grid-cols-1 justify-center items-center my-10 after:content-['ffffffffff'] ">
         <div className=''>
           <h2 className='text-center font-bold text-lg'>Our Team</h2>
-          <div className='grid grid-cols-3 max-width'>
-            <Blob />
-            <Blob />
-            <Blob />
+
+          <div className='grid grid-cols-5 items-center justify-center justify-items-center max-width h-full '>
+            {/* <div className='  '>
+              <button className='iconsDiv bg-pink-500 '>
+                <FcPrevious className='text-gray-200' />
+              </button>
+            </div> */}
+            <TeachersCarousel />
+            {/* <div className=''>
+              <button className='iconsDiv bg-pink-500 '>
+                <FcNext className='text-gray-200' />
+              </button>
+            </div> */}
           </div>
         </div>
       </section>
-
-
 
       <section className='bg-purple-900'>
         <div className='max-width grid grid-rows-1 lg:grid-cols-2 items-center justify-between lg:gap-20 '>
