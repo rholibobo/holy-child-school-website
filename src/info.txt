@@ -7,3 +7,5 @@ primary COLORS
 #fff200 >> yellow
 #bb56e2 >> purple
 #81d742 >> green
+#919497 >> GREY
+ #1c1464 >> DARKER PURPLE

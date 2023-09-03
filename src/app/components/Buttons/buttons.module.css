@@ -1,30 +1,35 @@
 /* Enroll Now Button */
 .enroll_now_btn {
-    padding: 1rem 2.5rem;
-    /* background-color: #1faded ; */
-    background-image: linear-gradient(to right, #1faded, #fff200);
-    border: none;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-    border-radius: 30px 5px 15px 20px ;
-    border-bottom-right-radius: -10px 20px ;
-    border-top-right-radius: 30px 80px;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  padding: 1rem 2.5rem;
+  background-color: #1c1464 ;
+  /* background-image: linear-gradient(to right, #1faded, #fff200); */
+  border: none;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 30px 5px 15px 20px;
+  border-bottom-right-radius: -10px 20px;
+  border-top-right-radius: 30px 80px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(66, 62, 62, 0.8) -6px -2px 16px 0px;
 }
 .enroll_yourchild_btn {
-    padding: 1rem 2.5rem;
-    background-color: #3c134d ; 
-    border: none;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-    border-radius: 30px 5px 15px 20px ;
-    border-bottom-right-radius: -80px ;
-    border-top-right-radius: 30px 80px;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  padding: 1rem 2.5rem;
+  background-color: #3c134d;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 30px 5px 15px 20px;
+  border-bottom-right-radius: -80px;
+  border-top-right-radius: 30px 80px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
+<<<<<<< HEAD
         .view_all_btn{
             padding: 0.7rem 2.2rem; 
             background-color: #bb56e2;
@@ -36,32 +41,47 @@
             border-top-right-radius: 30px 80px;
 
         }
+=======
+.view_all_btn {
+  padding: 0.7rem 2.2rem;
+  background-color: #1c1464;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 30px 5px 15px 20px;
+  border-bottom-right-radius: -10px 20px;
+  border-top-right-radius: 30px 80px;
+}
+>>>>>>> 4ceeb2c496743eda00a163f15bea943f22dc73d3
 
-.view_all_whitebtn{
-    padding: 0.7rem 2.2rem; 
-    background-color: #ffffff;
-    border: none;
-    font-weight: bold;
-    border-radius: 30px 5px 15px 20px ;
-    border-bottom-right-radius: -10px 20px ;
-    border-top-right-radius: 30px 80px;
-
+.view_all_whitebtn {
+  padding: 0.7rem 2.2rem;
+  background-color: #ffffff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px 5px 15px 20px;
+  border-bottom-right-radius: -10px 20px;
+  border-top-right-radius: 30px 80px;
 }
 
-.carousel_left_btn{
-    padding: 1rem;
-    border-radius: 50% 40%;
-    background-color: #e130a7;
-    border: none;
-    font-weight: bold;
-    color: #ffffff;
+.carousel_left_btn {
+  padding: 1rem;
+  border-radius: 50% 40%;
+  background-color: #e130a7;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-.carousel_right_btn{
-    padding: 1rem;
-    border-radius: 50% 40%;
-    background-color: #b0acae;
-    border: none;
-    font-weight: bold;
-    color: #ffffff;
+.carousel_right_btn {
+  padding: 1rem;
+  border-radius: 50% 40%;
+  cursor: pointer;
+  background-color: #b0acae;
+  border: none;
+  font-weight: bold;
+  color: #ffffff;
 }
