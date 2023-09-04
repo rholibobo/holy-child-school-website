@@ -29,6 +29,19 @@
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
+<<<<<<< HEAD
+        .view_all_btn{
+            padding: 0.7rem 2.2rem; 
+            background-color: #bb56e2;
+            border: none;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 30px 5px 15px 20px ;
+            border-bottom-right-radius: -10px 20px ;
+            border-top-right-radius: 30px 80px;
+
+        }
+=======
 .view_all_btn {
   padding: 0.7rem 2.2rem;
   background-color: #1c1464;
@@ -40,6 +53,7 @@
   border-bottom-right-radius: -10px 20px;
   border-top-right-radius: 30px 80px;
 }
+>>>>>>> 4ceeb2c496743eda00a163f15bea943f22dc73d3
 
 .view_all_whitebtn {
   padding: 0.7rem 2.2rem;
