@@ -37,8 +37,8 @@ export default function ContactUs() {
        
                     <div className={styles.get_address}>
                     <h3 className={styles.text} > < LocationOn /> Address </h3> 
-                       <p> We are located at <br />
-                        3c Chaka Street, <br /> Independence Layout <br /> Enugu, Nigeria</p>
+                       <p> We are located at 
+                        3c Chaka <br />  Street, Independence Layout <br /> Enugu, Nigeria</p>
                     </div>
 
                       <div className={styles.get_email}>

@@ -5,7 +5,11 @@ import Header from "../components/Header/Header";
 import GifBackgroundSection from "../components/gifs/writing-video/vid";
 import BusGif from "../components/gifs/bus/bus";
 
-const data = [{}];
+import blogPostsData from "./blogData.json";
+import Link from "next/link";
+import Image from "next/image";
+import Seesaw from "../components/gifs/seeSaw/seesaw";
+import Earth from "../components/gifs/earth/earth";
 
 const page = () => {
   return (
@@ -31,48 +35,52 @@ const page = () => {
           </section>
         </div>
       </div>
-      <section className={styles.blogSection}>
-        <h1 className={styles.latestBlog}>Latest Blogs</h1>
-        <div className={styles.itemsContainer}>
-          <div className={styles.item}>
-            <h1>Discipleine a pupil</h1>
-            <h2>
-              Every student This 9 year old would grow up to tell his children
-              about the supreme price some Nigerian youths paid in the wake of
-              the #endsars protest of October 2020 because he was taught to pay
-              attention to what the...
-            </h2>
-          </div>
+      <main className={styles.blogContainer}>
+        <section className={styles.blogSection}>
+          <div className={styles.seeSawContainer}>
+            <div className={styles.latestContainer}>
+              <h1 className={styles.latestBlog}>Latest Blogs</h1>
+            </div>
 
-          <div className={styles.item}>
-            <h1>Discipleine a pupil</h1>
-            <h2>
-              Every student This 9 year old would grow up to tell his children
-              about the supreme price some Nigerian youths paid in the wake of
-              the #endsars protest of October 2020 because he was taught to pay
-              attention to what the...
-            </h2>
+            <div className={styles.seeSaw}>
+              <Seesaw />
+            </div>
           </div>
+          <div className={styles.itemsContainer}>
+            {blogPostsData.map((post) => (
+              <Link
+                href={`/blog/${post.post_id}`}
+                key={post.id}
+                className={styles.item}
+              >
+                <Image
+                  src={post.imagePath}
+                  alt={post.title}
+                  width={500}
+                  height={200}
+                />
 
-          <div className={styles.item}>
-            <h1>Discipleine a pupil</h1>
-            <h2>
-              Every student This 9 year old would grow up to tell his children
-              about the supreme price some Nigerian youths paid in the wake of
-              the #endsars protest of October 2020 because he was taught to pay
-              attention to what the...
-            </h2>
+                <div className={styles.blogtext}>
+                  <h2 className={styles.title}>{post.title}</h2>
+                  <p className={styles.desc}>{post.description}</p>
+                  <div className={styles.author}>
+                    <p>Author: {post.author}</p>
+                    <p>{post.date}</p>
+                  </div>
+                  <Link
+                    href={`/blog/${post.post_id}`}
+                    className={styles.seeMore}
+                  >
+                    see more
+                  </Link>
+                </div>
+              </Link>
+            ))}
           </div>
-
-          <div className={styles.item}>
-            <h1>Discipleine a pupil</h1>
-            <h2>
-              Every student This 9 year old would grow up to tell his children
-              about the supreme price some Nigerian youths paid in the wake of
-              the #endsars protest of October 2020 because he was taught to pay
-              attention to what the...
-            </h2>
+          <div className={styles.earthContainer}>
+            <Earth />
           </div>
+<<<<<<< HEAD
 
           <div className={styles.item}>
             <h1>Discipleine a pupil</h1>
@@ -105,6 +113,11 @@ const page = () => {
           </div>
         </div> 
       </section>
+=======
+          <div className={styles.rainbow}></div>
+        </section>
+      </main>
+>>>>>>> 694b2e5da8d8950514263845c54485c9c851b372
     </section>
   );
 };
