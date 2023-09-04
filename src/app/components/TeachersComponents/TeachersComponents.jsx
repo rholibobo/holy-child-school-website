@@ -1,10 +1,12 @@
 import Image from "next/image";
 
 export function Blob(props) {
+  // console.log(props);
+  // const { image, name, area_of_discipline } = props;
   return (
-    <div className='flex flex-col justify-center items-center w-full'>
+    <div className='flex flex-col justify-center items-center'>
       <div
-        className={`${props} blob1 bg-purple-900 border-s-4 flex justify-center items-center  w-full  overflow-hidden `}
+        className={`blob1 bg-purple-900 border-s-4 flex justify-center items-center  w-full  overflow-hidden `}
       >
         <Image
           src='/images/Teachers/1d-2-transparentbg.png'
@@ -14,9 +16,10 @@ export function Blob(props) {
           alt='red star'
         />
       </div>
-      <p className='text-lg font-semibold'>John Snow</p>
+      <p className='text-lg font-semibold'>Mr Wills</p>
       <p className=' text-gray-500 font-medium text-base'>
-        Specialist in Crops
+        {/* {props.area_of_discipline} */}
+        Crops
       </p>
     </div>
   );

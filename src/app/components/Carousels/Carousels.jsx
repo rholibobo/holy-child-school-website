@@ -1,5 +1,4 @@
 "use client";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -15,6 +14,7 @@ import Typography from "@mui/material/Typography";
 import { Blob } from "../TeachersComponents/TeachersComponents";
 import { FcNext } from "react-icons/fc";
 import { FcPrevious } from "react-icons/fc";
+import { teachersData } from "@/app/teachers/teachersData";
 
 // import { CarouselRightButton, CarouselLeftButton } from "../Carousels/";
 import { CarouselLeftButton, CarouselRightButton } from "../Buttons/AllButtons";
@@ -22,7 +22,6 @@ import { CarouselLeftButton, CarouselRightButton } from "../Buttons/AllButtons";
 // const CustomRightArrow = ({ onClick }) => {
 //   return <button onClick={() => onClick()}></button>;
 // };
-
 
 // const CustomLeftArrow = ({ onClick }) => {
 //   return <button onClick={() => onClick()}></button>;
@@ -181,12 +180,40 @@ const CustomLeftArrow = ({ onClick }) => {
   );
 };
 
+// Teachers Carousel starts here
+
+const ButtonGroup = ({ next, previous, ...rest }) => {
+  const {
+    carouselState: { currentSlide },
+  } = rest;
+  return (
+    <div className='carousel-button-group relative w-full '>
+      <button
+        className={`${
+          currentSlide === 0 ? "disable" : ""
+        } iconsDiv bg-pink-500 active:bg-gray-400 transition  duration-100 absolute right-full `}
+        onClick={() => previous()}
+      >
+        <FcPrevious className='text-gray-200' />
+      </button>
+
+      {/* Next button */}
+
+      <button
+        className='iconsDiv bg-pink-500  active:bg-gray-400 transition  duration-100 absolute left-full '
+        onClick={() => next()}
+      >
+        <FcNext className='text-gray-200' />
+      </button>
+    </div>
+  );
+};
+
 export function TeachersCarousel() {
   return (
-    <div className='w-full '>
+    <div className='relative'>
       <Carousel
         additionalTransfrom={0}
-        arrows
         autoPlaySpeed={3000}
         centerMode={false}
         className=''
@@ -199,16 +226,17 @@ export function TeachersCarousel() {
         keyBoardControl
         minimumTouchDrag={80}
         pauseOnHover
-        renderArrowsWhenDisabled={false}
-        renderButtonGroupOutside={true}
         renderDotsOutside={false}
+        arrows={false}
+        renderButtonGroupOutside={true}
+        customButtonGroup={<ButtonGroup />}
         responsive={{
           desktop: {
             breakpoint: {
               max: 3000,
               min: 1024,
             },
-            items: 4,
+            items: 3,
             partialVisibilityGutter: 40,
           },
           mobile: {
@@ -237,7 +265,10 @@ export function TeachersCarousel() {
         slidesToSlide={1}
         swipeable
       >
-        <Blob />
+        {/* {teachersData.map((teacher) => {
+          <Blob key={teacher.id} {...teacher} />;
+        })} */}
+
         <Blob />
         <Blob />
         <Blob />
