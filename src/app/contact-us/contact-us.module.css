@@ -1,0 +1,208 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&family=Titan+One&display=swap");
+
+
+
+.section1 {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#3647a7, #339130);
+  position: relative;
+  
+}
+.section1::before {
+  content: "PREP SCHOOL";
+  font-family: "Titan One", cursive;
+  color: antiquewhite;
+  font-size: 15rem;
+  font-weight: bold;
+  line-height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0.05;
+
+}
+.section1::after {
+    content: "";
+    background-image: url('/images/DesignImages/crop-cloud.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 18.88%;
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+  .navbar {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section{
+    width: 80%;
+    height: 400px;
+    /* background-color: red; */
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .contents{
+    margin-top: 12%;  
+    /* background-color: red; */
+  
+  }
+.h1{
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  
+}
+.contact_info{
+  font-size: 14px;
+  color:rgb(240, 233, 233);
+  /* padding-left: 20px; */
+  margin-bottom: 10px;
+
+} 
+.parent-container{
+  width: 100%;
+  position: relative;
+  margin-top: 10%;
+
+}
+.parent-container img {
+  width: 100%;
+  height: auto;
+  /* max-width: 100%; */
+  /* max-height: 100%; */
+}
+.touch{
+  font-size: 32px;
+  color: #1C1464;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+}
+.get_us{
+  width: 80%;
+  height: 200px;
+  /* background-color: red; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.get_address, .get_email, .get_number{
+  position: relative;
+  height: 200px;
+  padding: 15px;
+  background-color: #39aadf;  
+  text-align: center;
+  border-radius: 15px;
+  color: white ;
+  font-size: 14px;
+  border: none;
+} 
+.text, .text_em, .text_ph{
+  color: #1c1464;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.text.em{
+  height: 120px;
+}
+.email_link{
+  color: #1C1464;
+  font-weight: 600;
+}
+
+
+/* contact_form */
+
+
+.container{
+  background-color: #1C1464;
+  height: 380px;
+  width: 500px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 43% 49%;
+}
+.about{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding-top: 20px;
+  
+}
+.form{
+  width: 380px;
+  height: 280px;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 20px;
+}
+.input{
+  width: 350px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px dotted white;
+  outline: none; 
+  color: #ffffff;
+}
+.view_all_btn{
+  /* padding: 0.7rem 2.2rem;  */
+  padding: 10px 20px;
+  background-color: #39aadf;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 30px 5px 15px 20px ;
+  border-bottom-right-radius: -10px 20px ;
+  border-top-right-radius: 30px 80px;
+  margin-left: 220px;
+  margin-top: 27px;
+}
+.input::placeholder{
+color: #ffffff;
+font-size: 12px;
+}
+.know_about{
+  width: 80%;
+  height: 450px;
+  margin: 0 auto;
+  margin-top: 20px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+}
+.assist_you{
+  font-size: 30px;
+  font-weight: bold;
+  color: #1C1464;
+}
+
+  @media screen and (max-width: 600px) {
+    
+    .section1::before{
+      content: "Prep School";
+      font-size: 8rem;
+      line-height: 100px;
+  
+    }
+    .navbar{
+      width: 90%;
+      
+    }
+  }
+  
