@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import styles from "./page.module.css";
 
 import Header from "../components/Header/Header";
@@ -16,11 +16,10 @@ const page = () => {
     <section className={styles.container}>
       {/* ////////// SECTION 1 //////////// */}
       <div className={styles.section1}>
+        <div className={styles.navbar}>
+          <Header />
+        </div>
         <div className={styles.section_container}>
-          <div className={styles.navbar}>
-            <Header />
-          </div>
-
           <section className={styles.headerContainer}>
             <div className={styles.blogHeader}>
               <h1>Welcome to Holychild's Blog</h1>
@@ -36,7 +35,7 @@ const page = () => {
         </div>
       </div>
       <main className={styles.blogContainer}>
-        <section className={styles.blogSection}>
+        <div className={styles.blogSection}>
           <div className={styles.seeSawContainer}>
             <div className={styles.latestContainer}>
               <h1 className={styles.latestBlog}>Latest Blogs</h1>
@@ -80,44 +79,9 @@ const page = () => {
           <div className={styles.earthContainer}>
             <Earth />
           </div>
-<<<<<<< HEAD
-
-          <div className={styles.item}>
-            <h1>Discipleine a pupil</h1>
-            <h2>
-              Every student This 9 year old would grow up to tell his children
-              about the supreme price some Nigerian youths paid in the wake of
-              the #endsars protest of October 2020 because he was taught to pay
-              attention to what the...
-            </h2>
-          </div>
-
-          <div className={styles.item}>
-            <h1>Discipleine a pupil</h1>
-            <h2>
-              Every student This 9 year old would grow up to tell his children
-              about the supreme price some Nigerian youths paid in the wake of
-              the #endsars protest of October 2020 because he was taught to pay
-              attention to what the...
-            </h2>
-          </div>
-
-          <div className={styles.item}>
-            <h1>Discipleine a pupil</h1>
-            <h2>
-              Every student This 9 year old would grow up to tell his children
-              about the supreme price some Nigerian youths paid in the wake of
-              the #endsars protest of October 2020 because he was taught to pay
-              attention to what the...
-            </h2>
-          </div>
-        </div> 
-      </section>
-=======
           <div className={styles.rainbow}></div>
-        </section>
+        </div>
       </main>
->>>>>>> 694b2e5da8d8950514263845c54485c9c851b372
     </section>
   );
 };
