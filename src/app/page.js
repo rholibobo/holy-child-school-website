@@ -14,7 +14,7 @@ import styles from "./page.module.css";
 import { motion } from "framer-motion";
 
 import { Box, Grid, Stack, Typography } from "@mui/material";
-import {useMediaQuery} from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 
 /////// Components ////////////
 import Header from "./components/Header/Header";
@@ -26,7 +26,10 @@ import {
 } from "./components/Buttons/AllButtons";
 import { MediaCard } from "./components/Carousels/Carousels";
 import FloatingStars from "./components/FloatingStars/Stars";
-import {WovenImageList, WovenImageListMobileView} from "./components/HomeImageList/ImageList";
+import {
+  WovenImageList,
+  WovenImageListMobileView,
+} from "./components/HomeImageList/ImageList";
 
 //////// Icons //////////
 import { FcGraduationCap } from "react-icons/fc";
@@ -37,8 +40,6 @@ import { BsPencilSquare } from "react-icons/bs";
 import { FaBook } from "react-icons/fa";
 import Link from "next/link";
 
-
-
 export default function Home() {
   const isMobileView = useMediaQuery("(max-width:850px)");
 
@@ -46,11 +47,10 @@ export default function Home() {
     <main>
       {/* ////////// SECTION 1 //////////// */}
       <div className={styles.section1}>
+        <div className={styles.navbar}>
+          <Header />
+        </div>
         <div className={styles.section_container}>
-          <div className={styles.navbar}>
-            <Header />
-          </div>
-
           <Grid
             container
             rowSpacing={1}
@@ -383,7 +383,7 @@ export default function Home() {
             <Box
               sx={{
                 width: { xs: "100%", md: "50%" },
-               height: "100%"
+                height: "100%",
               }}
             >
               <Image
@@ -448,8 +448,8 @@ export default function Home() {
       {/* ///////////// Section 5 ///////////// */}
       <div className={styles.section5}>
         <div className={styles.section5_div}>
-        {!isMobileView ? <WovenImageList /> : <WovenImageListMobileView />}
-          
+          {!isMobileView ? <WovenImageList /> : <WovenImageListMobileView />}
+
           <br />
           <Link href="/gallery">
             <ViewGallery />
@@ -469,19 +469,19 @@ export default function Home() {
             sx={{
               display: "flex",
               justifyContent: "space-between",
-              flexDirection: {xs: "column", md: "row"}
+              flexDirection: { xs: "column", md: "row" },
             }}
           >
             <Box
               sx={{
-                width: {xs: "100%",md:"35%"},
-                height: {xs: "70vh", sm: "50vh",md:"80vh"},
+                width: { xs: "100%", md: "35%" },
+                height: { xs: "70vh", sm: "50vh", md: "80vh" },
                 backgroundColor: "#1faded",
                 borderRadius: "20% 35% 20% 15%",
                 border: "2px solid #ffffff",
-                marginTop: {xs: "2rem",md:"9rem"},
+                marginTop: { xs: "2rem", md: "9rem" },
                 color: "#ffffff",
-                padding: {xs: "2rem", sm: "3rem",md: "3rem"},
+                padding: { xs: "2rem", sm: "3rem", md: "3rem" },
               }}
             >
               <Box>
@@ -518,12 +518,12 @@ export default function Home() {
             </Box>
             <Box
               sx={{
-                width: {xs: "100%",md:"30%"},
-                height:{sm:"50vh",md:"80vh"},
+                width: { xs: "100%", md: "30%" },
+                height: { sm: "50vh", md: "80vh" },
                 backgroundColor: "#ffffff",
                 borderRadius: "20% 35% 20% 15%",
                 border: "2px solid #1c1464",
-                marginTop: {xs: "2rem",md:"9rem"},
+                marginTop: { xs: "2rem", md: "9rem" },
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-around",
@@ -555,10 +555,10 @@ export default function Home() {
             </Box>
             <Box
               sx={{
-                width: {xs: "100%",md:"30%"},
-                height: {sm: "60vh",md:"70vh"},
+                width: { xs: "100%", md: "30%" },
+                height: { sm: "60vh", md: "70vh" },
                 // backgroundColor: "#81d742",
-                marginTop: {xs: "2rem",md:"7rem"},
+                marginTop: { xs: "2rem", md: "7rem" },
               }}
             >
               <Image
@@ -579,7 +579,12 @@ export default function Home() {
         <Box sx={{}}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15858.205064690168!2d7.531379!3d6.451606!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1044a5aae5e5b3d1%3A0xb1a3fb1573962ad7!2sHoly%20Child%20Preparatory%20School!5e0!3m2!1sen!2sus!4v1693227391900!5m2!1sen!2sus"
-            style={{ width: "100%", height: "100vh", border: "0", marginTop: "2rem" }}
+            style={{
+              width: "100%",
+              height: "100vh",
+              border: "0",
+              marginTop: "2rem",
+            }}
             allowFullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -588,9 +593,7 @@ export default function Home() {
       </div>
 
       {/* ////// Section 8 //////////// */}
-      <div className={styles.section8}>
-        
-      </div>
+      <div className={styles.section8}></div>
     </main>
   );
 }

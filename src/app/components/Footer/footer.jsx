@@ -1,3 +1,4 @@
+"use client";
 
 import Styles from "./footer.module.css";
 import Link from "next/link";

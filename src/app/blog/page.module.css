@@ -41,6 +41,10 @@
   width: 80%;
   margin: 0 auto;
 }
+.navbar{
+  width: 95%;
+  margin: 0 auto;
+}
 
 /* ///  Blog styling start/////////////////////////////////////////// */
 .headerContainer {

@@ -3,7 +3,8 @@
   height: 100vh;
   /* background-image: linear-gradient(#9d2a77, #e130a7); */
   /* background-image: linear-gradient(#1c1464, #919497); */
-  background-image: linear-gradient(#919497, #1c1464);
+  /* background-image: linear-gradient(#919497, #1c1464); */
+  background-image: linear-gradient(#151515, #1c1464);
   position: relative;
 }
 .section1::before {
@@ -23,6 +24,7 @@
 
 .section1::after {
   content: "";
+  /* background-image: url(../../public/images/DesignImages/crop-cloud.svg); */
   background-image: url(../../public/images/DesignImages/crop-cloud.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -31,13 +33,17 @@
   height: 19%;
   display: block;
   position: absolute;
-  bottom: -1px;
+  bottom: -2px;
   left: 0;
   /* border: 1px solid black;  */
 }
 
 .section_container {
   width: 80%;
+  margin: 0 auto;
+}
+.navbar{
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -273,7 +279,7 @@
   }
   .section1::after {
     display: none;
-    height: 12vh;
+    /* height: 12vh; */
     /* bottom: -5px; */
   }
   .section2 {
