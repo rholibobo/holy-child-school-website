@@ -80,9 +80,44 @@ const page = () => {
           <div className={styles.earthContainer}>
             <Earth />
           </div>
+<<<<<<< HEAD
+
+          <div className={styles.item}>
+            <h1>Discipleine a pupil</h1>
+            <h2>
+              Every student This 9 year old would grow up to tell his children
+              about the supreme price some Nigerian youths paid in the wake of
+              the #endsars protest of October 2020 because he was taught to pay
+              attention to what the...
+            </h2>
+          </div>
+
+          <div className={styles.item}>
+            <h1>Discipleine a pupil</h1>
+            <h2>
+              Every student This 9 year old would grow up to tell his children
+              about the supreme price some Nigerian youths paid in the wake of
+              the #endsars protest of October 2020 because he was taught to pay
+              attention to what the...
+            </h2>
+          </div>
+
+          <div className={styles.item}>
+            <h1>Discipleine a pupil</h1>
+            <h2>
+              Every student This 9 year old would grow up to tell his children
+              about the supreme price some Nigerian youths paid in the wake of
+              the #endsars protest of October 2020 because he was taught to pay
+              attention to what the...
+            </h2>
+          </div>
+        </div> 
+      </section>
+=======
           <div className={styles.rainbow}></div>
         </section>
       </main>
+>>>>>>> 694b2e5da8d8950514263845c54485c9c851b372
     </section>
   );
 };
