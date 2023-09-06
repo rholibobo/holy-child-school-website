@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import { Box, Button, Menu, MenuItem } from "@mui/material";
+import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
 import { ArrowRight, ArrowDropDown } from "@mui/icons-material";
 
 import Link from "next/link";
@@ -29,7 +29,7 @@ export default function ({ handleCloseNavMenu }) {
         padding: "1rem 0",
         display: "flex",
         justifyContent: "space-between",
-        fontSize: "1.2rem"
+        fontSize: "1.2rem",
       }}
     >
       <Link href="/">
@@ -92,37 +92,49 @@ export default function ({ handleCloseNavMenu }) {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={handleClose}>
+        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider="true">
           <Link href="/blog">
-            <Box
-              sx={{ textTransform: "capitalize", color: "#000000" }}
+            <Typography gutterBottom
+              sx={{
+                textTransform: "capitalize",
+                color: "#000000",
+                fontSize: "0.85rem",
+              }}
               color="inherit"
               className={pathname == "/about-us" ? styles.active : ""}
             >
               Blog
-            </Box>
+            </Typography>
           </Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider="true">
           <Link href="/teachers">
-            <Box
-              sx={{ textTransform: "capitalize", color: "#000000" }}
+            <Typography gutterBottom
+              sx={{
+                textTransform: "capitalize",
+                color: "#000000",
+                fontSize: "0.85rem",
+              }}
               color="inherit"
               className={pathname == "/teachers" ? styles.active : ""}
             >
               Meet Our Teachers
-            </Box>
+            </Typography>
           </Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider="true">
           <Link href="/gallery">
-            <Box
-              sx={{ textTransform: "capitalize", color: "#000000" }}
+            <Typography gutterBottom
+              sx={{
+                textTransform: "capitalize",
+                color: "#000000",
+                fontSize: "0.85rem",
+              }}
               color="inherit"
               className={pathname == "/gallery" ? styles.active : ""}
             >
               Gallery
-            </Box>
+            </Typography>
           </Link>
         </MenuItem>
       </Menu>
