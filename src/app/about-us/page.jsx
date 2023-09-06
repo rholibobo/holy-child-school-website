@@ -14,20 +14,24 @@ export default function AboutUs() {
   return (
     <main>
       <section className={styles.section1}>
+        <div className={styles.navbar}>
+          <Header />
+        </div>
         <div className={styles.section_container}>
-          <div className={styles.navbar}>
-            <Header />
-          </div>
-
           <Image
             src={FloatingBallons}
             alt="floating ballons"
             className={styles.gif}
           />
+          <Image
+            src={FloatingBallons}
+            alt="floating ballons"
+            className={styles.gif1}
+          />
           <Box sx={{ marginTop: "4rem" }}>
             <Box>
               <Typography
-                variant="h1"
+                variant="h2"
                 sx={{ fontWeight: "bold", color: "#ffffff" }}
                 textAlign="center"
                 gutterBottom
@@ -38,9 +42,9 @@ export default function AboutUs() {
 
               <Typography
                 variant="body1"
-                sx={{ fontWeight: "bold", color: "#ffffff" }}
+                sx={{ color: "#ffffff" }}
                 gutterBottom
-                textAlign="center"
+                textAlign={{ xs: "left", md: "center" }}
               >
                 Holy Child Preparatory School was birthed out of a passion to
                 improve the quality of basic Education in South Eastern Nigeria.
@@ -61,22 +65,37 @@ export default function AboutUs() {
 
       {/* ////////////////////// */}
       <section className={styles.values_section}>
-        <Box sx={{ width: "80%", margin: "0 auto", display: "flex", justifyContent: "space-between" }}>
+        <Box
+          sx={{
+            width: { xs: "90%", md: "80%" },
+            margin: "0 auto",
+            display: "flex",
+            justifyContent: "space-between",
+            flexDirection: { xs: "column", md: "row" },
+          }}
+        >
           <Box
             sx={{
-              marginTop: "7rem",
-              width: "30%",
+              marginTop: {xs: "5rem",md:"7rem"},
+              width: { xs: "100%", md: "30%" },
               position: "relative",
               padding: "2rem",
-              boxShadow:
-                "#e130a7 0px 2px 4px 0px, #e130a7 0px 2px 16px 0px",
+              boxShadow: "#e130a7 0px 2px 4px 0px, #e130a7 0px 2px 16px 0px",
+              backgroundColor: "#ffffff",
             }}
           >
             <div className={styles.icons_div}>
               <Campaign />
             </div>
             <br />
-            <Typography variant="h6" sx={{fontWeight: "bold", color: "#e130a7"}} textAlign="center" gutterBottom>Core Values</Typography>
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: "bold", color: "#e130a7" }}
+              textAlign="center"
+              gutterBottom
+            >
+              Core Values
+            </Typography>
             <br />
             <Typography textAlign="center" gutterBottom>
               Good character and a love for leisure reading. Objectives: to
@@ -86,42 +105,58 @@ export default function AboutUs() {
           </Box>
           <Box
             sx={{
-              marginTop: "6rem",
-              width: "30%",
+              marginTop: { xs: "2rem", md: "6rem" },
+              width: { xs: "100%", md: "30%" },
               position: "relative",
               padding: "2rem",
-              boxShadow:
-                "#1faded 0px 2px 4px 0px, #1faded 0px 2px 16px 0px",
+              boxShadow: "#1faded 0px 2px 4px 0px, #1faded 0px 2px 16px 0px",
+              // zIndex: 2,
+              backgroundColor: "#ffffff",
             }}
           >
             <div className={styles.icons_div2}>
               <Favorite />
             </div>
             <br />
-            <Typography variant="h6" sx={{fontWeight: "bold", color: "#1faded"}} textAlign="center" gutterBottom>Belief</Typography>
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: "bold", color: "#1faded" }}
+              textAlign="center"
+              gutterBottom
+            >
+              Belief
+            </Typography>
             <br />
             <Typography textAlign="center" gutterBottom>
-            Talent is not enough. Brilliance must be match by good character.
+              Talent is not enough. Brilliance must be match by good character.
             </Typography>
           </Box>
           <Box
             sx={{
-              marginTop: "7rem",
-              width: "30%",
+              marginTop: {xs: "2rem",md:"7rem"},
+              width: {xs: "100%" ,md:"30%"},
               position: "relative",
               padding: "2rem",
-              boxShadow:
-                "#81d742 0px 2px 4px 0px, #81d742 0px 2px 16px 0px",
+              boxShadow: "#81d742 0px 2px 4px 0px, #81d742 0px 2px 16px 0px",
+              backgroundColor: "#ffffff",
             }}
           >
             <div className={styles.icons_div3}>
               <Tv />
             </div>
             <br />
-            <Typography variant="h6" sx={{fontWeight: "bold", color: "#81d742"}} textAlign="center" gutterBottom>Vision</Typography>
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: "bold", color: "#81d742" }}
+              textAlign="center"
+              gutterBottom
+            >
+              Vision
+            </Typography>
             <br />
             <Typography textAlign="center" gutterBottom>
-            To become a first rate educational institution with a reputation for excellent character and strong academic learning.
+              To become a first rate educational institution with a reputation
+              for excellent character and strong academic learning.
             </Typography>
           </Box>
         </Box>
