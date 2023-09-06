@@ -25,13 +25,14 @@
 .section1::after {
   content: "";
   /* background-image: url(../../public/images/DesignImages/crop-cloud.svg); */
-  background-image: url(../../public/images/DesignImages/crop-cloud.png);
+  /* background-image: url(../../public/images/DesignImages/crop-cloud.png); */
+  background-image: url(../../public/images/DesignImages/crop-cloud.svg);
   background-repeat: no-repeat;
   background-size: contain;
   /* object-fit: cover; */
   width: 100%;
   height: 19%;
-  display: block;
+  display: none;
   position: absolute;
   bottom: -2px;
   left: 0;

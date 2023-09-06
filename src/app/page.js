@@ -375,7 +375,7 @@ export default function Home() {
                 sx={{
                   backgroundColor: "#ffffff",
                   padding: "1.5rem",
-                  boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
+                  boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
                   position: "inherit",
                   zIndex: "4",
                 }}
