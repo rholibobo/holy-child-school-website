@@ -15,20 +15,6 @@ import styles from "./header.module.css";
 export default function Header() {
   const isMobileView = useMediaQuery("(max-width:1000px)");
 
-  // const [anchorElNav, setAnchorElNav] = useState(null);
-
-  // const handleOpenNavMenu = (event) => {
-  //   setAnchorElNav(event.currentTarget);
-  // };
-
-  // const handleCloseNavMenu = () => {
-  //   setAnchorElNav(null);
-  // };
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
-
   return (
     <Box position="static" sx={{ boxShadow: "none", width: "100%" }}>
       <Container
@@ -41,9 +27,9 @@ export default function Header() {
       >
         <Box
           sx={{
-            width: { xs: "50%", md: "10%" },
+            width: { xs: "100%", md: "10%" },
             display: "flex",
-            justifyContent: { xs: "space-between", md: "space-between" },
+            justifyContent: "space-between",
             alignItems: "center",
           }}
         >
@@ -52,7 +38,7 @@ export default function Header() {
           <Image src={Logo} alt="logo" className={styles.logo} />
         </Box>
 
-        <Box sx={{width: "60%"}}>
+        <Box sx={{width: {xs: "100%",md:"60%"}}}>
           <Box
             sx={{
               // flexGrow: 1,
