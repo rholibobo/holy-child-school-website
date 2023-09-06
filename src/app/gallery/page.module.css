@@ -3,7 +3,8 @@
   height: 100vh;
   /* background-image: linear-gradient(#9d2a77, #e130a7); */
   /* background-image: linear-gradient(#1c1464, #919497); */
-  background-image: linear-gradient(#3988d8, #c53cae);
+  /* background-image: linear-gradient(#3988d8, #c53cae); */
+  background-image: linear-gradient(#919497, #1c1464);
   position: relative;
 }
 
@@ -31,7 +32,7 @@
   height: 18.88%;
   display: block;
   position: absolute;
-  bottom: -1px;
+  bottom: -13px;
   left: 0;
   /* margin-bottom: 0px; */
   /* border: 1px solid black;  */
@@ -89,5 +90,3 @@
   top: -60px;
   right: -80px;
 }
-
-

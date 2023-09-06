@@ -2,17 +2,18 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
 import { FcGraduationCap } from "react-icons/fc";
-import {
-  Blob,
-  IconDiv,
-} from "../components/TeachersComponents/TeachersComponents";
+import { FcNext } from "react-icons/fc";
+import { FcPrevious } from "react-icons/fc";
+//
+import { Blob } from "../components/TeachersComponents/TeachersComponents";
+import { TeachersCarousel } from "../components/Carousels/Carousels";
 
 export default function Teachers() {
   return (
     <main>
       <section>
         {/* ////////// SECTION 1 //////////// */}
-        <div className={styles.section1} >
+        <div className={styles.section1}>
           <div className={styles.section_container}>
             <div className={styles.navbar}>
               <Header />
@@ -51,76 +52,75 @@ export default function Teachers() {
             />
           </div>
 
-          <div className='grid grid-cols-2 justify-center items-center gap-6'>
-            <div className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-6'>
+            <div className='space-y-4 bg-gray-100  rounded-sm p-3 '>
               <div className='flex items-center space-x-2  '>
-                <div className='iconsDiv bg-purple-400 border border-purple-400 flex justify-center items-end w-fit pb-7'>
+                <div className='iconsDiv bg-purple-400 border border-purple-400 flex justify-center items-end w-fit'>
                   <FcGraduationCap className='text-3xl' />
                 </div>
-                <p className='w-1/2 t text-base font-bold'>
+                <p className=' t text-base font-bold'>
                   Self-contained gifted programs
                 </p>
               </div>
-              <p className='w-full'>
+              <p className='w-full text-gray-800 text-base'>
                 By creating a safe,consistent and welcoming environment
               </p>
             </div>
-            <div className='spac space-y-4'>
+            <div className='space-y-4 bg-gray-100  rounded-sm p-3 '>
               <div className='flex items-center space-x-2 '>
                 <div className='iconsDiv bg-green-400 border border-green-400 flex justify-center items-end w-fit pb-7'>
                   <FcGraduationCap className='text-3xl' />
                 </div>
-                <p className='w-1/2 text-base font-bold'>
+                <p className=' text-base font-bold'>
                   Self-contained gifted programs
                 </p>
               </div>
-              <p className=''>
+              <p className='text-gray-800 text-base'>
                 By creating a safe,consistent and welcoming environment
               </p>
             </div>
-            <div className='spac space-y-4'>
+            <div className='space-y-4 bg-gray-100  rounded-sm p-3 '>
               <div className='flex items-center space-x-2 '>
                 <div className='iconsDiv bg-lime-600 border border-lime-600 flex justify-center items-end w-fit pb-7'>
                   <FcGraduationCap className='text-3xl' />
                 </div>
-                <p className='w-1/2 text-base font-bold'>
+                <p className='text-base font-bold'>
                   Self-contained gifted programs
                 </p>
               </div>
-              <p className=''>
+              <p className='text-gray-800 text-base'>
                 By creating a safe,consistent and welcoming environment
               </p>
             </div>
-            <div className='spac space-y-4'>
+            <div className='spac space-y-4 bg-gray-100  rounded-sm p-3'>
               <div className='flex items-center space-x-2 '>
                 <div className='iconsDiv bg bg-sky-600 border--400 flex justify-center items-end w-fit pb-7'>
                   <FcGraduationCap className='text-3xl' />
                 </div>
-                <p className='w-1/2 text-base font-bold'>
+                <p className=' text-base font-bold'>
                   Self-contained gifted programs
                 </p>
               </div>
-              <p className=''>
+              <p className='text-gray-800 text-base'>
                 By creating a safe,consistent and welcoming environment
               </p>
             </div>
           </div>
         </div>
       </section>
-      <section className="grid grid-cols-1 justify-center items-center my-10 after:content-['ffffffffff'] ">
+      <section className="grid grid-cols-1 justify-center items-center my-10 after:content-[''] ">
         <div className=''>
-          <h2 className='text-center font-bold text-lg'>Our Team</h2>
-          <div className='grid grid-cols-3 max-width'>
-            <Blob />
-            <Blob />
-            <Blob />
+          <h2 className='text-center text-gray-900 font-bold  text-2xl'>
+            Our Team
+          </h2>
+
+          <div className=' max-width h-full relative py-4'>
+            <TeachersCarousel />
           </div>
         </div>
       </section>
 
-
-
-      <section className='bg-purple-900'>
+      <section className='bg-purple-900 before:contents-[url(../../public/images/DesignImages/cropped_div.png)] my-14'>
         <div className='max-width grid grid-rows-1 lg:grid-cols-2 items-center justify-between lg:gap-20 '>
           <div className='grid grid-cols-2 justify-center items-center gap-10'>
             <div className='flex items-center space-x-2 '>
@@ -167,13 +167,13 @@ export default function Teachers() {
           </div>
         </div>
       </section>
-      <section>
+      {/* <section>
         <h2 className='text-center font-bold text-lg'>Curriculum</h2>
-        {/*Curriculum */}
+      
         <div>
           <div></div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
