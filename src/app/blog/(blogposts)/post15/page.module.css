@@ -1,0 +1,178 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.blogPost {
+  max-width: 800px;
+  padding: 20px;
+  /* border-right: 1px solid rgb(207, 203, 203); */
+  margin-top: 20px;
+}
+
+.mainImage {
+  border-radius: 15px;
+}
+
+.blogTitle {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.metaContainer {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.metaContainer span {
+  color: #1faded;
+}
+
+.blogContent {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin: 15px auto;
+  padding: 10px;
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aside {
+  max-width: 699px;
+  min-width: 300px;
+  padding-right: 15px;
+  margin: auto;
+
+}
+
+.tagsContainer {
+  padding: 10px;
+  border: 1px solid goldenrod;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags p {
+  padding: 6px 20px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+}
+
+.tags :first-child {
+  background-color: #1faded;
+}
+
+.tags :nth-child(2) {
+  background-color: rgb(235, 77, 169);
+}
+
+.tags :nth-child(3) {
+  background-color: peru;
+}
+
+.tags :nth-child(4) {
+  background-color: rgb(75, 216, 75);
+}
+
+
+
+
+.recentPostsHeader {
+  font-weight: 600;
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.recentPostsContainer {
+  border: 1px solid goldenrod;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.recents {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* .recentBlog {
+  padding: 10px;
+} */
+
+.recentImage {
+  border-radius: 15px;
+}
+
+.recentText {
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.recentText h2 {
+  font-weight: 600;
+}
+
+.recentText p {
+  color: gray;
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aside {
+    max-width: 100%;
+    padding-right: 0px;
+  }
+
+  .recents {
+    flex-direction: row;
+    /* width: 32%; */
+  }
+
+  .recentPostsContainer {
+    border: none;
+  }
+
+  .recentPostsHeader {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .tagsContainer {
+    display: none;
+  }
+}
