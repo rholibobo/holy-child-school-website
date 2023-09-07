@@ -40,12 +40,14 @@ export default function Teachers() {
       </section>
 
       <section className='py-20'>
-        <h2 className='text-left font-medium text-lg'>Who we are</h2>
+        <h2 className='text-gray-900 font-bold  text-2xl max-width'>
+          Who we are
+        </h2>
         <div className='max-width grid grid-rows-1 lg:grid-cols-2 lg:gap-20 '>
-          <div className='mask1 '>
+          <div className='mask1 w-80 h-80 '>
             <Image
               src='/images/Teacher-Training/DSC0407-1024x684.jpg'
-              className=' w-full h-full mb-[7rem] object-cover '
+              className=' w-80 h-80 mb-[7rem] object-cover '
               width={100}
               height={100}
               alt='red star'
@@ -115,12 +117,19 @@ export default function Teachers() {
           </h2>
 
           <div className=' max-width h-full relative py-4'>
+            <Image
+              src='/images/DesignImages/redstar.png'
+              className='w-20  h-20 absolute  left-[90%] top-[20%]'
+              width={100}
+              height={100}
+              alt='red star'
+            />
             <TeachersCarousel />
           </div>
         </div>
       </section>
 
-      <section className='bg-purple-900 before:contents-[url(../../public/images/DesignImages/cropped_div.png)] my-14'>
+      <section className='bg-[#1c1464] before:contents-[url(../../public/images/DesignImages/cropped_div.png)] my-14'>
         <div className='max-width grid grid-rows-1 lg:grid-cols-2 items-center justify-between lg:gap-20 '>
           <div className='grid grid-cols-2 justify-center items-center gap-10'>
             <div className='flex items-center space-x-2 '>
@@ -158,10 +167,12 @@ export default function Teachers() {
           </div>
           <div className='lg:-mt-20'>
             <Image
-              src='/images/DesignImages/little_boy_with_paint.png'
+              src='/images/DesignImages/cube-unscreen.gif'
               className=' w-full h-full obj object-cover '
               width={100}
               height={100}
+              quality={100}
+              aria-hidden='true'
               alt='red star'
             />
           </div>

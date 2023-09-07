@@ -6,7 +6,7 @@ export function Blob(props) {
   return (
     <div className='flex flex-col justify-center items-center'>
       <div
-        className={`blob1 bg-purple-900 border-s-4 flex justify-center items-center  w-full  overflow-hidden `}
+        className={`blob1 bg-purple-900 border-s-4 flex justify-center items-center  w-1/2  overflow-hidden `}
       >
         <Image
           src='/images/Teachers/1d-2-transparentbg.png'

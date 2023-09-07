@@ -13,12 +13,12 @@
   padding: 0;
   margin: 0;
 }
-
+/* 
 .wholepage {
   width: 100%;
   background-color: #e130a7;
-  /* margin: 0 auto; */
-}
+  margin: 0 auto;
+} */
 
 .blob1 {
   border-radius: 42% 58% 67% 33% / 57% 30% 70% 43%;

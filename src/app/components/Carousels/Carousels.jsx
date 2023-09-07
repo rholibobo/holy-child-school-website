@@ -187,7 +187,7 @@ const ButtonGroup = ({ next, previous, ...rest }) => {
     carouselState: { currentSlide },
   } = rest;
   return (
-    <div className='carousel-button-group relative w-full '>
+    <div className='carousel-button-group absolute w-[80%] lg:w-full lg:top-1/2'>
       <button
         className={`${
           currentSlide === 0 ? "disable" : ""

@@ -48,15 +48,20 @@ export default function Gallery() {
               <Header />
             </div>
 
-            <div className='max-width  flex flex-col justify-center items-center  mt-[9rem] '>
+            <div className='max-width  flex justify-between items-center  mt-[9rem]  '>
+              <div>
+                <h2 className='tex text-gray-100 text-4xl font-bold'>Gallery </h2>
+                <p>Memories live forever in pictures</p>
+              </div>
               <Image
-                src='/images/DesignImages/icons8-gallery-64.png'
-                className='w-[40%] h-full'
-                width={50}
-                height={50}
+                src='/images/DesignImages/gallery.png'
+                className='w-80 h-80'
+                width={100}
+                height={100}
+                quality={100}
                 alt='red star'
               />
-              <span className="text-white">I consider this temporary</span>
+              {/* <span className='text-white'>I consider this temporary</span> */}
             </div>
           </div>
         </div>
@@ -65,12 +70,12 @@ export default function Gallery() {
       <section className='bg bg-gradient-to-b from-white  via-sky-300  to-gray-100 py-10'>
         {/*  */}
         <div className='max-width relative'>
-          <div ref={ref}>
+          <div ref={ref} className='space-y-3'>
             <motion.div
               className='h-20 w-20 bg-emerald-300 rounded-[50%] shadow-emerald-300 shadow-sm hover:skew-y-6 transition duration-1000'
               animate={animationCircle}
             ></motion.div>
-            <div className='w-0 h-0   border-l-8 border-r-8 border-r-transparent border-l-transparent b border-b-6 border-b-violet-500 ' />
+            <div className='w-0 h-0   border-l-8 border-r-8 border-r-transparent border-l-transparent b border-b-6 border-b-[#1c1464] ' />
             <motion.div
               className='h-20 w-20 bg-emerald-300 rounded-[50%] shadow-emerald-300 shadow-sm'
               animate={animationCircle2}
@@ -81,12 +86,13 @@ export default function Gallery() {
         </div>
       </section>
 
-      <section className='flex flex-col justify-center items-center relative  overflow-hidden bg-gray-100 '>
+      <section className='flex flex-col  relative  overflow-hidden bg-gray-100 '>
         <Image
           src='/images/DesignImages/colored_ring.png'
           className='w-fit absolute left-[90%] lg:left-[95%]  '
           width={100}
           height={100}
+          
           aria-hidden='true'
           alt='red star'
         />
@@ -98,7 +104,7 @@ export default function Gallery() {
             <div className='col-span-2 row-span-2'>
               <Image
                 src='/images/Gallery/18341948_1394826867268795_6746496119913966168_n.jpg'
-                className='w-full h-full  rounded-lg hover:scale-105 transition duration-200 '
+                className='w-fit h-fit rounded-lg hover:scale-105 transition duration-200 '
                 width={100}
                 height={100}
                 alt='red star'
@@ -148,7 +154,11 @@ export default function Gallery() {
 
         {/* Second */}
 
-        <div className={`${morePictures ? "block" : "hidden"} lg:selection:my-14 lg:py-20`}>
+        <div
+          className={`${
+            morePictures ? "block" : "hidden"
+          } lg:selection:my-14 lg:py-20`}
+        >
           <Image
             src='/images/DesignImages/ballon.png'
             className=' absolute right-[93%] top-[80%] '
