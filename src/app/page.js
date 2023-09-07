@@ -24,7 +24,10 @@ import {
   ViewAllWhiteButton,
   ViewGallery,
 } from "./components/Buttons/AllButtons";
-import { MediaCard } from "./components/Carousels/Carousels";
+import {
+  MediaCard,
+  HeroSectionCarousel,
+} from "./components/Carousels/Carousels";
 import FloatingStars from "./components/FloatingStars/Stars";
 import {
   WovenImageList,
@@ -108,68 +111,18 @@ export default function Home() {
                 width={60}
                 height={60}
                 alt="globe"
-                style={{ marginLeft: "-90px" }}
+                style={{ marginLeft: "-40px" }}
               />
             </Grid>
 
-            {/* <Grid
+            <Grid
               item
               xs={12}
               md={6}
-              sx={{ display: { xs: "none", md: "grid" } }}
+              sx={{ display: { xs: "none", md: "grid" }, marginTop: "-6rem" }}
             >
-              <Box sx={{width: "70%", position: "relative" }}>
-                <Image
-                  src="/images/DesignImages/d5.png"
-                  alt="School boy"
-                  width={370}
-                  height={200}
-                  // layout="responsive"
-                  quality={90}
-                  style={imageSection1}
-                />
-                <div className={styles.info}>
-                  <span style={{ fontWeight: "bold" }}>Best quality</span>
-                  <Typography variant="body2" gutterBottom>
-                    Education
-                  </Typography>
-                </div>
-                <div className={styles.info2}>
-                  <span style={{ fontWeight: "bold" }}>Best quality</span>
-                  <Typography variant="body2" gutterBottom>
-                    {" "}
-                    Staff
-                  </Typography>
-                </div>
-                <div className={styles.info3}>
-                  <span style={{ fontWeight: "bold" }}>Best learning</span>
-                  <Typography variant="body2" gutterBottom>
-                    {" "}
-                    Environment
-                  </Typography>
-                  <div className={styles.stars_div}>
-                    <Image
-                      src="/images/DesignImages/redStar.png"
-                      width={20}
-                      height={20}
-                      alt="red star"
-                      style={{ marginTop: "60px" }}
-                    />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <Image
-                      src="/images/DesignImages/blueStar.png"
-                      width={20}
-                      height={20}
-                      alt="red star"
-                      style={{ marginTop: "-60px" }}
-                    />
-                  </div>
-                </div>
-              </Box>
-            </Grid> */}
+              <HeroSectionCarousel />
+            </Grid>
           </Grid>
         </div>
       </div>
@@ -422,7 +375,7 @@ export default function Home() {
                 sx={{
                   backgroundColor: "#ffffff",
                   padding: "1.5rem",
-                  boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
+                  boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
                   position: "inherit",
                   zIndex: "4",
                 }}
