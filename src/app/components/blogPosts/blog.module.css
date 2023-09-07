@@ -1,144 +1,3 @@
-.section1 {
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(#9d2a77, #e130a7);
-  /* background-image: linear-gradient(#1c1464, #919497); */
-  /* background-image: linear-gradient(#47204d, #ca3d94); */
-  position: relative;
-}
-
-.section1::before {
-  content: "PREP SCHOOL";
-  font-family: "Titan One", cursive;
-  color: antiquewhite;
-  font-size: 15rem;
-  /* font-size: 100%; */
-  font-weight: bold;
-  line-height: 150px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.05;
-}
-
-.section1::after {
-  content: "";
-  background-image: url(../../../public/images/DesignImages/crop-cloud.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  /* object-fit: cover; */
-  width: 100%;
-  height: 18.88%;
-  display: none;
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  /* border: 1px solid black;  */
-}
-
-/* .section_container {
-  width: 80%;
-  margin: 0 auto;
-} */
-
-/* ///  Blog styling start/////////////////////////////////////////// */
-.headerContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-
-
-.blogHeader {
-  text-align: center;
-  margin-bottom: 100px;
-  color: white;
-  position: absolute;
-  padding: 0 20px;
-}
-
-.blogHeader h1 {
-  font-size: 56px;
-  margin-bottom: 10px;
-  font-family: "Titan One", cursive;
-}
-
-.blogHeader h2 {
-  font-size: 36px;
-  font-family: "Titan One", cursive;
-}
-
-/* GIFS START */
-
-@keyframes move {
-  from {
-    transform: translateY(-20px);
-  }
-
-  to {
-    transform: translateY(20px);
-  }
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(-20px);
-  }
-
-  to {
-    transform: translateX(20px);
-  }
-}
-
-.vidContainer {
-  position: relative;
-  top: -100px;
-  left: -400px;
-  width: fit-content;
-  animation: move 4s infinite ease-in-out alternate;
-}
-
-.busContainer {
-  position: relative;
-  z-index: 1;
-  animation: slide 4s infinite ease-in-out alternate;
-}
-
-.seeSawContainer {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid black;
-}
-
-.earthContainer {
-  position: absolute;
-  left: 20px;
-  z-index: 1;
-  height: 100px;
-  width: 100px;
-
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* GIFS END */
-
-/* POSTS START */
-
-
 .blogContainer {
   max-width: 1500px;
   margin: 0 auto;
@@ -146,7 +5,7 @@
 }
 
 .blogSection {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 10px 30px;
 
@@ -163,13 +22,18 @@
   padding-bottom: 10px;
 }
 
+.seeSawContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* SINGLE POST STYLES*/
 .itemsContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 60px;
   column-gap: 30px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .item {
@@ -177,8 +41,7 @@
   border-radius: 5px;
   padding: 10px;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
 }
@@ -291,6 +154,18 @@
     top: 100px;
   }
 
+  .rainbow {
+    overflow: hidden;
+    position: absolute;
+    right: 50px;
+    top: 500px;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    background: url('../../../../public/images/DesignImages/rainbow.png') center center / cover no-repeat;
+    z-index: -1;
+    animation: rotate 4s linear infinite;
+  }
 
 
   .section1::before {
@@ -360,23 +235,8 @@
 }
 
 @media screen and (max-width: 426px) {
-  .section1::before {
-    content: "Prep School";
-    font-size: 5rem;
-    line-height: 100px;
-  }
-
-  .section1::after {
-    height: 9.5vh;
-    /* bottom: -10px; */
-  }
-
   .blogHeader h2 {
     font-size: 18px;
-  }
-
-  .navbar {
-    width: 90%;
   }
 
   .latestBlog {
@@ -384,7 +244,7 @@
   }
 }
 
-@media screen and (max-width: 376px) {
+/* @media screen and (max-width: 376px) {
   .section1::before {
     content: "Prep School";
     font-size: 5rem;
@@ -393,15 +253,15 @@
 
   .section1::after {
     height: 8.5vh;
-    /* bottom: -8px; */
+    bottom: -8px;
   }
 
   .navbar {
     width: 90%;
   }
-}
+} */
 
-@media screen and (max-width: 321px) {
+/* @media screen and (max-width: 321px) {
   .section1::before {
     content: "Prep School";
     font-size: 5rem;
@@ -410,10 +270,10 @@
 
   .section1::after {
     height: 7.5%;
-    /* bottom: -8px; */
+    bottom: -8px;
   }
 
   .navbar {
     width: 90%;
   }
-}
+} */
