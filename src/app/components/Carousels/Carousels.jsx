@@ -19,11 +19,24 @@ import pix2 from "../../../../public/images/HomePage/port5.jpg";
 import pix3 from "../../../../public/images/HomePage/port6.jpg";
 
 // Teachers carousel imports
+import Teacher1 from "../../../../public/images/Teachers/1d-2-transparentbg.png";
+import Teacher2 from "../../../../public/images/Teachers/1a.jpeg";
+import Teacher3 from "../../../../public/images/Teachers/1d.jpeg";
+import Teacher4 from "../../../../public/images/Teachers/1f.jpeg";
+import Teacher5 from "../../../../public/images/Teachers/1qs.jpeg";
+import Teacher6 from "../../../../public/images/Teachers/1s.jpeg";
+import Teacher7 from "../../../../public/images/Teachers/123.jpeg";
+import Teacher8 from "../../../../public/images/Teachers/1234.jpeg";
+import Teacher9 from "../../../../public/images/Teachers/12345.jpeg";
+import Teacher10 from "../../../../public/images/Teachers/123456.jpeg";
+import Teacher11 from "../../../../public/images/Teachers/wed.jpeg";
+
+//
 
 import { Blob } from "../TeachersComponents/TeachersComponents";
 import { FcNext } from "react-icons/fc";
 import { FcPrevious } from "react-icons/fc";
-import { teachersData } from "@/app/teachers/teachersData";
+// import { teachersData } from "@/app/teachers/teachersData";
 
 // import { CarouselRightButton, CarouselLeftButton } from "../Carousels/";
 import { CarouselLeftButton, CarouselRightButton } from "../Buttons/AllButtons";
@@ -36,13 +49,13 @@ export function MediaCard() {
       arrows
       autoPlaySpeed={3000}
       centerMode={false}
-      className=""
-      containerClass="container"
-      dotListClass=""
+      className=''
+      containerClass='container'
+      dotListClass=''
       draggable
       focusOnSelect={false}
       infinite={false}
-      itemClass=""
+      itemClass=''
       keyBoardControl
       minimumTouchDrag={80}
       pauseOnHover
@@ -80,7 +93,7 @@ export function MediaCard() {
       rtl={false}
       shouldResetAutoplay
       showDots={false}
-      sliderClass=""
+      sliderClass=''
       slidesToSlide={1}
       swipeable
     >
@@ -92,8 +105,8 @@ export function MediaCard() {
       >
         <CardMedia
           sx={{ height: "55vh" }}
-          image="/images/HomePage/prenursery-1.jpg"
-          title="girl child"
+          image='/images/HomePage/prenursery-1.jpg'
+          title='girl child'
         />
 
         <CardContent sx={{ backgroundColor: "#ffffff" }}>
@@ -117,8 +130,8 @@ export function MediaCard() {
       >
         <CardMedia
           sx={{ height: "55vh" }}
-          image="/images/HomePage/nursery.jpg"
-          title="girl child"
+          image='/images/HomePage/nursery.jpg'
+          title='girl child'
         />
 
         <CardContent sx={{ backgroundColor: "#ffffff" }}>
@@ -142,8 +155,8 @@ export function MediaCard() {
       >
         <CardMedia
           sx={{ height: "55vh" }}
-          image="/images/HomePage/primary.jpg"
-          title="girl child"
+          image='/images/HomePage/primary.jpg'
+          title='girl child'
         />
 
         <CardContent sx={{ backgroundColor: "#ffffff" }}>
@@ -323,42 +336,120 @@ const ButtonGroup = ({ next, previous, ...rest }) => {
     carouselState: { currentSlide },
   } = rest;
   return (
-    <div className="carousel-button-group relative w-full ">
+    <div className='carousel-button-group absolute w-[80%] lg:w-full lg:top-1/2'>
       <button
         className={`${
           currentSlide === 0 ? "disable" : ""
-        } iconsDiv bg-pink-500 active:bg-gray-400 transition  duration-100 absolute right-full `}
+        } iconsDiv bg-[#1c1464] active:bg-gray-400 transition  duration-100 absolute right-full `}
         onClick={() => previous()}
       >
-        <FcPrevious className="text-gray-200" />
+        <FcPrevious className='text-gray-200' />
       </button>
 
       {/* Next button */}
 
       <button
-        className="iconsDiv bg-pink-500  active:bg-gray-400 transition  duration-100 absolute left-full "
+        className='iconsDiv bg-[#1c1464]  active:bg-gray-400 transition  duration-100 absolute left-full '
         onClick={() => next()}
       >
-        <FcNext className="text-gray-200" />
+        <FcNext className='text-gray-200' />
       </button>
     </div>
   );
 };
 
 export function TeachersCarousel() {
+  const TeachersData = [
+    {
+      id: 1,
+      image: Teacher1,
+      name: "John Henry",
+      area_of_discipline: "Home economics",
+    },
+    {
+      id: 2,
+      image: Teacher2,
+      name: "Peter parker",
+      area_of_discipline: "Commerce",
+    },
+    {
+      id: 3,
+      image: Teacher3,
+      name: "David Living-Stone",
+      area_of_discipline: "Agricultural Science",
+    },
+    {
+      id: 4,
+      image: Teacher4,
+      name: "David Francis",
+      area_of_discipline: "Agricultural Science",
+    },
+    {
+      id: 5,
+      image: Teacher5,
+      name: "Peter Andrew",
+      area_of_discipline: "Agricultural Science",
+    },
+    {
+      id: 6,
+      image: Teacher6,
+      name: "Peter Andrew",
+      area_of_discipline: "Agricultural Science",
+    },
+    {
+      id: 7,
+      image: Teacher7,
+      name: "Holy Cow",
+      area_of_discipline: "Agricultural Science",
+    },
+    {
+      id: 8,
+      image: Teacher8,
+      name: "Peter Andrew",
+      area_of_discipline: "Agricultural Science",
+    },
+    {
+      id: 9,
+      image: Teacher9,
+      name: "Peter Andrew",
+      area_of_discipline: "Agricultural Science",
+    },
+    {
+      id: 10,
+      image: Teacher10,
+      name: "Holy Shit",
+      area_of_discipline: "Agricultural Science",
+    },
+    {
+      id: 11,
+      image: Teacher11,
+      name: "Peter Andrew",
+      area_of_discipline: "Agricultural Science",
+    },
+  ];
+
+  const content = TeachersData.map((teacher) => (
+    <Blob
+      key={teacher.id}
+      image={teacher.image}
+      name={teacher.name}
+      area_of_discipline={teacher.area_of_discipline}
+    />
+  ));
+
   return (
-    <div className="relative">
+    <div className='relative'>
       <Carousel
         additionalTransfrom={0}
         autoPlaySpeed={3000}
         centerMode={false}
-        className=""
-        containerClass="container"
-        dotListClass=""
+        className=''
+        containerClass='container'
+        dotListClass=''
         draggable
         focusOnSelect={false}
         infinite={true}
-        itemClass=""
+        itemClass=''
         keyBoardControl
         minimumTouchDrag={80}
         pauseOnHover
@@ -380,7 +471,7 @@ export function TeachersCarousel() {
               max: 464,
               min: 0,
             },
-            items: 2,
+            items: 1,
             partialVisibilityGutter: 30,
           },
           tablet: {
@@ -392,25 +483,16 @@ export function TeachersCarousel() {
             partialVisibilityGutter: 30,
           },
         }}
-        rewind={false}
-        rewindWithAnimation={false}
+        rewind={true}
+        rewindWithAnimation={true}
         rtl={false}
         shouldResetAutoplay
         showDots={false}
-        sliderClass=""
+        sliderClass=''
         slidesToSlide={1}
         swipeable
       >
-        {/* {teachersData.map((teacher) => {
-          <Blob key={teacher.id} {...teacher} />;
-        })} */}
-
-        <Blob />
-        <Blob />
-        <Blob />
-        <Blob />
-        <Blob />
-        <Blob />
+        {content}
       </Carousel>
     </div>
   );

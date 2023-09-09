@@ -24,7 +24,7 @@
 
 .section1::after {
   content: "";
-  background-image: url(../../../public/images/DesignImages/crop-cloud.png);
+  background-image: url(../../../public/images/DesignImages/crop-cloud.svg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
