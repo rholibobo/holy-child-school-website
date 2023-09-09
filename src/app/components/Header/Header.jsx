@@ -23,6 +23,7 @@ export default function Header() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          paddingTop: "0.5rem",
         }}
       >
         <Box

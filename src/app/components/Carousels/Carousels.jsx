@@ -1,5 +1,8 @@
 "use client";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
 import Image from "next/image";
 
 import Carousel from "react-multi-carousel";
@@ -84,8 +87,7 @@ export function MediaCard() {
       <Card
         sx={{
           width: "93%",
-          border: "2px solid #ffffff",
-          borderRadius: "30% 20% 40% 10%",
+          borderRadius: "10%",
         }}
       >
         <CardMedia
@@ -94,14 +96,14 @@ export function MediaCard() {
           title="girl child"
         />
 
-        <CardContent sx={{ backgroundColor: "#1faded" }}>
+        <CardContent sx={{ backgroundColor: "#ffffff" }}>
           <Typography
             gutterBottom
-            variant="h6"
+            variant="body2"
             textAlign="center"
             component="div"
-            fontWeight="bold"
-            color="#ffffff"
+            // fontWeight="bold"
+            // color="#ffffff"
           >
             Pre-Nursery
           </Typography>
@@ -110,8 +112,7 @@ export function MediaCard() {
       <Card
         sx={{
           width: "93%",
-          border: "2px solid #ffffff",
-          borderRadius: "30% 20% 40% 10%",
+          borderRadius: "10%",
         }}
       >
         <CardMedia
@@ -120,14 +121,14 @@ export function MediaCard() {
           title="girl child"
         />
 
-        <CardContent sx={{ backgroundColor: "#bb56e2" }}>
+        <CardContent sx={{ backgroundColor: "#ffffff" }}>
           <Typography
             gutterBottom
-            variant="h6"
+            variant="body2"
             textAlign="center"
             component="div"
-            fontWeight="bold"
-            color="#ffffff"
+            // fontWeight="bold"
+            // color="#ffffff"
           >
             Nursery
           </Typography>
@@ -136,8 +137,7 @@ export function MediaCard() {
       <Card
         sx={{
           width: "93%",
-          border: "2px solid #ffffff",
-          borderRadius: "30% 20% 40% 10%",
+          borderRadius: "10%",
         }}
       >
         <CardMedia
@@ -146,14 +146,14 @@ export function MediaCard() {
           title="girl child"
         />
 
-        <CardContent sx={{ backgroundColor: "#919497" }}>
+        <CardContent sx={{ backgroundColor: "#ffffff" }}>
           <Typography
             gutterBottom
-            variant="h6"
+            variant="body2"
             textAlign="center"
             component="div"
-            fontWeight="bold"
-            color="#ffffff"
+            // fontWeight="bold"
+            // color="#ffffff"
           >
             Primary
           </Typography>
@@ -162,129 +162,157 @@ export function MediaCard() {
     </Carousel>
   );
 }
-
-// const CustomRightArrow = ({ onClick }) => {
-//   return (
-//     <button className='iconsDiv bg-pink-500 '>
-//       <FcNext className='text-gray-200' onClick={() => onClick()} />
-//     </button>
-//   );
-// };
-
-// const CustomLeftArrow = ({ onClick }) => {
-//   return (
-//     <button className='iconsDiv bg-pink-500 '>
-//       <FcPrevious className='text-gray-200' onClick={() => onClick()} />
-//     </button>
-//   );
-// };
-
+// <Carousel
+    //   additionalTransfrom={0}
+    //   arrows
+    //   autoPlay
+    //   autoPlaySpeed={1000}
+    //   centerMode={false}
+    //   className=""
+    //   containerClass="container-with-dots"
+    //   dotListClass=""
+    //   draggable
+    //   focusOnSelect={false}
+    //   infinite={false}
+    //   itemClass=""
+    //   keyBoardControl
+    //   minimumTouchDrag={80}
+    //   pauseOnHover
+    //   renderArrowsWhenDisabled={false}
+    //   renderButtonGroupOutside={false}
+    //   renderDotsOutside={false}
+    //   responsive={{
+    //     desktop: {
+    //       breakpoint: {
+    //         max: 3000,
+    //         min: 1024,
+    //       },
+    //       items: 1,
+    //       partialVisibilityGutter: 40,
+    //     },
+    //     mobile: {
+    //       breakpoint: {
+    //         max: 464,
+    //         min: 0,
+    //       },
+    //       items: 1,
+    //       partialVisibilityGutter: 30,
+    //     },
+    //     tablet: {
+    //       breakpoint: {
+    //         max: 1024,
+    //         min: 464,
+    //       },
+    //       items: 1,
+    //       partialVisibilityGutter: 30,
+    //     },
+    //   }}
+    //   rewind
+    //   rewindWithAnimation={false}
+    //   rtl={false}
+    //   shouldResetAutoplay
+    //   showDots={false}
+    //   sliderClass=""
+    //   slidesToSlide={2}
+    //   swipeable
+    // >
+    //   <Box sx={{borderRadius: "10%",}}>
+    //     <Image
+    //       src={pix1}
+    //       alt="Carousel Image"
+    //       style={{
+    //         width: "100%",
+    //         height: "auto",
+    //         borderRadius: "10%",
+    //       }}
+    //     />
+    //   </Box>
+    //   <Box sx={{borderRadius: "10%",}}>
+    //     <Image
+    //       src={pix2}
+    //       alt="Carousel Image"
+    //       style={{
+    //         width: "100%",
+    //         height: "auto",
+    //         borderRadius: "10%",
+    //       }}
+    //     />
+    //   </Box>
+    //   <Box sx={{borderRadius: "10%",}}>
+    //     <Image
+    //       src={pix2}
+    //       alt="Carousel Image"
+    //       style={{
+    //         width: "100%",
+    //         height: "auto",
+    //         borderRadius: "10%",
+    //       }}
+    //     />
+    //   </Box>
+    //   <Box sx={{borderRadius: "10%",}}>
+    //     <Image
+    //       src={pix3}
+    //       alt="Carousel Image"
+    //       style={{
+    //         width: "100%",
+    //         height: "auto",
+    //         borderRadius: "10%",
+    //       }}
+    //     />
+    //   </Box>
+    // </Carousel>
 // Homepage Hero Section Carousel
 export function HeroSectionCarousel() {
   return (
-  <Carousel
-    additionalTransfrom={0}
-    arrows
-    autoPlay
-    autoPlaySpeed={4000}
-    centerMode={false}
-    className=""
-    containerClass="container-with-dots"
-    dotListClass=""
-    draggable
-    focusOnSelect={false}
-    infinite={false}
-    itemClass=""
-    keyBoardControl
-    minimumTouchDrag={80}
-    pauseOnHover
-    renderArrowsWhenDisabled={false}
-    renderButtonGroupOutside={false}
-    renderDotsOutside={false}
-    responsive={{
-      desktop: {
-        breakpoint: {
-          max: 3000,
-          min: 1024,
-        },
-        items: 1,
-        partialVisibilityGutter: 40,
-      },
-      mobile: {
-        breakpoint: {
-          max: 464,
-          min: 0,
-        },
-        items: 1,
-        partialVisibilityGutter: 30,
-      },
-      tablet: {
-        breakpoint: {
-          max: 1024,
-          min: 464,
-        },
-        items: 1,
-        partialVisibilityGutter: 30,
-      },
-    }}
-    rewind
-    rewindWithAnimation={false}
-    rtl={false}
-    shouldResetAutoplay
-    showDots={false}
-    sliderClass=""
-    slidesToSlide={2}
-    swipeable
-  >
-    <Box >
-      <Image
-        src={pix1}
-        alt="Carousel Image"
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "20% 10% 30% 20%",
-          border: "2px solid #ffffff",
-        }}
-      />
-    </Box>
-    <Box >
-      <Image
-        src={pix2}
-        alt="Carousel Image"
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "20% 10% 30% 20%",
-          border: "2px solid #ffffff",
-        }}
-      />
-    </Box>
-    <Box >
-      <Image
-        src={pix2}
-        alt="Carousel Image"
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "20% 10% 30% 20%",
-          border: "2px solid #ffffff",
-        }}
-      />
-    </Box>
-    <Box>
-      <Image
-        src={pix3}
-        alt="Carousel Image"
-        style={{
-          width: "100%",
-          height: "auto",
-          borderRadius: "20% 10% 30% 20%",
-          border: "2px solid #ffffff",
-        }}
-      />
-    </Box>
-  </Carousel>
+    
+    <Swiper spaceBetween={50} slidesPerView={1}>
+      <SwiperSlide>
+        {/* <Box>
+          <Image
+            src={pix1}
+            alt="Carousel Image"
+            style={{
+              width: "100%",
+              height: "100vh",
+              borderRadius: "10%",
+            }}
+            // width={400}
+            // height={400}
+          />
+        </Box> */}
+        1
+      </SwiperSlide>
+      {/* <SwiperSlide>
+        <Box>
+          <Image
+            src={pix2}
+            alt="Carousel Image"
+            // style={{
+            //   // width: "100%",
+            //   // height: "auto",
+            //   borderRadius: "10%",
+            // }}
+            width={400}
+            height={400}
+          />
+        </Box>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Box>
+          <Image
+            src={pix3}
+            alt="Carousel Image"
+            // style={{
+            //   // width: "100%",
+            //   // height: "auto",
+            //   borderRadius: "10%",
+            // }}
+            width={400}
+            height={400}
+          />
+        </Box>
+      </SwiperSlide> */}
+    </Swiper>
   );
 }
 

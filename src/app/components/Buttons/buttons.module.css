@@ -1,7 +1,7 @@
 /* Enroll Now Button */
 .enroll_now_btn {
   padding: 1rem 2.5rem;
-  background-color: #1c1464 ;
+  background-color: #2b19cf ;
   /* background-image: linear-gradient(to right, #1faded, #fff200); */
   border: none;
   text-align: center;
@@ -11,8 +11,7 @@
   border-radius: 30px 5px 15px 20px;
   border-bottom-right-radius: -10px 20px;
   border-top-right-radius: 30px 80px;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-    rgba(66, 62, 62, 0.8) -6px -2px 16px 0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: relative;
     z-index: 3;
 }
