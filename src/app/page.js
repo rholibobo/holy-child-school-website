@@ -33,6 +33,7 @@ import {
   WovenImageList,
   WovenImageListMobileView,
 } from "./components/HomeImageList/ImageList";
+import Earth from "./components/gifs/earth/earth";
 
 //////// Icons //////////
 import { FcGraduationCap } from "react-icons/fc";
@@ -42,6 +43,11 @@ import { HiLightBulb } from "react-icons/hi";
 import { BsPencilSquare } from "react-icons/bs";
 import { FaBook } from "react-icons/fa";
 import Link from "next/link";
+import {
+  HomeHero,
+  MediaCardCarousel,
+  GalleryCarousel,
+} from "./components/SwiperCarousels/Swiper";
 
 export default function Home() {
   const isMobileView = useMediaQuery("(max-width:850px)");
@@ -54,24 +60,15 @@ export default function Home() {
           <Header />
         </div>
         <div className={styles.section_container}>
-          <Grid
-            container
-            rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            sx={{ width: "80%", marginTop: "4rem" }}
-          >
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={
-                  {
-                    // width: "100%",
-                    // height: "50vh",
-                    // border: "1px solid red",
-                    // display: "flex",
-                    // alignItems: "center",
-                  }
-                }
-              >
+          <Box sx={{ display: "flex" }}>
+            <Box
+              sx={{
+                width: { xs: "100%", md: "50%" },
+                marginTop: "4rem",
+                position: "relative",
+              }}
+            >
+              <Box>
                 <div>
                   <Typography
                     variant="h6"
@@ -106,24 +103,25 @@ export default function Home() {
                 </div>
               </Box>
               <br />
-              <Image
-                src="/images/DesignImages/globe.png"
-                width={60}
-                height={60}
-                alt="globe"
-                style={{ marginLeft: "-40px" }}
-              />
-            </Grid>
+              <div className={styles.earthContainer}>
+                <Earth />
+              </div>
+            </Box>
 
-            <Grid
-              item
-              xs={12}
-              md={6}
-              sx={{ display: { xs: "none", md: "grid" }, marginTop: "-6rem" }}
+            <Box
+              sx={{
+                width: "50%",
+                maxWidth: "50%",
+                maxHeight: "auto",
+                minHeight: "0",
+                minWidth: "0",
+                display: { xs: "none", md: "block" },
+                marginTop: "3rem",
+              }}
             >
-              <HeroSectionCarousel />
-            </Grid>
-          </Grid>
+              <HomeHero />
+            </Box>
+          </Box>
         </div>
       </div>
 
@@ -140,8 +138,8 @@ export default function Home() {
             // position: "relative",
           }}
         >
-          <Box sx={{ width: "50%", marginTop: "4rem" }}>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }} gutterBottom>
+          <Box sx={{ width: { xs: "90%", md: "50%" }, marginTop: {xs:"2rem", md: "5rem"} }}>
+            <Typography variant="h4" fontWeight="bold" gutterBottom>
               Why Holy Child?
             </Typography>
             <br />
@@ -290,7 +288,7 @@ export default function Home() {
           >
             <Box
               sx={{
-                marginTop: { xs: "4rem", md: "10rem" },
+                marginTop: { xs: "4rem", md: "7rem" },
                 width: { xs: "90%", md: "40%" },
               }}
             >
@@ -314,10 +312,15 @@ export default function Home() {
             <Box
               sx={{
                 width: { xs: "100%", md: "40%" },
+                maxWidth: "100%",
+                maxHeight: "auto",
+                // minHeight: "0",
+                // minWidth: "0",
                 marginTop: { xs: "2rem", md: "7rem" },
+                padding: "0 1rem",
               }}
             >
-              <MediaCard />
+              <MediaCardCarousel />
             </Box>
           </Box>
         </Box>
@@ -331,12 +334,14 @@ export default function Home() {
               display: "flex",
               justifyContent: "space-between",
               flexDirection: { xs: "column", md: "row" },
+              gap: { xs: "2rem", md: "0" },
             }}
           >
             <Box
               sx={{
                 width: { xs: "100%", md: "50%" },
                 height: "100%",
+                order: { xs: "1", md: "2" },
               }}
             >
               <Image
@@ -360,7 +365,8 @@ export default function Home() {
                   sx={{
                     fontWeight: "bold",
                     color: "#e130a7",
-                    boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
+                    boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                    backgroundColor: "#ffffff",
                   }}
                   gutterBottom
                 >
@@ -401,7 +407,19 @@ export default function Home() {
       {/* ///////////// Section 5 ///////////// */}
       <div className={styles.section5}>
         <div className={styles.section5_div}>
-          {!isMobileView ? <WovenImageList /> : <WovenImageListMobileView />}
+          <Typography
+            variant="h2"
+            fontWeight="bold"
+            textAlign="center"
+            sx={{ color: "#1c1464" }}
+            gutterBottom
+          >
+            GALLERY
+          </Typography>
+
+          <Box>
+            <GalleryCarousel />
+          </Box>
 
           <br />
           <Link href="/gallery">
@@ -428,20 +446,25 @@ export default function Home() {
             <Box
               sx={{
                 width: { xs: "100%", md: "35%" },
-                height: { xs: "70vh", sm: "50vh", md: "80vh" },
-                backgroundColor: "#1faded",
-                borderRadius: "20% 35% 20% 15%",
+                height: { xs: "auto", sm: "auto", md: "70vh" },
+                backgroundColor: "#ffffff",
+                borderRadius: "60px",
                 border: "2px solid #ffffff",
-                marginTop: { xs: "2rem", md: "9rem" },
-                color: "#ffffff",
-                padding: { xs: "2rem", sm: "3rem", md: "3rem" },
+                marginTop: { xs: "2rem", md: "6rem" },
+                color: "#1c1469",
+                padding: { xs: "2rem", sm: "3rem", md: "2rem" },
               }}
             >
               <Box>
-                <Typography variant="h5" textAlign="center" gutterBottom>
+                <Typography
+                  variant="h6"
+                  fontWeight="bold"
+                  textAlign="center"
+                  gutterBottom
+                >
                   Our Core Value
                 </Typography>
-                <Typography textAlign="center" gutterBottom>
+                <Typography variant="subtitle2" textAlign="center" gutterBottom>
                   Good character and a love for leisure reading. Objectives: to
                   raise children who not only fear God but are able to hold
                   their own in any circumstance.
@@ -449,20 +472,30 @@ export default function Home() {
               </Box>
               <br />
               <Box>
-                <Typography variant="h5" textAlign="center" gutterBottom>
+                <Typography
+                  variant="h6"
+                  fontWeight="bold"
+                  textAlign="center"
+                  gutterBottom
+                >
                   Our Belief
                 </Typography>
-                <Typography textAlign="center" gutterBottom>
+                <Typography variant="subtitle2" textAlign="center" gutterBottom>
                   Because “talent is not enough,”brilliance must be matched by
                   good charater.
                 </Typography>
               </Box>
               <br />
               <Box>
-                <Typography variant="h5" textAlign="center" gutterBottom>
+                <Typography
+                  variant="h6"
+                  fontWeight="bold"
+                  textAlign="center"
+                  gutterBottom
+                >
                   Our Vision
                 </Typography>
-                <Typography textAlign="center" gutterBottom>
+                <Typography variant="subtitle2" textAlign="center" gutterBottom>
                   To become a first rate educational institution with a
                   reputation for excellent character and strong academic
                   learning.
@@ -472,11 +505,11 @@ export default function Home() {
             <Box
               sx={{
                 width: { xs: "100%", md: "30%" },
-                height: { sm: "50vh", md: "80vh" },
+                height: { sm: "auto", md: "70vh" },
                 backgroundColor: "#ffffff",
-                borderRadius: "20% 35% 20% 15%",
+                borderRadius: "60px",
                 border: "2px solid #1c1464",
-                marginTop: { xs: "2rem", md: "9rem" },
+                marginTop: { xs: "2rem", md: "6rem" },
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-around",
@@ -485,7 +518,12 @@ export default function Home() {
               }}
             >
               <Box>
-                <Typography variant="h4" textAlign="center" gutterBottom>
+                <Typography
+                  variant="h5"
+                  fontWeight="bold"
+                  textAlign="center"
+                  gutterBottom
+                >
                   Meet our Educational Consultant
                 </Typography>
 
@@ -498,7 +536,7 @@ export default function Home() {
                   Dr. Mrs. O. Nnamani
                 </Typography>
               </Box>
-              <Typography gutterBottom>
+              <Typography variant="subtitle2" gutterBottom>
                 B.A English, U.N.N; M.A English, U.N.N, best Graduating Student
                 85/ 86 session; Ph.d English, Ebonyi State University,
                 Abakaliki. Founder, Holy Child Preparatory School. Senior
@@ -509,9 +547,9 @@ export default function Home() {
             <Box
               sx={{
                 width: { xs: "100%", md: "30%" },
-                height: { sm: "60vh", md: "70vh" },
+                height: { sm: "auto", md: "50vh" },
                 // backgroundColor: "#81d742",
-                marginTop: { xs: "2rem", md: "7rem" },
+                marginTop: { xs: "2rem", md: "4rem" },
               }}
             >
               <Image
@@ -536,9 +574,8 @@ export default function Home() {
               width: "100%",
               height: "100vh",
               border: "0",
-              marginTop: "2rem",
+              marginTop: "1rem",
             }}
-            allowFullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>

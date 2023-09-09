@@ -1,16 +1,22 @@
 .active {
   background-color: #ffffff;
   color: #000000;
+  
+}
+.active:hover{
+  background-color: rgb(193, 193, 206);
+  color: #000000;
 }
 
 .logo {
   width: 60%;
   height: auto;
+  /* margin-top: 0.5rem; */
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 821px) {
   .logo {
-    width: 40%;
+    width: 35%;
     margin-top: 1rem;
   }
 }

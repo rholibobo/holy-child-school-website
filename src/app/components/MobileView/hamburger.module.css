@@ -1,4 +1,20 @@
-.link_tag{
-    text-decoration: none;
-    color: black;
+.link_tag {
+  text-decoration: none;
+  color: #1c1469;
+}
+.iconHover {
+  color: #1c1469;
+}
+.buttonHover:hover {
+  font-size: 1.4rem;
+}
+
+.buttonHover:hover {
+  background-color: #1c1469;
+  color: #ffffff;
+}
+
+.buttonHover:hover .iconHover {
+  color: #ffffff;
+  /* font-size: 40px; */
 }

@@ -43,10 +43,11 @@ export default function Gallery() {
     <main className='justify-center items-center'>
       <section className='overflow-hidden'>
         <div className={`${styles.section1} after:hidden after:lg:block `}>
-          <div className={styles.section_container}>
-            <div className={styles.navbar}>
+        <div className={styles.navbar}>
               <Header />
             </div>
+          <div className={styles.section_container}>
+            
 
             <div className='max-width  flex justify-between items-center  mt-[9rem]  '>
               <div>

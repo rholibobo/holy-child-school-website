@@ -19,18 +19,16 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 
 /////////// MUI ICONS /////////////////////
-import HomeIcon from '@mui/icons-material/Home';
-import BookIcon from '@mui/icons-material/Book';
-import InfoIcon from '@mui/icons-material/Info';
-import PeopleIcon from '@mui/icons-material/People';
-import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
-import CollectionsIcon from '@mui/icons-material/Collections';
-import PhoneIcon from '@mui/icons-material/Phone';
-import RouteIcon from '@mui/icons-material/Route';
+import HomeIcon from "@mui/icons-material/Home";
+import BookIcon from "@mui/icons-material/Book";
+import InfoIcon from "@mui/icons-material/Info";
+import PeopleIcon from "@mui/icons-material/People";
+import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
+import CollectionsIcon from "@mui/icons-material/Collections";
+import PhoneIcon from "@mui/icons-material/Phone";
+import RouteIcon from "@mui/icons-material/Route";
 
 import { motion } from "framer-motion";
-
-
 
 export default function HamburgerMenu() {
   const [open, setOpen] = useState(false);
@@ -43,7 +41,12 @@ export default function HamburgerMenu() {
     <div>
       <GiHamburgerMenu
         onClick={toggleDrawer}
-        style={{ color: "black", fontSize: "30px", marginTop: "1rem", color: "#ffffff" }}
+        style={{
+          color: "black",
+          fontSize: "30px",
+          marginTop: "1rem",
+          color: "#ffffff",
+        }}
       />
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
         <Box sx={{ width: { xs: "250px", sm: "400px" } }}>
@@ -64,11 +67,14 @@ export default function HamburgerMenu() {
           <br />
           <List sx={{ marginTop: "3rem" }}>
             <br />
-            <motion.div whileTap={{ scale: 0.9 }}>
+            <motion.div
+              whileTap={{ scale: 0.9 }}
+              whileHover={{ backgroundColor: "#1c1465" }}
+            >
               <Link href="/" className={styles.link_tag}>
-                <ListItemButton>
+                <ListItemButton className={styles.buttonHover}>
                   <ListItemIcon>
-                    <HomeIcon />
+                    <HomeIcon className={styles.iconHover} />
                   </ListItemIcon>
 
                   <ListItemText primary="Home" />
@@ -78,9 +84,9 @@ export default function HamburgerMenu() {
             <br />
             <motion.div whileTap={{ scale: 0.9 }}>
               <Link href="/blog" className={styles.link_tag}>
-                <ListItemButton>
+                <ListItemButton className={styles.buttonHover}>
                   <ListItemIcon>
-                    <BookIcon />
+                    <BookIcon className={styles.iconHover} />
                   </ListItemIcon>
 
                   <ListItemText primary="Blog" />
@@ -90,9 +96,9 @@ export default function HamburgerMenu() {
             <br />
             <motion.div whileTap={{ scale: 0.9 }}>
               <Link href="/about-us" className={styles.link_tag}>
-                <ListItemButton>
+                <ListItemButton className={styles.buttonHover}>
                   <ListItemIcon>
-                    <InfoIcon />
+                    <InfoIcon className={styles.iconHover} />
                   </ListItemIcon>
 
                   <ListItemText primary="About Us" />
@@ -102,9 +108,9 @@ export default function HamburgerMenu() {
             <br />
             <motion.div whileTap={{ scale: 0.9 }}>
               <Link href="/teachers" className={styles.link_tag}>
-                <ListItemButton>
+                <ListItemButton className={styles.buttonHover}>
                   <ListItemIcon>
-                    <PeopleIcon />
+                    <PeopleIcon className={styles.iconHover} />
                   </ListItemIcon>
 
                   <ListItemText primary="Meet Our Teachers" />
@@ -114,9 +120,9 @@ export default function HamburgerMenu() {
             <br />
             <motion.div whileTap={{ scale: 0.9 }}>
               <Link href="/services" className={styles.link_tag}>
-                <ListItemButton>
+                <ListItemButton className={styles.buttonHover}>
                   <ListItemIcon>
-                    <MiscellaneousServicesIcon />
+                    <MiscellaneousServicesIcon className={styles.iconHover} />
                   </ListItemIcon>
 
                   <ListItemText primary="Services" />
@@ -126,9 +132,9 @@ export default function HamburgerMenu() {
             <br />
             <motion.div whileTap={{ scale: 0.9 }}>
               <Link href="/gallery" className={styles.link_tag}>
-                <ListItemButton>
+                <ListItemButton className={styles.buttonHover}>
                   <ListItemIcon>
-                    <CollectionsIcon />
+                    <CollectionsIcon className={styles.iconHover} />
                   </ListItemIcon>
 
                   <ListItemText primary="Gallery" />
@@ -138,9 +144,9 @@ export default function HamburgerMenu() {
             <br />
             <motion.div whileTap={{ scale: 0.9 }}>
               <Link href="/contact-us" className={styles.link_tag}>
-                <ListItemButton>
+                <ListItemButton className={styles.buttonHover}>
                   <ListItemIcon>
-                    <PhoneIcon />
+                    <PhoneIcon className={styles.iconHover} />
                   </ListItemIcon>
 
                   <ListItemText primary="Contact Us" />
@@ -150,9 +156,9 @@ export default function HamburgerMenu() {
             <br />
             <motion.div whileTap={{ scale: 0.9 }}>
               <Link href="#" className={styles.link_tag}>
-                <ListItemButton>
+                <ListItemButton className={styles.buttonHover}>
                   <ListItemIcon>
-                    <RouteIcon />
+                    <RouteIcon className={styles.iconHover} />
                   </ListItemIcon>
 
                   <ListItemText primary="School Portal" />
