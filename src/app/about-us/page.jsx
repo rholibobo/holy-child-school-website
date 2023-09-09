@@ -9,6 +9,12 @@ import Header from "../components/Header/Header";
 import FloatingBallons from "../../../public/images/DesignImages/ballons-unscreen.gif";
 import Image from "next/image";
 import { Campaign, Favorite, Tv } from "@mui/icons-material";
+import {
+  GalleryCarousel,
+  TeachersCarousel,
+} from "../components/SwiperCarousels/Swiper";
+import { ViewAllButton } from "../components/Buttons/AllButtons";
+import Link from "next/link";
 
 export default function AboutUs() {
   return (
@@ -23,11 +29,7 @@ export default function AboutUs() {
             alt="floating ballons"
             className={styles.gif}
           />
-          <Image
-            src={FloatingBallons}
-            alt="floating ballons"
-            className={styles.gif1}
-          />
+
           <Box sx={{ marginTop: "4rem" }}>
             <Box>
               <Typography
@@ -60,11 +62,27 @@ export default function AboutUs() {
               </Typography>
             </Box>
           </Box>
+          <Image
+            src={FloatingBallons}
+            alt="floating ballons"
+            className={styles.gif1}
+          />
         </div>
       </section>
 
       {/* ////////////////////// */}
       <section className={styles.values_section}>
+        <Box sx={{ marginTop: "3rem" }}>
+          <Typography
+            variant="h3"
+            fontWeight="bold"
+            textAlign="center"
+            color="#1c1489"
+            gutterBottom
+          >
+            What Are We About?
+          </Typography>
+        </Box>
         <Box
           sx={{
             width: { xs: "90%", md: "80%" },
@@ -76,7 +94,7 @@ export default function AboutUs() {
         >
           <Box
             sx={{
-              marginTop: {xs: "5rem",md:"7rem"},
+              marginTop: { xs: "5rem", md: "7rem" },
               width: { xs: "100%", md: "30%" },
               position: "relative",
               padding: "2rem",
@@ -133,8 +151,8 @@ export default function AboutUs() {
           </Box>
           <Box
             sx={{
-              marginTop: {xs: "2rem",md:"7rem"},
-              width: {xs: "100%" ,md:"30%"},
+              marginTop: { xs: "2rem", md: "7rem" },
+              width: { xs: "100%", md: "30%" },
               position: "relative",
               padding: "2rem",
               boxShadow: "#81d742 0px 2px 4px 0px, #81d742 0px 2px 16px 0px",
@@ -160,6 +178,34 @@ export default function AboutUs() {
             </Typography>
           </Box>
         </Box>
+      </section>
+
+      {/* ///////// Teachers Gallery /////////// */}
+      <section className={styles.teachers_gallery}>
+        <Box>
+          <Typography
+            variant="h3"
+            fontWeight="bold"
+            textAlign="center"
+            color="#1c1489"
+            gutterBottom
+          >
+            Meet Our Teachers
+          </Typography>
+        </Box>
+            <br />
+        <Box sx={{width: {xs: "95%",md:"80%"},margin: "0 auto"}}>
+          <TeachersCarousel />
+
+          <br />
+          <Link href="/teachers">
+            <ViewAllButton />
+          </Link>
+        </Box>
+
+        
+
+
       </section>
     </main>
   );

@@ -22,59 +22,43 @@
   opacity: 0.05;
 }
 
-.section1::after {
-  content: "";
-  background-image: url(../../../public/images/DesignImages/crop-cloud.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  object-fit: cover;
-  width: 100%;
-  height: 19%;
-  display: block;
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  /* border: 1px solid black;  */
-}
-
 .section_container {
   width: 80%;
   margin: 0 auto;
   /* position: relative; */
 }
 
-.navbar{
+.navbar {
   width: 95%;
   margin: 0 auto;
 }
 
 .gif {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 15%;
-    height: auto;
-    z-index: 10;
+  position: absolute;
+  top: 7%;
+  left: -1%;
+  width: 15%;
+  height: auto;
+  z-index: 10;
 }
 .gif1 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 15%;
-    height: auto;
-    z-index: 10;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 15%;
+  height: auto;
+  z-index: 10;
 }
 
-
 /* ///////////////////////// */
-.values_section{
+.values_section {
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
   position: relative;
 }
 
-.values_section::before{
+.values_section::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -102,7 +86,7 @@
 .icons_div2 {
   padding: 1rem;
   border-radius: 50% 30%;
-  background-color:#1faded;
+  background-color: #1faded;
   border: 1px solid #1faded;
   position: absolute;
   top: -9%;
@@ -118,7 +102,16 @@
   left: 40%;
 }
 
-@media screen and (max-width: 820px) {
+/* ///////////////////////////// */
+.teachers_gallery {
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+  border-radius: 50px;
+  background-color: #f0f3f6;
+}
+
+@media screen and (max-width: 850px) {
   .section1 {
     width: 100%;
     height: auto;
@@ -132,17 +125,16 @@
     font-size: 8rem;
     line-height: 100px;
   }
-  .section1::after {
-    display: none;
-    /* height: 12vh; */
-    /* bottom: -5px; */
-  }
-  .gif, .gif1{
+
+  .gif,
+  .gif1 {
     width: 30%;
   }
-  .values_section{
+  .gif1 {
+    bottom: -40px;
+  }
+  .values_section {
     height: auto;
     padding-bottom: 2rem;
-    
   }
 }
