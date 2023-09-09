@@ -22,72 +22,17 @@
   opacity: 0.05;
 }
 
-.section1::after {
-  content: "";
-  background-image: url(../../../public/images/DesignImages/crop-cloud.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 18.88%;
-  display: block;
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  /* margin-bottom: 0px; */
-  /* border: 1px solid black;  */
-}
+
 
 .section_container {
-  width: 80%;
+  width: 90%;
+  margin: 0 auto;
+}
+.navbar {
+  width: 95%;
   margin: 0 auto;
 }
 
-.info {
-  width: 20%;
-  height: 15vh;
-  padding: 1rem;
-  border-radius: 50% 20%;
-  background-color: rgba(255, 165, 0);
-  position: absolute;
-  top: 0;
-  left: 20px;
-  color: white;
-  box-shadow: rgba(33, 36, 37, 0.48) 6px 2px 16px 0px,
-    rgba(115, 110, 110, 0.8) -6px -2px 16px 0px;
-}
 
-.info2 {
-  width: 20%;
-  height: 15vh;
-  padding: 1rem;
-  border-radius: 50% 20%;
-  background-color: #bb56e2;
-  position: absolute;
-  top: 80px;
-  right: 150px;
-  color: white;
-  box-shadow: rgba(33, 36, 37, 0.48) 6px 2px 16px 0px,
-    rgba(115, 110, 110, 0.8) -6px -2px 16px 0px;
-}
-
-.info3 {
-  width: 22%;
-  height: 15vh;
-  padding: 1rem;
-  border-radius: 50% 20%;
-  background-color: #1faded;
-  position: absolute;
-  right: 35px;
-  bottom: -10px;
-  color: white;
-  box-shadow: rgba(33, 36, 37, 0.48) 6px 2px 16px 0px,
-    rgba(115, 110, 110, 0.8) -6px -2px 16px 0px;
-}
-
-.stars_div {
-  position: absolute;
-  top: -60px;
-  right: -80px;
-}
 
 
