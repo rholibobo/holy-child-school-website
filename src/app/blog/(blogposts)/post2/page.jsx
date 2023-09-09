@@ -40,7 +40,7 @@ const page = () => {
               and provide practical tips for parents and educators.
             </p>
 
-            <h3>The Role of Creativity in Early Education</h3>
+            <h2>The Role of Creativity in Early Education</h2>
             <p>
               Creativity is the ability to think outside the box, solve problems
               innovatively, and express oneself in unique ways. In preschool,
@@ -49,7 +49,7 @@ const page = () => {
               emotional growth.
             </p>
 
-            <h3>Benefits of Fostering Creativity</h3>
+            <h2>Benefits of Fostering Creativity</h2>
             <p>
               <ol>
                 <li>Enhanced problem-solving skills</li>
@@ -60,7 +60,7 @@ const page = () => {
               </ol>
             </p>
 
-            <h3>Practical Tips for Encouraging Creativity</h3>
+            <h2>Practical Tips for Encouraging Creativity</h2>
             <p>
               Here are some practical strategies for parents and educators to
               nurture creativity in young learners:
@@ -79,7 +79,7 @@ const page = () => {
               </li>
             </ol>
 
-            <h3>Conclusion</h3>
+            <h2>Conclusion</h2>
             <p>
               Cultivating creativity in education is a powerful tool for
               enhancing learning outcomes and preparing children for a bright
