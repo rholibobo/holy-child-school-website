@@ -35,7 +35,7 @@ export default function Header() {
           }}
         >
           <Box>
-          {!isMobileView ? null : <HamburgerMenu />}
+          {!isMobileView ? "" : <HamburgerMenu />}
           </Box>
           
 

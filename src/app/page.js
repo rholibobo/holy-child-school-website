@@ -447,11 +447,11 @@ export default function Home() {
               sx={{
                 width: { xs: "100%", md: "35%" },
                 height: { xs: "auto", sm: "auto", md: "70vh" },
-                backgroundColor: "#1faded",
+                backgroundColor: "#ffffff",
                 borderRadius: "60px",
                 border: "2px solid #ffffff",
                 marginTop: { xs: "2rem", md: "6rem" },
-                color: "#ffffff",
+                color: "#1c1469",
                 padding: { xs: "2rem", sm: "3rem", md: "2rem" },
               }}
             >
@@ -547,7 +547,7 @@ export default function Home() {
             <Box
               sx={{
                 width: { xs: "100%", md: "30%" },
-                height: { sm: "60vh", md: "50vh" },
+                height: { sm: "auto", md: "50vh" },
                 // backgroundColor: "#81d742",
                 marginTop: { xs: "2rem", md: "4rem" },
               }}
