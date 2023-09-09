@@ -23,7 +23,7 @@ export default function Header() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          paddingTop: "0.5rem",
+          paddingTop: {xs: "0",md:"0.5rem"},
         }}
       >
         <Box
@@ -34,7 +34,10 @@ export default function Header() {
             alignItems: "center",
           }}
         >
+          <Box>
           {!isMobileView ? null : <HamburgerMenu />}
+          </Box>
+          
 
           <Image src={Logo} alt="logo" className={styles.logo} />
         </Box>

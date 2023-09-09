@@ -111,7 +111,7 @@ export function MediaCardCarousel() {
       <SwiperSlide>
         <Card
           sx={{
-            width: "80%",
+            width: {xs:"95%",md:"80%"},
             borderRadius: "10%",
           }}
         >
@@ -138,7 +138,7 @@ export function MediaCardCarousel() {
       <SwiperSlide>
         <Card
           sx={{
-            width: "80%",
+            width: {xs:"95%",md:"80%"},
             borderRadius: "10%",
           }}
         >
@@ -165,7 +165,7 @@ export function MediaCardCarousel() {
       <SwiperSlide>
         <Card
           sx={{
-            width: "80%",
+            width: {xs:"95%",md:"80%"},
             borderRadius: "10%",
           }}
         >
@@ -199,8 +199,25 @@ export function GalleryCarousel() {
       modules={[Navigation, Pagination, Scrollbar]}
       pagination={{ clickable: true }}
       navigation={true}
-      spaceBetween={50}
-      slidesPerView={2}
+      lazy={true}
+      // spaceBetween={50}
+      // slidesPerView={2}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+      }}
+      
+      
      
     >
       <SwiperSlide>
@@ -208,6 +225,7 @@ export function GalleryCarousel() {
           src={port3}
           alt="Gallery Image1"
           sizes="100vw"
+          loading="lazy"
           style={{
             width: "100%",
             height: "auto",
@@ -219,6 +237,7 @@ export function GalleryCarousel() {
           src={port4}
           alt="Gallery Image1"
           sizes="100vw"
+          loading="lazy"
           style={{
             width: "100%",
             height: "auto",
@@ -230,6 +249,7 @@ export function GalleryCarousel() {
           src={port5}
           alt="Gallery Image1"
           sizes="100vw"
+          loading="lazy"
           style={{
             width: "100%",
             height: "auto",
@@ -241,6 +261,7 @@ export function GalleryCarousel() {
           src={port6}
           alt="Gallery Image1"
           sizes="100vw"
+          loading="lazy"
           style={{
             width: "100%",
             height: "auto",
@@ -252,6 +273,7 @@ export function GalleryCarousel() {
           src={port7}
           alt="Gallery Image1"
           sizes="100vw"
+          loading="lazy"
           style={{
             width: "100%",
             height: "auto",

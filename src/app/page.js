@@ -61,18 +61,14 @@ export default function Home() {
         </div>
         <div className={styles.section_container}>
           <Box sx={{ display: "flex" }}>
-            <Box sx={{ width: "50%", marginTop: "4rem", position: "relative" }}>
-              <Box
-                sx={
-                  {
-                    // width: "40%",
-                    // height: "50vh",
-                    // border: "1px solid red",
-                    // display: "flex",
-                    // alignItems: "center",
-                  }
-                }
-              >
+            <Box
+              sx={{
+                width: { xs: "100%", md: "50%" },
+                marginTop: "4rem",
+                position: "relative",
+              }}
+            >
+              <Box>
                 <div>
                   <Typography
                     variant="h6"
@@ -142,8 +138,8 @@ export default function Home() {
             // position: "relative",
           }}
         >
-          <Box sx={{ width: "50%", marginTop: "5rem" }}>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }} gutterBottom>
+          <Box sx={{ width: { xs: "90%", md: "50%" }, marginTop: {xs:"2rem", md: "5rem"} }}>
+            <Typography variant="h4" fontWeight="bold" gutterBottom>
               Why Holy Child?
             </Typography>
             <br />
@@ -316,11 +312,12 @@ export default function Home() {
             <Box
               sx={{
                 width: { xs: "100%", md: "40%" },
-                maxWidth: "40%",
+                maxWidth: "100%",
                 maxHeight: "auto",
-                minHeight: "0",
-                minWidth: "0",
+                // minHeight: "0",
+                // minWidth: "0",
                 marginTop: { xs: "2rem", md: "7rem" },
+                padding: "0 1rem",
               }}
             >
               <MediaCardCarousel />
@@ -337,12 +334,14 @@ export default function Home() {
               display: "flex",
               justifyContent: "space-between",
               flexDirection: { xs: "column", md: "row" },
+              gap: { xs: "2rem", md: "0" },
             }}
           >
             <Box
               sx={{
                 width: { xs: "100%", md: "50%" },
                 height: "100%",
+                order: { xs: "1", md: "2" },
               }}
             >
               <Image
@@ -366,7 +365,8 @@ export default function Home() {
                   sx={{
                     fontWeight: "bold",
                     color: "#e130a7",
-                    boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
+                    boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                    backgroundColor: "#ffffff",
                   }}
                   gutterBottom
                 >
@@ -417,7 +417,7 @@ export default function Home() {
             GALLERY
           </Typography>
 
-          <Box sx={{ height: "100%" }}>
+          <Box>
             <GalleryCarousel />
           </Box>
 
@@ -446,7 +446,7 @@ export default function Home() {
             <Box
               sx={{
                 width: { xs: "100%", md: "35%" },
-                height: { xs: "70vh", sm: "50vh", md: "70vh" },
+                height: { xs: "auto", sm: "auto", md: "70vh" },
                 backgroundColor: "#1faded",
                 borderRadius: "60px",
                 border: "2px solid #ffffff",
@@ -505,7 +505,7 @@ export default function Home() {
             <Box
               sx={{
                 width: { xs: "100%", md: "30%" },
-                height: { sm: "50vh", md: "70vh" },
+                height: { sm: "auto", md: "70vh" },
                 backgroundColor: "#ffffff",
                 borderRadius: "60px",
                 border: "2px solid #1c1464",
@@ -574,9 +574,8 @@ export default function Home() {
               width: "100%",
               height: "100vh",
               border: "0",
-              marginTop: "2rem",
+              marginTop: "1rem",
             }}
-            allowFullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
