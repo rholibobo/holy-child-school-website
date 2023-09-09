@@ -1,11 +1,11 @@
 .blogContainer {
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto;
   position: relative;
 }
 
 .blogSection {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 10px 30px;
 
@@ -208,10 +208,6 @@
     width: 90%;
   }
 
-  .blogSection {
-    margin-top: 60px;
-  }
-
   .blogHeader h1 {
     font-size: 36px;
     margin-bottom: 10px;
@@ -230,7 +226,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 0;
   }
 }
 
