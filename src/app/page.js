@@ -195,7 +195,7 @@ export default function Home() {
                 }}
               >
                 <div className={styles.icons_div3}>
-                  <BiSolidBusSchool style={{ fontSize: "30px" }} />
+                  <BiSolidBusSchool style={{ fontSize: "30px", color: "#ffffff" }} />
                 </div>
                 <Typography
                   variant="body1"

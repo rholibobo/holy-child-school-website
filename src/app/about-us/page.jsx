@@ -94,7 +94,7 @@ export default function AboutUs() {
         >
           <Box
             sx={{
-              marginTop: { xs: "5rem", md: "7rem" },
+              marginTop: { xs: "2rem", md: "7rem" },
               width: { xs: "100%", md: "30%" },
               position: "relative",
               padding: "2rem",
