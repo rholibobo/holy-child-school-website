@@ -1,9 +1,8 @@
 import React from "react";
-import Footer from "../components/Footer/footer";
 
 export const metadata = {
   title: "Holy Child School",
-  description: "Holy Child School Website",
+  description: "Holy Child Blog",
 };
 
 export default function RootLayout({ children }) {
@@ -11,7 +10,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div>{children}</div>
-        <Footer />
       </body>
     </html>
   );

@@ -5,7 +5,6 @@ import styles from "./page.module.css";
 
 import Header from "../components/Header/Header";
 import GifBackgroundSection from "../components/gifs/writing-video/vid";
-import BusGif from "../components/gifs/bus/bus";
 import BlogPosts from "../components/blogPosts/blog";
 
 const page = () => {
@@ -13,21 +12,21 @@ const page = () => {
     <section className={styles.container}>
       {/* ////////// SECTION 1 //////////// */}
       <div className={styles.section1}>
-        <div className={styles.navbar}>
-          <Header />
-        </div>
-        <section className={styles.headerContainer}>
+        <div className={styles.headerContainer}>
+          <div className={styles.navbar}>
+            <Header />
+          </div>
           <div className={styles.blogHeader}>
-            <h1>Welcome to Holychild's Blog</h1>
-            <h2>Beyond the Books: Unveiling Our Blog</h2>
+            <h1>Explore Holychild's Blog</h1>
+            <h2>Discover More Beyond the Classroom</h2>
+            <div className={styles.vidContainer}>
+              <GifBackgroundSection />
+            </div>
+            {/* <div className={styles.busContainer}>
+              <BusGif />
+            </div> */}
           </div>
-          <div className={styles.vidContainer}>
-            <GifBackgroundSection />
-          </div>
-          <div className={styles.busContainer}>
-            <BusGif />
-          </div>
-        </section>
+        </div>
       </div>
       <BlogPosts />
     </section>

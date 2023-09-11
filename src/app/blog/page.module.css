@@ -1,3 +1,7 @@
+.container {
+  position: relative;
+}
+
 .section1 {
   width: 100%;
   height: 100vh;
@@ -5,6 +9,7 @@
   /* background-image: linear-gradient(#1c1464, #919497); */
   /* background-image: linear-gradient(#47204d, #ca3d94); */
   position: relative;
+  overflow: hidden;
 }
 
 .section1::before {
@@ -42,13 +47,16 @@
   margin: 0 auto;
 } */
 
+
+.navbar {
+  margin: 0 auto;
+}
+
 /* ///  Blog styling start/////////////////////////////////////////// */
 .headerContainer {
-  max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
   height: 100%;
-  align-items: center;
-  justify-content: center;
   display: flex;
   flex-direction: column;
 }
@@ -56,14 +64,20 @@
 
 .blogHeader {
   text-align: center;
-  margin-bottom: 100px;
   color: white;
-  position: absolute;
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 1200px; */
+  margin: 0 auto;
+  flex-grow: 1;
+  /* border: 4px solid black; */
 }
 
 .blogHeader h1 {
-  font-size: 56px;
+  font-size: 66px;
+  margin-top: 50px;
   margin-bottom: 10px;
   font-family: "Titan One", cursive;
 }
@@ -96,17 +110,19 @@
 }
 
 .vidContainer {
-  position: relative;
-  top: -100px;
-  left: -400px;
   width: fit-content;
   animation: move 4s infinite ease-in-out alternate;
+  left: 200px;
+  top: 100px;
+  z-index: 1;
 }
 
+
 .busContainer {
-  position: relative;
+  position: absolute;
   z-index: 1;
   animation: slide 4s infinite ease-in-out alternate;
+  width: fit-content;
 }
 
 .seeSawContainer {
@@ -278,20 +294,9 @@
     height: 70vh;
   }
 
-  .headerContainer {
-    height: fit-content;
-    margin-top: 100px;
+  .blogHeader h1 {
+    font-size: 46px;
   }
-
-  .vidContainer {
-    display: none;
-  }
-
-  .busContainer {
-    top: 100px;
-  }
-
-
 
   .section1::before {
     content: "Prep School";

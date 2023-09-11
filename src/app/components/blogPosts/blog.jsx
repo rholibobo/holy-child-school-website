@@ -50,18 +50,15 @@ const BlogPosts = () => {
                 alt={post.title}
                 width={500}
                 height={200}
+                className={styles.itemImage}
               />
 
               <div className={styles.blogtext}>
                 <h2 className={styles.title}>{post.title}</h2>
-                <p className={styles.desc}>{post.description}</p>
                 <div className={styles.author}>
                   <p>Author: {post.author}</p>
                   <p>{post.date}</p>
                 </div>
-                <Link href={`/blog/${post.post_id}`} className={styles.seeMore}>
-                  see more
-                </Link>
               </div>
             </Link>
           ))}

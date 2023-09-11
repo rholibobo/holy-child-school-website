@@ -1,7 +1,7 @@
 .gifBackground {
   position: relative;
-  width: 350px;
-  height: 430px;
+  width: 200px;
+  height: 300px;
   z-index: 1;
   overflow: hidden;
 }
