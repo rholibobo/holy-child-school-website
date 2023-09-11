@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./layout.module.css";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/footer";
 
 export const metadata = {
   title: "Holy Child School",
@@ -16,13 +15,12 @@ export default function RootLayout({ children }) {
           <Header />
           <div className={styles.section_container}>
             <div className={styles.blogHeader}>
-              <h1>Welcome to Holychild's Blog</h1>
-              <h2>Beyond the Books: Unveiling Our Blog</h2>
+              <h1>Explore Holychild's Blog</h1>
+              <h2>Discover More Beyond the Classroom</h2>
             </div>
           </div>
         </div>
         <div className={styles.children}>{children}</div>
-        <Footer />
       </body>
     </html>
   );
