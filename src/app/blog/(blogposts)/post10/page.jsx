@@ -4,12 +4,12 @@ import styles from "./page.module.css";
 import blogData from "../../../components/blogPosts/blogData.json";
 import Link from "next/link";
 import Image from "next/image";
-import { StyleTwoTone } from "@mui/icons-material";
+import WalkVid from "@/app/components/gifs/walking-video/walk-vid";
 
 const page = () => {
   const firstThreePosts = blogData.slice(0, 3);
 
-  const postIdToFetch = 1;
+  const postIdToFetch = 12;
   const desiredPost = blogData.find((post) => post.id === postIdToFetch);
 
   return (
@@ -18,6 +18,7 @@ const page = () => {
         <article>
           <h1 className={styles.blogTitle}>{desiredPost.title}</h1>
           <div className={styles.metaContainer}>
+            <p className={styles.description}>{desiredPost.description}</p>
             <p>
               Author: <span>{desiredPost.author}</span>
             </p>
@@ -89,9 +90,9 @@ const page = () => {
           <h2 className={styles.recentPostsHeader}>Tags</h2>
           <div className={styles.tags}>
             <p>Education</p>
-            <p>Education</p>
-            <p>Education</p>
-            <p>Education</p>
+            <p>Explore</p>
+            <p>Unity</p>
+            <p>Awareness</p>
           </div>
         </div>
         <div className={styles.recentPostsContainer}>
@@ -118,6 +119,9 @@ const page = () => {
               </Link>
             ))}
           </div>
+        </div>
+        <div className={styles.walkContainer}>
+          <WalkVid />
         </div>
       </aside>
     </main>
