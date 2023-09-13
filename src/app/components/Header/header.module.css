@@ -1,17 +1,23 @@
 .active {
   border-bottom: 2px solid #ffffff;
-  color: #000000;
+  /* color: #000000; */
   
 }
 .active:hover{
-  background-color: rgb(193, 193, 206);
-  color: #000000;
+  color: yellow;
+  /* color: #000000; */
 }
 
 .logo {
-  width: 60%;
+  width: 12%;
   height: auto;
   /* margin-top: 0.5rem; */
+}
+
+.portal_btn{
+  /* padding: 0.7rem; */
+  /* background-color: rgb(85, 85, 25);  */
+   border: 2px solid #ffffff;
 }
 
 @media screen and (max-width: 821px) {

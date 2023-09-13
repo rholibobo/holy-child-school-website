@@ -2,12 +2,12 @@
 import Image from "next/image";
 
 import ProprietorImage from "../../public/images/HomePage/pp.jpg";
-import BlueStar from "../../public/images/DesignImages/blueStar.png";
-import Ballon from "../../public/images/DesignImages/ballon.png";
-import RedStar from "../../public/images/DesignImages/redStar.png";
-import YellowStar from "../../public/images/DesignImages/yellowStar.png";
-import Globe from "../../public/images/DesignImages/globe.png";
 import Kids from "../../public/images/HomePage/kids1.jpg";
+
+// SVG IMPORTS //
+import values from "../../public/svg/value.svg";
+import Belief from "../../public/svg/Belief.svg";
+import vision from "../../public/svg/vision.svg";
 
 import styles from "./page.module.css";
 
@@ -41,7 +41,7 @@ import { GiTrophyCup } from "react-icons/gi";
 import { BiSolidBusSchool } from "react-icons/bi";
 import { HiLightBulb } from "react-icons/hi";
 import { BsPencilSquare } from "react-icons/bs";
-import { FaBook } from "react-icons/fa";
+import { FaBook, FaGraduationCap } from "react-icons/fa";
 import Link from "next/link";
 import {
   HomeHero,
@@ -55,16 +55,17 @@ export default function Home() {
   return (
     <main>
       {/* ////////// SECTION 1 //////////// */}
-      <div className={styles.section1}>
-        <div className={styles.navbar}>
+      <div className={styles.navbar}>
           <Header />
         </div>
+      <div className={styles.section1}>
+        
         <div className={styles.section_container}>
           <Box sx={{ display: "flex" }}>
             <Box
               sx={{
                 width: { xs: "100%", md: "50%" },
-                marginTop: "4rem",
+                marginTop: {xs: "2rem",md:"4rem"},
                 position: "relative",
               }}
             >
@@ -72,7 +73,7 @@ export default function Home() {
                 <div>
                   <Typography
                     variant="h6"
-                    sx={{ fontWeight: "bold", color: "#fff200" }}
+                    sx={{ fontWeight: "bold", color: "#1faded" }}
                     gutterBottom
                   >
                     {" "}
@@ -138,7 +139,12 @@ export default function Home() {
             // position: "relative",
           }}
         >
-          <Box sx={{ width: { xs: "90%", md: "50%" }, marginTop: {xs:"2rem", md: "5rem"} }}>
+          <Box
+            sx={{
+              width: { xs: "90%", md: "50%" },
+              marginTop: { xs: "2rem", md: "5rem" },
+            }}
+          >
             <Typography variant="h4" fontWeight="bold" gutterBottom>
               Why Holy Child?
             </Typography>
@@ -153,7 +159,9 @@ export default function Home() {
                 }}
               >
                 <div className={styles.icons_div}>
-                  <FcGraduationCap style={{ fontSize: "30px" }} />
+                  <FaGraduationCap
+                    style={{ fontSize: "30px", color: "#ffffff" }}
+                  />
                 </div>
                 <Typography
                   variant="body1"
@@ -172,7 +180,7 @@ export default function Home() {
                 }}
               >
                 <div className={styles.icons_div2}>
-                  <GiTrophyCup style={{ fontSize: "30px" }} />
+                  <GiTrophyCup style={{ fontSize: "30px", color: "#ffffff" }} />
                 </div>
                 <Typography
                   variant="body1"
@@ -195,7 +203,9 @@ export default function Home() {
                 }}
               >
                 <div className={styles.icons_div3}>
-                  <BiSolidBusSchool style={{ fontSize: "30px", color: "#ffffff" }} />
+                  <BiSolidBusSchool
+                    style={{ fontSize: "30px", color: "#ffffff" }}
+                  />
                 </div>
                 <Typography
                   variant="body1"
@@ -214,7 +224,7 @@ export default function Home() {
                 }}
               >
                 <div className={styles.icons_div4}>
-                  <HiLightBulb style={{ fontSize: "30px" }} />
+                  <HiLightBulb style={{ fontSize: "30px", color: "#ffffff" }} />
                 </div>
                 <Typography
                   variant="body1"
@@ -236,7 +246,9 @@ export default function Home() {
                 }}
               >
                 <div className={styles.icons_div5}>
-                  <BsPencilSquare style={{ fontSize: "30px" }} />
+                  <BsPencilSquare
+                    style={{ fontSize: "30px", color: "#ffffff" }}
+                  />
                 </div>
                 <Typography
                   variant="body1"
@@ -255,7 +267,7 @@ export default function Home() {
                 }}
               >
                 <div className={styles.icons_div6}>
-                  <FaBook style={{ fontSize: "30px" }} />
+                  <FaBook style={{ fontSize: "30px", color: "#ffffff" }} />
                 </div>
                 <Typography
                   variant="body1"
@@ -342,6 +354,7 @@ export default function Home() {
                 width: { xs: "100%", md: "50%" },
                 height: "100%",
                 order: { xs: "1", md: "2" },
+                marginTop: "2rem",
               }}
             >
               <Image
@@ -356,6 +369,7 @@ export default function Home() {
                 marginTop: { xs: "2rem", md: "" },
                 position: "inherit",
                 zIndex: "1",
+                marginTop: "2rem",
               }}
             >
               <Box sx={{ borderRadius: "20% 40% 10%" }}>
@@ -417,7 +431,7 @@ export default function Home() {
             GALLERY
           </Typography>
 
-          <Box>
+          <Box sx={{}}>
             <GalleryCarousel />
           </Box>
 
@@ -428,11 +442,95 @@ export default function Home() {
         </div>
       </div>
 
+      {/* //////////// Section 6.0 ////////// */}
+      <section className={styles.section6_0}>
+        <Box sx={{ width: "80%", margin: "0 auto" }}>
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            textAlign="center"
+            sx={{ color: "#1c1464" }}
+            gutterBottom
+          >
+            Why Choose Holy Child Academy
+          </Typography>
+          <br />
+
+          <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: {xs: "column", md: "row"}}}>
+            <Box sx={{width: {xs:"95%",md:"30%"}}} >
+              <Image
+                src={values}
+                alt="Values"
+                className={styles.svg_width}
+              />
+              
+
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                // textAlign="center"
+                gutterBottom
+              >
+                Our Core Value
+              </Typography>
+
+              <Typography variant="subtitle2" gutterBottom>
+                Good character and a love for leisure reading. Objectives: to
+                raise children who not only fear God but are able to hold their
+                own in any circumstance.
+              </Typography>
+            </Box>
+            <Box sx={{width: {xs:"95%",md:"30%"}}} >
+              <Image
+                src={Belief}
+                alt="Belief"
+                className={styles.svg_width}
+              />
+              
+
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                // textAlign="center"
+                gutterBottom
+              >
+                Our Belief
+              </Typography>
+
+              <Typography variant="subtitle2" gutterBottom>
+              Talent is not enough. Brilliance must be match by good character.
+              </Typography>
+            </Box>
+            <Box sx={{width: {xs:"95%",md:"30%"}}} >
+              <Image
+                src={vision}
+                alt="Values"
+                className={styles.svg_width}
+              />
+              
+
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                // textAlign="center"
+                gutterBottom
+              >
+                Our Vision
+              </Typography>
+
+              <Typography variant="subtitle2" gutterBottom>
+              To become a first rate educational institution with a reputation for excellent character and strong academic learning.
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </section>
+
       {/* /////////////// Section 6 ///////////// */}
       <div className={styles.section6}>
         <Box
           sx={{
-            width: "90%",
+            width: {xs:"95%",md:"70%"},
             margin: "0 auto",
           }}
         >
@@ -443,68 +541,10 @@ export default function Home() {
               flexDirection: { xs: "column", md: "row" },
             }}
           >
+            
             <Box
               sx={{
-                width: { xs: "100%", md: "35%" },
-                height: { xs: "auto", sm: "auto", md: "70vh" },
-                backgroundColor: "#ffffff",
-                borderRadius: "60px",
-                border: "2px solid #ffffff",
-                marginTop: { xs: "2rem", md: "6rem" },
-                color: "#1c1469",
-                padding: { xs: "2rem", sm: "3rem", md: "2rem" },
-              }}
-            >
-              <Box>
-                <Typography
-                  variant="h6"
-                  fontWeight="bold"
-                  textAlign="center"
-                  gutterBottom
-                >
-                  Our Core Value
-                </Typography>
-                <Typography variant="subtitle2" textAlign="center" gutterBottom>
-                  Good character and a love for leisure reading. Objectives: to
-                  raise children who not only fear God but are able to hold
-                  their own in any circumstance.
-                </Typography>
-              </Box>
-              <br />
-              <Box>
-                <Typography
-                  variant="h6"
-                  fontWeight="bold"
-                  textAlign="center"
-                  gutterBottom
-                >
-                  Our Belief
-                </Typography>
-                <Typography variant="subtitle2" textAlign="center" gutterBottom>
-                  Because “talent is not enough,”brilliance must be matched by
-                  good charater.
-                </Typography>
-              </Box>
-              <br />
-              <Box>
-                <Typography
-                  variant="h6"
-                  fontWeight="bold"
-                  textAlign="center"
-                  gutterBottom
-                >
-                  Our Vision
-                </Typography>
-                <Typography variant="subtitle2" textAlign="center" gutterBottom>
-                  To become a first rate educational institution with a
-                  reputation for excellent character and strong academic
-                  learning.
-                </Typography>
-              </Box>
-            </Box>
-            <Box
-              sx={{
-                width: { xs: "100%", md: "30%" },
+                width: { xs: "100%", md: "45%" },
                 height: { sm: "auto", md: "70vh" },
                 backgroundColor: "#ffffff",
                 borderRadius: "60px",
@@ -546,19 +586,16 @@ export default function Home() {
             </Box>
             <Box
               sx={{
-                width: { xs: "100%", md: "30%" },
-                height: { sm: "auto", md: "50vh" },
+                width: { xs: "100%", md: "45%" },
+                height: { sm: "auto", md: "40vh" },
                 // backgroundColor: "#81d742",
-                marginTop: { xs: "2rem", md: "4rem" },
+                marginTop: { xs: "2rem", md: "2rem" },
               }}
             >
               <Image
                 src={ProprietorImage}
                 alt="Proprietor"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                }}
+                className={styles.ppImage}
               />
             </Box>
           </Box>

@@ -9,9 +9,12 @@ import {
   Autoplay,
   EffectCube,
   EffectCards,
+  Grid,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
+
+import styles from "./swiper.module.css"
 
 import Image from "next/image";
 
@@ -31,25 +34,32 @@ import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 export function HomeHero() {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, Autoplay, EffectCube]}
-      effect={"cube"}
+      modules={[
+        Navigation,
+        Pagination,
+        Scrollbar,
+        Autoplay,
+        EffectCube,
+        EffectFade,
+      ]}
+      effect={"fade"}
       grabCursor={true}
-      cubeEffect={{
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      }}
+      // cubeEffect={{
+      //   shadow: true,
+      //   slideShadows: true,
+      //   shadowOffset: 20,
+      //   shadowScale: 0.94,
+      // }}
       // effect={"fade"}
       centeredSlides={true}
       autoplay={{
-        delay: 2500,
+        delay: 3500,
         disableOnInteraction: false,
       }}
       spaceBetween={50}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      navigation={true}
+      // navigation={true}
     >
       <SwiperSlide>
         <Image
@@ -123,11 +133,11 @@ export function MediaCardCarousel() {
           <CardContent sx={{ backgroundColor: "#ffffff" }}>
             <Typography
               gutterBottom
-              variant="body2"
+              variant="body"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
-              // color="#ffffff"
+              fontWeight="bold"
+              color="#1c1486"
             >
               Pre-Nursery
             </Typography>
@@ -150,11 +160,11 @@ export function MediaCardCarousel() {
           <CardContent sx={{ backgroundColor: "#ffffff" }}>
             <Typography
               gutterBottom
-              variant="body2"
+              variant="body"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
-              // color="#ffffff"
+              fontWeight="bold"
+              color="#1c1486"
             >
               Nursery
             </Typography>
@@ -177,11 +187,11 @@ export function MediaCardCarousel() {
           <CardContent sx={{ backgroundColor: "#ffffff" }}>
             <Typography
               gutterBottom
-              variant="body2"
+              variant="body"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
-              // color="#ffffff"
+              fontWeight="bold"
+              color="#1c1486"
             >
               Primary
             </Typography>
@@ -195,11 +205,20 @@ export function MediaCardCarousel() {
 export function GalleryCarousel() {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar]}
+      modules={[Pagination, Grid]}
+      grid={{
+        rows: 2,
+        fill: "row"
+      }}
+      // slidesPerView={3}
       pagination={{ clickable: true }}
-      navigation={true}
+      spaceBetween={30}
+      // navigation={true}
       lazy={true}
-      // spaceBetween={50}
+      
+      
+      className="mySwiper"
+      
       // slidesPerView={2}
       breakpoints={{
         640: {
@@ -276,6 +295,7 @@ export function GalleryCarousel() {
           }}
         />
       </SwiperSlide>
+      
     </Swiper>
   );
 }
@@ -312,7 +332,7 @@ export function TeachersCarousel() {
           }}
         >
           <CardMedia
-            sx={{ height: "75vh" }}
+            sx={{ height: "55vh" }}
             image="/images/Teachers/1d-2.jpg"
             title="girl child"
           />
@@ -349,7 +369,7 @@ export function TeachersCarousel() {
           }}
         >
           <CardMedia
-            sx={{ height: "75vh" }}
+            sx={{ height: "55vh" }}
             image="/images/Teachers/1d.jpeg"
             title="girl child"
           />
@@ -386,7 +406,7 @@ export function TeachersCarousel() {
           }}
         >
           <CardMedia
-            sx={{ height: "75vh" }}
+            sx={{ height: "55vh" }}
             image="/images/Teachers/1f.jpeg"
             title="girl child"
           />
@@ -423,7 +443,7 @@ export function TeachersCarousel() {
           }}
         >
           <CardMedia
-            sx={{ height: "75vh" }}
+            sx={{ height: "55vh" }}
             image="/images/Teachers/1s.jpeg"
             title="girl child"
           />

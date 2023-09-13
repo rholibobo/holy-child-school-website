@@ -6,7 +6,8 @@
 .section1 {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(#3647a7, #339130);
+  /* background-image: linear-gradient(#3647a7, #339130); */
+  background-image: linear-gradient( #339130,#1c1464);
   position: relative;
   
 }
@@ -24,7 +25,7 @@
   opacity: 0.05;
 
 }
-.section1::after {
+/* .section1::after {
     content: "";
     background-image: url('/images/DesignImages/crop-cloud.png'); 
     background-repeat: no-repeat;
@@ -35,14 +36,20 @@
     position: absolute;
     bottom: -1px;
     left: 0;
-}
+} */
 
-  .navbar {
-    width: 80%;
-    margin: 0 auto;
-  }
+.navbar {
+  width: 100%;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  /* background-color: #000; */
+  background-image: linear-gradient(#1c1464,#339130 );
+  z-index: 10;
+}
   .section{
-    width: 80%;
+    width: 90%;
     height: 400px;
     /* background-color: red; */
     margin: 0 auto;

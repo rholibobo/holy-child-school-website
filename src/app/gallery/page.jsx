@@ -41,11 +41,12 @@ export default function Gallery() {
 
   return (
     <main className='justify-center items-center'>
-      <section className='overflow-hidden'>
+      <div className={styles.navbar}>
+          <Header />
+      </div>
+      <section className='overflow-hidden '>
         <div className={`${styles.section1} after:hidden after:lg:block `}>
-        <div className={styles.navbar}>
-              <Header />
-            </div>
+        
           <div className={styles.section_container}>
             
 

@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
-import { ArrowRight, ArrowDropDown } from "@mui/icons-material";
+import { ArrowRight, ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -34,7 +34,7 @@ export default function ({ handleCloseNavMenu }) {
     >
       <Link href="/">
         <Button
-          sx={{ textTransform: "capitalize", color: "#ffffff" }}
+          sx={{ textTransform: "capitalize", color: "#ffffff", ":hover": {color: "yellow", backgroundColor: "transparent"} }}
           color="inherit"
           className={pathname == "/" ? styles.active : ""}
         >
@@ -44,7 +44,7 @@ export default function ({ handleCloseNavMenu }) {
 
       <Link href="/about-us">
         <Button
-          sx={{ textTransform: "capitalize", color: "#ffffff" }}
+          sx={{ textTransform: "capitalize", color: "#ffffff", ":hover": {color: "yellow", backgroundColor: "transparent"} }}
           color="inherit"
           className={pathname == "/about-us" ? styles.active : ""}
         >
@@ -54,7 +54,7 @@ export default function ({ handleCloseNavMenu }) {
 
       <Link href="/services">
         <Button
-          sx={{ textTransform: "capitalize", color: "#ffffff" }}
+          sx={{ textTransform: "capitalize", color: "#ffffff", ":hover": {color: "yellow", backgroundColor: "transparent"} }}
           color="inherit"
           className={pathname == "/services" ? styles.active : ""}
         >
@@ -64,8 +64,9 @@ export default function ({ handleCloseNavMenu }) {
 
       <Link href="/contact-us">
         <Button
-          sx={{ textTransform: "capitalize", color: "#ffffff" }}
+          sx={{ textTransform: "capitalize", color: "#ffffff", ":hover": {color: "yellow", backgroundColor: "transparent"} }}
           color="inherit"
+          disableFocusRipple={true}
           className={pathname == "/contact-us" ? styles.active : ""}
         >
           Contact Us
@@ -77,11 +78,11 @@ export default function ({ handleCloseNavMenu }) {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        sx={{ textTransform: "capitalize", color: "#ffffff" }}
+        sx={{ textTransform: "capitalize", color: "#ffffff", ":hover": {color: "yellow", backgroundColor: "transparent"} }}
         color="inherit"
         className={pathname == "/blog" ? styles.active : ""}
       >
-        Learn More {!open ? <ArrowRight /> : <ArrowDropDown />}
+        Learn More {!open ? <ArrowDropDown /> : <ArrowDropUp />}
       </Button>
       <Menu
         id="basic-menu"
@@ -92,7 +93,7 @@ export default function ({ handleCloseNavMenu }) {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider="true">
+        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider={true}>
           <Link href="/blog">
             <Typography gutterBottom
               sx={{
@@ -107,7 +108,7 @@ export default function ({ handleCloseNavMenu }) {
             </Typography>
           </Link>
         </MenuItem>
-        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider="true">
+        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider={true}>
           <Link href="/teachers">
             <Typography gutterBottom
               sx={{
@@ -122,7 +123,7 @@ export default function ({ handleCloseNavMenu }) {
             </Typography>
           </Link>
         </MenuItem>
-        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider="true">
+        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider={true}>
           <Link href="/gallery">
             <Typography gutterBottom
               sx={{
@@ -142,6 +143,7 @@ export default function ({ handleCloseNavMenu }) {
         <Button
           sx={{ textTransform: "capitalize", color: "#ffffff" }}
           color="inherit"
+          className={styles.portal_btn}
         >
           School Portal
         </Button>
