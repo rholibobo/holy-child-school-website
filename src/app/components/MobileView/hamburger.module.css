@@ -18,3 +18,10 @@
   color: #ffffff;
   /* font-size: 40px; */
 }
+
+.logo {
+  width: 20%;
+  height: auto;
+  
+  /* margin-top: 0.5rem; */
+}

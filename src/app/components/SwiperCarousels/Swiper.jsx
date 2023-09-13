@@ -9,9 +9,12 @@ import {
   Autoplay,
   EffectCube,
   EffectCards,
+  Grid,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
+
+import styles from "./swiper.module.css"
 
 import Image from "next/image";
 
@@ -19,7 +22,6 @@ import Image from "next/image";
 import pix1 from "../../../../public/images/HomePage/port2.jpg";
 import pix2 from "../../../../public/images/HomePage/port5.jpg";
 import pix3 from "../../../../public/images/HomePage/port6.jpg";
-
 
 import port3 from "../../../../public/images/Homepage/port3.jpg";
 import port4 from "../../../../public/images/Homepage/port4.jpg";
@@ -32,25 +34,32 @@ import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 export function HomeHero() {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, Autoplay, EffectCube]}
-      effect={"cube"}
+      modules={[
+        Navigation,
+        Pagination,
+        Scrollbar,
+        Autoplay,
+        EffectCube,
+        EffectFade,
+      ]}
+      effect={"fade"}
       grabCursor={true}
-      cubeEffect={{
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      }}
+      // cubeEffect={{
+      //   shadow: true,
+      //   slideShadows: true,
+      //   shadowOffset: 20,
+      //   shadowScale: 0.94,
+      // }}
       // effect={"fade"}
       centeredSlides={true}
       autoplay={{
-        delay: 2500,
+        delay: 3500,
         disableOnInteraction: false,
       }}
       spaceBetween={50}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      navigation={true}
+      // navigation={true}
     >
       <SwiperSlide>
         <Image
@@ -111,7 +120,7 @@ export function MediaCardCarousel() {
       <SwiperSlide>
         <Card
           sx={{
-            width: {xs:"95%",md:"80%"},
+            width: { xs: "95%", md: "80%" },
             borderRadius: "10%",
           }}
         >
@@ -124,11 +133,11 @@ export function MediaCardCarousel() {
           <CardContent sx={{ backgroundColor: "#ffffff" }}>
             <Typography
               gutterBottom
-              variant="body2"
+              variant="body"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
-              // color="#ffffff"
+              fontWeight="bold"
+              color="#1c1486"
             >
               Pre-Nursery
             </Typography>
@@ -138,7 +147,7 @@ export function MediaCardCarousel() {
       <SwiperSlide>
         <Card
           sx={{
-            width: {xs:"95%",md:"80%"},
+            width: { xs: "95%", md: "80%" },
             borderRadius: "10%",
           }}
         >
@@ -151,11 +160,11 @@ export function MediaCardCarousel() {
           <CardContent sx={{ backgroundColor: "#ffffff" }}>
             <Typography
               gutterBottom
-              variant="body2"
+              variant="body"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
-              // color="#ffffff"
+              fontWeight="bold"
+              color="#1c1486"
             >
               Nursery
             </Typography>
@@ -165,7 +174,7 @@ export function MediaCardCarousel() {
       <SwiperSlide>
         <Card
           sx={{
-            width: {xs:"95%",md:"80%"},
+            width: { xs: "95%", md: "80%" },
             borderRadius: "10%",
           }}
         >
@@ -178,11 +187,11 @@ export function MediaCardCarousel() {
           <CardContent sx={{ backgroundColor: "#ffffff" }}>
             <Typography
               gutterBottom
-              variant="body2"
+              variant="body"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
-              // color="#ffffff"
+              fontWeight="bold"
+              color="#1c1486"
             >
               Primary
             </Typography>
@@ -196,11 +205,20 @@ export function MediaCardCarousel() {
 export function GalleryCarousel() {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar]}
+      modules={[Pagination, Grid]}
+      grid={{
+        rows: 2,
+        fill: "row"
+      }}
+      // slidesPerView={3}
       pagination={{ clickable: true }}
-      navigation={true}
+      spaceBetween={30}
+      // navigation={true}
       lazy={true}
-      // spaceBetween={50}
+      
+      
+      className="mySwiper"
+      
       // slidesPerView={2}
       breakpoints={{
         640: {
@@ -216,9 +234,6 @@ export function GalleryCarousel() {
           spaceBetween: 50,
         },
       }}
-      
-      
-     
     >
       <SwiperSlide>
         <Image
@@ -279,6 +294,183 @@ export function GalleryCarousel() {
             height: "auto",
           }}
         />
+      </SwiperSlide>
+      
+    </Swiper>
+  );
+}
+
+export function TeachersCarousel() {
+  return (
+    <Swiper
+      modules={[Navigation, Pagination, Scrollbar]}
+      pagination={{ clickable: true }}
+      navigation={true}
+      lazy={true}
+      // spaceBetween={50}
+      // slidesPerView={2}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      }}
+    >
+      <SwiperSlide>
+        <Card
+          sx={{
+            width: "100%",
+            borderRadius: "10%",
+          }}
+        >
+          <CardMedia
+            sx={{ height: "55vh" }}
+            image="/images/Teachers/1d-2.jpg"
+            title="girl child"
+          />
+
+          <CardContent sx={{ backgroundColor: "#ffffff" }}>
+            <Typography
+              gutterBottom
+              variant="body1"
+              textAlign="center"
+              component="div"
+              // fontWeight="bold"
+              // color="#ffffff"
+            >
+              GODWIN IKOUGHE
+            </Typography>
+            <Typography
+              gutterBottom
+              variant="body2"
+              textAlign="center"
+              component="div"
+              // fontWeight="bold"
+              // color="#ffffff"
+            >
+              School Head
+            </Typography>
+          </CardContent>
+        </Card>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Card
+          sx={{
+            width: "100%",
+            borderRadius: "10%",
+          }}
+        >
+          <CardMedia
+            sx={{ height: "55vh" }}
+            image="/images/Teachers/1d.jpeg"
+            title="girl child"
+          />
+
+          <CardContent sx={{ backgroundColor: "#ffffff" }}>
+            <Typography
+              gutterBottom
+              variant="body1"
+              textAlign="center"
+              component="div"
+              // fontWeight="bold"
+              // color="#ffffff"
+            >
+              JULIANA NWOSU
+            </Typography>
+            <Typography
+              gutterBottom
+              variant="body2"
+              textAlign="center"
+              component="div"
+              // fontWeight="bold"
+              // color="#ffffff"
+            >
+              Deputy School Head
+            </Typography>
+          </CardContent>
+        </Card>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Card
+          sx={{
+            width: "100%",
+            borderRadius: "10%",
+          }}
+        >
+          <CardMedia
+            sx={{ height: "55vh" }}
+            image="/images/Teachers/1f.jpeg"
+            title="girl child"
+          />
+
+          <CardContent sx={{ backgroundColor: "#ffffff" }}>
+            <Typography
+              gutterBottom
+              variant="body1"
+              textAlign="center"
+              component="div"
+              // fontWeight="bold"
+              // color="#ffffff"
+            >
+              MARIAN NEBEIFE
+            </Typography>
+            <Typography
+              gutterBottom
+              variant="body2"
+              textAlign="center"
+              component="div"
+              // fontWeight="bold"
+              // color="#ffffff"
+            >
+              MATH TEACHER
+            </Typography>
+          </CardContent>
+        </Card>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Card
+          sx={{
+            width: "100%",
+            borderRadius: "10%",
+          }}
+        >
+          <CardMedia
+            sx={{ height: "55vh" }}
+            image="/images/Teachers/1s.jpeg"
+            title="girl child"
+          />
+
+          <CardContent sx={{ backgroundColor: "#ffffff" }}>
+            <Typography
+              gutterBottom
+              variant="body1"
+              textAlign="center"
+              component="div"
+              // fontWeight="bold"
+              // color="#ffffff"
+            >
+              MRS. YEMISI AJALA
+            </Typography>
+            <Typography
+              gutterBottom
+              variant="body2"
+              textAlign="center"
+              component="div"
+              // fontWeight="bold"
+              // color="#ffffff"
+            >
+              BASIC SCIENCE & AFRICA TEACHER
+            </Typography>
+          </CardContent>
+        </Card>
       </SwiperSlide>
     </Swiper>
   );

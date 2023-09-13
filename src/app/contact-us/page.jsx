@@ -10,10 +10,11 @@ import {useMediaQuery} from "@mui/material";
 export default function ContactUs() {
   return (
     <main>
-      <div className={styles.section1}>
-        <div className={styles.navbar}>
+      <div className={styles.navbar}>
           <Header />
         </div>
+      <div className={styles.section1}>
+        
         <section className={styles.section}>
           <div className={styles.contents}>
             <h1 className={styles.h1}>Contact us</h1>
