@@ -138,7 +138,12 @@ export default function Home() {
             // position: "relative",
           }}
         >
-          <Box sx={{ width: { xs: "90%", md: "50%" }, marginTop: {xs:"2rem", md: "5rem"} }}>
+          <Box
+            sx={{
+              width: { xs: "90%", md: "50%" },
+              marginTop: { xs: "2rem", md: "5rem" },
+            }}
+          >
             <Typography variant="h4" fontWeight="bold" gutterBottom>
               Why Holy Child?
             </Typography>
