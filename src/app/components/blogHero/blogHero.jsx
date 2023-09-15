@@ -5,7 +5,9 @@ import Header from "../Header/Header";
 const BlogHero = () => {
   return (
     <div className={styles.section1}>
-      <Header />
+      <div className={styles.navbar}>
+        <Header />
+      </div>
       <div className={styles.section_container}>
         <div className={styles.blogHeader}>
           <h1>Explore Holychild's Blog</h1>

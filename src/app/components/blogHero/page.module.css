@@ -47,6 +47,17 @@
   align-items: center;
 }
 
+
+.navbar {
+  width: 100%;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(#1c1464, #e130a7);
+  z-index: 10;
+}
+
 /* ///  Blog styling start/////////////////////////////////////////// */
 
 
@@ -144,9 +155,6 @@
     bottom: -10px;
   }
 
-  .navbar {
-    width: 90%;
-  }
 
   .blogHeader h1 {
     font-size: 36px;
@@ -179,9 +187,6 @@
     font-size: 18px;
   }
 
-  .navbar {
-    width: 90%;
-  }
 }
 
 @media screen and (max-width: 376px) {
@@ -196,9 +201,6 @@
     /* bottom: -8px; */
   }
 
-  .navbar {
-    width: 90%;
-  }
 }
 
 @media screen and (max-width: 321px) {
@@ -213,7 +215,4 @@
     /* bottom: -8px; */
   }
 
-  .navbar {
-    width: 90%;
-  }
 }

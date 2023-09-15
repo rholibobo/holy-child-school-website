@@ -6,6 +6,7 @@
   /* background-image: linear-gradient(#3988d8, #c53cae); */
   background-image: linear-gradient(#919497, #1c1464);
   position: relative;
+  margin-top: -9rem;
 }
 
 .section1::before {
@@ -29,6 +30,12 @@
 }
 
 .navbar {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  /* background-color: #000; */
+  background-image: linear-gradient(#1c1464, #201f1f);
+  z-index: 10;
 }
