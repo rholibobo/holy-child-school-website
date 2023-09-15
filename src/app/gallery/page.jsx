@@ -49,7 +49,7 @@ export default function Gallery() {
         
           <div className={styles.section_container}>
             
-
+{/* Just cloned, i am yet to understand what the fuck is happening here (-:) */}
             <div className='max-width  flex justify-between items-center  mt-[9rem]  '>
               <div>
                 <h2 className='tex text-gray-100 text-4xl font-bold'>Gallery </h2>
