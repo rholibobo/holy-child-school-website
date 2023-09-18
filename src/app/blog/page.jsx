@@ -11,13 +11,11 @@ const page = () => {
   return (
     <section className={styles.container}>
       <div className={styles.navbar}>
-            <Header />
-          </div>
+        <Header />
+      </div>
       {/* ////////// SECTION 1 //////////// */}
       <div className={styles.section1}>
-      
         <div className={styles.headerContainer}>
-          
           <div className={styles.blogHeader}>
             <h1>Explore Holychild's Blog</h1>
             <h2>Discover More Beyond the Classroom</h2>
