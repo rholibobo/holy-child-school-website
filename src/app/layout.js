@@ -1,8 +1,25 @@
+"use client";
 import Footer from "./components/Footer/footer";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Poppins, Kanit } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import { createTheme, ThemeProvider } from "@mui/material";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "inherit",
+  },
+});
+
+// const inter = Inter({ subsets: ["latin"] });
+// const kanit = Kanit({
+//    weight: ["400", "700"],
+//    subsets: ["latin"]
+// });
+const poppins = Poppins({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Holy Child School",
@@ -12,9 +29,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <Footer />
+      <body className={poppins.className}>
+        <ThemeProvider theme={theme}>
+
+          {children}
+
+          <Footer />
+        
+        </ThemeProvider>
+
+        
       </body>
     </html>
   );

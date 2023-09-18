@@ -4,9 +4,11 @@
   /* background-image: linear-gradient(#9d2a77, #e130a7); */
   /* background-image: linear-gradient(#1c1464, #919497); */
   /* background-image: linear-gradient(#919497, #1c1464); */
-  background-image: linear-gradient(#151515, #1c1464);
+  background-image: linear-gradient(#000, #1c1464);
   position: relative;
+  padding-bottom: 3rem;
 }
+
 .section1::before {
   content: "PREP SCHOOL";
   font-family: "Titan One", cursive;
@@ -25,19 +27,27 @@
 .section_container {
   width: 90%;
   margin: 0 auto;
+  
 }
 .navbar {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  /* background-color: #000; */
+  background-image: linear-gradient(#1c1464, #000);
+  z-index: 10;
 }
 
 .earthContainer {
   position: absolute;
   left: 20px;
   z-index: 1;
-  bottom: -20px;
+  bottom: -80px;
   height: 60px;
   width: 60px;
+  display: none;
 }
 
 /* /////////// Section 2 //////////////////// */
@@ -45,6 +55,39 @@
   width: 100%;
   height: 100vh;
   background-color: #ffffff;
+  position: relative;
+}
+
+.blueStar1 {
+  width: 3%;
+  height: auto;
+  position: absolute;
+  left: 20px;
+  opacity: 0.2;
+}
+.yellowStar {
+  width: 3%;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  opacity: 0.2;
+}
+.ballon {
+  width: 3%;
+  height: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 100px;
+  opacity: 0.2;
+}
+.redStar {
+  width: 3%;
+  height: auto;
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  opacity: 0.2;
 }
 
 .icons_div {
@@ -74,8 +117,8 @@
 .icons_div5 {
   padding: 1rem;
   border-radius: 50% 30%;
-  background-color: #fff200;
-  border: 1px solid #fff200;
+  background-color: #71730a;
+  border: 1px solid #71730a;
 }
 .icons_div6 {
   padding: 1rem;
@@ -102,16 +145,24 @@
   height: 100vh;
   background-color: #1c1464;
   position: relative;
-  border-radius: 50px 50px 0 0;
+  border-radius: 20px 20px 0 0;
 }
+
+
 
 /* ////////// Section 4 ///////////// */
 .section4 {
   width: 100%;
   height: 100vh;
   /* background-color: #919497; */
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   position: relative;
+  background-color: #f7f7f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#131dd9 0.5px, transparent 0.5px),
+    radial-gradient(#131dd9 0.5px, #f7f7f7 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
 }
 .section4::before {
   content: "";
@@ -132,7 +183,7 @@
 .section4_div {
   width: 80%;
   margin: 0 auto;
-  margin-top: 6rem;
+  /* margin-top: 6rem; */
   position: inherit;
   /* z-index: 4; */
 }
@@ -153,9 +204,8 @@
 /* ////////// Section 5 ///////////// */
 .section5 {
   width: 100%;
-  height: 100vh;
-  padding-top: 2rem;
-  border-radius: 50px;
+  height: auto;
+  padding: 2rem 0;
   /* background-color: #919497; */
   background-color: #f0f3f6;
 }
@@ -170,21 +220,46 @@
   width: 100%;
   height: 100vh;
   background-color: #1c1464;
-  border-radius: 50px;
+  border-radius: 20px 20px 0 0;
+  /* padding-bottom: 4rem; */
 }
+
+.ppImage{
+  width: 90%;
+  height: auto;
+}
+
+@media screen and (max-width: 835px) {
+  .ppImage{
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+
+
+/* /////////////////// Section 6.0 ////////// */
+.section6_0{
+  width: 100%;
+  height: auto;
+  padding: 3rem 0;
+}
+
+.svg_width{
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* /////////// Section 7 //////////// */
 
 .section7 {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background-color: #ffffff;
   position: relative;
 }
 
-.section8 {
-  width: 100%;
-  height: 10vh;
-  background-color: #ffffff;
-}
 
 /* ///////////// Media Queries //////////////// */
 
@@ -199,14 +274,13 @@
   }
   .section1::before {
     content: "Prep School";
-    font-size: 7.5rem;
+    font-size: 7rem;
     line-height: 100px;
   }
   .earthContainer {
     display: none;
     right: 250px;
     top: 50px;
-    
   }
   .section2 {
     height: auto;
@@ -234,7 +308,7 @@
     width: 100%;
     height: 100%;
   }
-  .section5{
+  .section5 {
     height: auto;
     margin-top: 3rem;
     padding-bottom: 2rem;
@@ -253,6 +327,9 @@
   }
   .section8 {
     height: 20vh;
+  }
+  .svg_width{
+    margin: 0 auto;
   }
 }
 

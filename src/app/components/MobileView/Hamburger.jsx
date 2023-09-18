@@ -18,6 +18,8 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 
+import Logo from "../../../../public/HCLogo.png";
+
 /////////// MUI ICONS /////////////////////
 import HomeIcon from "@mui/icons-material/Home";
 import BookIcon from "@mui/icons-material/Book";
@@ -29,6 +31,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import RouteIcon from "@mui/icons-material/Route";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HamburgerMenu() {
   const [open, setOpen] = useState(false);
@@ -49,7 +52,10 @@ export default function HamburgerMenu() {
         }}
       />
       <Drawer anchor="left" open={open} onClose={toggleDrawer}>
+
+      
         <Box sx={{ width: { xs: "250px", sm: "400px" } }}>
+
           <div styles={{ posiiton: "relative" }}>
             <IconButton
               onClick={() => setOpen(!open)}
@@ -58,14 +64,19 @@ export default function HamburgerMenu() {
                 top: "10px",
                 right: "10px",
                 fontSize: "40px",
-                color: "#FC2F32",
+                color: "#1c1464",
+                
               }}
             >
               <MdClose />
             </IconButton>
+
+            
           </div>
+          
           <br />
-          <List sx={{ marginTop: "3rem" }}>
+         
+          <List sx={{ marginTop: "1rem" }}>
             <br />
             <motion.div
               whileTap={{ scale: 0.9 }}

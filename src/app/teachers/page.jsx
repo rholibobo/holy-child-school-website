@@ -12,11 +12,12 @@ export default function Teachers() {
   return (
     <main>
       <section>
+      <div className={styles.navbar}>
+            <Header />
+        </div>
         {/* ////////// SECTION 1 //////////// */}
         <div className={styles.section1}>
-          <div className={styles.navbar}>
-            <Header />
-          </div>
+          
           <div className={styles.section_container}>
             <div className="max-width  flex justify-center items-center  mt-[9rem] ">
               <div className="grid grid-rows-1 lg:grid-cols-2 justify-center items-center lg:gap-x-[15rem] ">
