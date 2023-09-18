@@ -15,7 +15,7 @@ export default function Gallery() {
       <div className={styles.navbar}>
           <Header />
       </div>
-      
+      <div className={styles.section1}></div>
     </main>
   );
 }
