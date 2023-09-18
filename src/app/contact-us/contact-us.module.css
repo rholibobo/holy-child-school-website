@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&family=Titan+One&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&family=Titan+One&display=swap"); */
 
 
 
@@ -203,13 +203,13 @@ font-size: 12px;
     
     .section1::before{
       content: "Prep School";
-      font-size: 8rem;
+      font-size: 7rem;
       line-height: 100px;
   
     }
-    .navbar{
+    /* .navbar{
       width: 90%;
       
-    }
+    } */
   }
   

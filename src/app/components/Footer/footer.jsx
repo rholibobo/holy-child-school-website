@@ -9,7 +9,7 @@ import { FaFax } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className=" bg-[#1c1464] text-white">
+    <footer className=" bg-[#1c1464] text-white ">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  justify-center align-middle text-white p-5 sm:p-10 gap-5">
         <div className="flex p-4 rounded-[10px] hover:bg-[#140e46] flex-col max-w-[500px]">
           <h1 className="text-3xl font-semibold mb-5">About Us</h1>
@@ -62,22 +62,22 @@ const Footer = () => {
           <Link className="hover:text-[#329999] w-fit " href="/blog">
             Blog
           </Link>
-          <Link className="hover:text-[#329999] w-fit " href="/ABout ">
+          <Link className="hover:text-[#329999] w-fit " href="/about-us">
             About Us
           </Link>
-          <Link className="hover:text-[#329999] w-fit " href="/blog">
+          <Link className="hover:text-[#329999] w-fit " href="/teachers">
             Meeet Our Teachers
           </Link>
           <Link className="hover:text-[#329999] w-fit " href="/services">
-            services
+            Services
           </Link>
           <Link className="hover:text-[#329999] w-fit " href="/gallery">
             Gallery
           </Link>
-          <Link className="hover:text-[#329999] w-fit " href="/blog">
+          <Link className="hover:text-[#329999] w-fit " href="/contact-us">
             Contact Us
           </Link>
-          <Link className="hover:text-[#329999] w-fit " href="/School">
+          <Link className="hover:text-[#329999] w-fit " href="/#">
             School Portal
           </Link>
         </div>

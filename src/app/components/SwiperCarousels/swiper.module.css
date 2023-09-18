@@ -2,3 +2,14 @@
     display: flex;
     justify-content: space-between;
 }
+
+.card_svg{
+    width: 40%;
+    height: auto;
+}
+.paper:hover{
+    /* background-color: #1c1464; */
+    background-color: #1faded;
+    color: #ffffff;
+    transition: .7s ease-in-out;
+}
