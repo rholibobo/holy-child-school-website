@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./page.module.css";
 
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/footer";
 import GifBackgroundSection from "../components/gifs/writing-video/vid";
 import BlogPosts from "../components/blogPosts/blog";
 
@@ -29,6 +30,8 @@ const page = () => {
         </div>
       </div>
       <BlogPosts />
+
+      <Footer />
     </section>
   );
 };

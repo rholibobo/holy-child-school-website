@@ -102,7 +102,7 @@ export default function ({ handleCloseNavMenu }) {
                 fontSize: "0.85rem",
               }}
               color="inherit"
-              className={pathname == "/about-us" ? styles.active : ""}
+              // className={pathname == "/about-us" ? styles.active : ""}
             >
               Blog
             </Typography>
@@ -117,7 +117,7 @@ export default function ({ handleCloseNavMenu }) {
                 fontSize: "0.85rem",
               }}
               color="inherit"
-              className={pathname == "/teachers" ? styles.active : ""}
+              // className={pathname == "/teachers" ? styles.active : ""}
             >
               Meet Our Teachers
             </Typography>
@@ -132,7 +132,7 @@ export default function ({ handleCloseNavMenu }) {
                 fontSize: "0.85rem",
               }}
               color="inherit"
-              className={pathname == "/gallery" ? styles.active : ""}
+              // className={pathname == "/gallery" ? styles.active : ""}
             >
               Gallery
             </Typography>

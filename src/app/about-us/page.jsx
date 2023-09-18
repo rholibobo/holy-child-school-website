@@ -5,6 +5,7 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import styles from "./about.module.css";
 
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/footer";
 
 import FloatingBallons from "../../../public/images/DesignImages/ballons-unscreen.gif";
 import Image from "next/image";
@@ -207,6 +208,8 @@ export default function AboutUs() {
           </Link>
         </Box>
       </section>
+
+      <Footer />
     </main>
   );
 }

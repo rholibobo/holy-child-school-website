@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/footer";
 import { FcGraduationCap } from "react-icons/fc";
 import { FcNext } from "react-icons/fc";
 import { FcPrevious } from "react-icons/fc";
@@ -200,6 +201,8 @@ export default function Teachers() {
           className="fill-[#1c1464]"
         ></path>
       </svg>
+
+      <Footer />
     </main>
   );
 }

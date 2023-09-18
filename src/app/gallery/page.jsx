@@ -6,6 +6,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { FcExpand, FcCollapse } from "react-icons/fc";
 import Header from "../components/Header/Header";
+// import Footer from "../components/Footer/footer";
 
 export default function Gallery() {
   const [morePictures, setmorePictures] = useState(false);

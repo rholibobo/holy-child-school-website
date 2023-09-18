@@ -22,6 +22,7 @@ import { useMediaQuery } from "@mui/material";
 
 /////// Components ////////////
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/footer";
 import {
   EnrollNowButton,
   ViewAllButton,
@@ -617,6 +618,8 @@ export default function Home() {
           ></iframe>
         </Box>
       </div>
+
+      <Footer />
 
       
     </main>

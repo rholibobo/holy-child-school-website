@@ -1,6 +1,7 @@
 "use client";
 import styles from "./contact-us.module.css";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/footer";
 import Image from "next/image"; 
 import Link from "next/link"                         
 import { LocationOn, LocalPhone, Fax, Email } from "@mui/icons-material";
@@ -107,7 +108,7 @@ export default function ContactUs() {
     
      </div>
           
-
+    <Footer />
       
     </main>
   );
