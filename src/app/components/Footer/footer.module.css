@@ -78,7 +78,7 @@
 }
 
 .custom .shape {
-  fill: #ffffff;
+  fill: transparent;
 }
 
 /* @media (max-width: 600px) {
@@ -92,19 +92,22 @@
 } */
 
 @media screen and (max-width: 820px) {
-  .container{
+  .container {
     height: auto;
   }
-  .linkContainer{
+
+  .linkContainer {
     width: 90%;
     margin-top: 1rem;
   }
 }
+
 @media screen and (max-width: 600px) {
-  .container{
+  .container {
     height: auto;
   }
-  .linkContainer{
+
+  .linkContainer {
     width: 90%;
     margin-top: 1rem;
   }
