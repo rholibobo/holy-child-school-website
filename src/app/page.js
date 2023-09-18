@@ -8,6 +8,10 @@ import Kids from "../../public/images/HomePage/kids1.jpg";
 import values from "../../public/svg/value.svg";
 import Belief from "../../public/svg/Belief.svg";
 import vision from "../../public/svg/vision.svg";
+import blueStar from "../../public/images/DesignImages/blueStar.png";
+import yellowStar from "../../public/images/DesignImages/yellowStar.png";
+import redStar from "../../public/images/DesignImages/redStar.png";
+import ballon from "../../public/images/DesignImages/ballon.png";
 
 import styles from "./page.module.css";
 
@@ -56,16 +60,15 @@ export default function Home() {
     <main>
       {/* ////////// SECTION 1 //////////// */}
       <div className={styles.navbar}>
-          <Header />
-        </div>
+        <Header />
+      </div>
       <div className={styles.section1}>
-        
         <div className={styles.section_container}>
           <Box sx={{ display: "flex" }}>
             <Box
               sx={{
                 width: { xs: "100%", md: "50%" },
-                marginTop: {xs: "2rem",md:"4rem"},
+                marginTop: { xs: "2rem", md: "6rem" },
                 position: "relative",
               }}
             >
@@ -128,6 +131,10 @@ export default function Home() {
 
       {/* /////// Section 2 /////////////// */}
       <div className={styles.section2}>
+      <Image src={blueStar} alt="star" className={styles.blueStar1} />
+        <Image src={yellowStar} alt="star" className={styles.yellowStar} />
+        <Image src={ballon} alt="star" className={styles.ballon} />
+        <Image src={redStar} alt="star" className={styles.redStar} />
         <Box
           sx={{
             width: { xs: "90%", md: "70%" },
@@ -164,7 +171,7 @@ export default function Home() {
                   />
                 </div>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   sx={{ fontWeight: "bold" }}
                   gutterBottom
                 >
@@ -183,7 +190,7 @@ export default function Home() {
                   <GiTrophyCup style={{ fontSize: "30px", color: "#ffffff" }} />
                 </div>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   sx={{ fontWeight: "bold" }}
                   gutterBottom
                 >
@@ -208,7 +215,7 @@ export default function Home() {
                   />
                 </div>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   sx={{ fontWeight: "bold" }}
                   gutterBottom
                 >
@@ -227,7 +234,7 @@ export default function Home() {
                   <HiLightBulb style={{ fontSize: "30px", color: "#ffffff" }} />
                 </div>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   sx={{ fontWeight: "bold" }}
                   gutterBottom
                 >
@@ -251,7 +258,7 @@ export default function Home() {
                   />
                 </div>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   sx={{ fontWeight: "bold", wordWrap: "none" }}
                   gutterBottom
                 >
@@ -270,7 +277,7 @@ export default function Home() {
                   <FaBook style={{ fontSize: "30px", color: "#ffffff" }} />
                 </div>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   sx={{ fontWeight: "bold" }}
                   gutterBottom
                 >
@@ -422,7 +429,7 @@ export default function Home() {
       <div className={styles.section5}>
         <div className={styles.section5_div}>
           <Typography
-            variant="h2"
+            variant="h3"
             fontWeight="bold"
             textAlign="center"
             sx={{ color: "#1c1464" }}
@@ -456,70 +463,64 @@ export default function Home() {
           </Typography>
           <br />
 
-          <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: {xs: "column", md: "row"}}}>
-            <Box sx={{width: {xs:"95%",md:"30%"}}} >
-              <Image
-                src={values}
-                alt="Values"
-                className={styles.svg_width}
-              />
+          <Box
+            sx={{
               
+              display: "flex",
+              justifyContent: "space-between",
+              flexDirection: { xs: "column", md: "row" },
+            }}
+          >
+            <Box sx={{ width: { xs: "95%", md: "30%" }, margin: "0 auto" }}>
+              <Image src={values} alt="Values" className={styles.svg_width} />
 
               <Typography
                 variant="h6"
                 fontWeight="bold"
-                // textAlign="center"
+                textAlign={{ xs: "center", md: "center" }}
                 gutterBottom
               >
                 Our Core Value
               </Typography>
 
-              <Typography variant="subtitle2" gutterBottom>
+              <Typography variant="subtitle2" textAlign={{ xs: "center", md: "center" }} gutterBottom>
                 Good character and a love for leisure reading. Objectives: to
                 raise children who not only fear God but are able to hold their
                 own in any circumstance.
               </Typography>
             </Box>
-            <Box sx={{width: {xs:"95%",md:"30%"}}} >
-              <Image
-                src={Belief}
-                alt="Belief"
-                className={styles.svg_width}
-              />
-              
+            <Box sx={{ width: { xs: "95%", md: "30%" }, margin: "0 auto" }}>
+              <Image src={Belief} alt="Belief" className={styles.svg_width} />
 
               <Typography
                 variant="h6"
                 fontWeight="bold"
-                // textAlign="center"
+                textAlign={{ xs: "center", md: "center" }}
                 gutterBottom
               >
                 Our Belief
               </Typography>
 
-              <Typography variant="subtitle2" gutterBottom>
-              Talent is not enough. Brilliance must be match by good character.
+              <Typography variant="subtitle2" textAlign={{ xs: "center", md: "center" }} gutterBottom>
+                Talent is not enough. Brilliance must be match by good
+                character.
               </Typography>
             </Box>
-            <Box sx={{width: {xs:"95%",md:"30%"}}} >
-              <Image
-                src={vision}
-                alt="Values"
-                className={styles.svg_width}
-              />
-              
+            <Box sx={{ width: { xs: "95%", md: "30%" }, margin: "0 auto" }}>
+              <Image src={vision} alt="Values" className={styles.svg_width} />
 
               <Typography
                 variant="h6"
                 fontWeight="bold"
-                // textAlign="center"
+                textAlign={{ xs: "center", md: "center" }}
                 gutterBottom
               >
                 Our Vision
               </Typography>
 
-              <Typography variant="subtitle2" gutterBottom>
-              To become a first rate educational institution with a reputation for excellent character and strong academic learning.
+              <Typography variant="subtitle2" textAlign={{ xs: "center", md: "center" }} gutterBottom>
+                To become a first rate educational institution with a reputation
+                for excellent character and strong academic learning.
               </Typography>
             </Box>
           </Box>
@@ -530,7 +531,7 @@ export default function Home() {
       <div className={styles.section6}>
         <Box
           sx={{
-            width: {xs:"95%",md:"70%"},
+            width: { xs: "95%", md: "70%" },
             margin: "0 auto",
           }}
         >
@@ -541,7 +542,6 @@ export default function Home() {
               flexDirection: { xs: "column", md: "row" },
             }}
           >
-            
             <Box
               sx={{
                 width: { xs: "100%", md: "45%" },

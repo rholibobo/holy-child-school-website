@@ -64,7 +64,8 @@ export default function HamburgerMenu() {
                 top: "10px",
                 right: "10px",
                 fontSize: "40px",
-                color: "#FC2F32",
+                color: "#1c1464",
+                
               }}
             >
               <MdClose />

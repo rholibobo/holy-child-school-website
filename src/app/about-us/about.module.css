@@ -40,22 +40,7 @@
   z-index: 10;
 }
 
-/* .gif {
-  position: absolute;
-  top: 7%;
-  left: -1%;
-  width: 15%;
-  height: auto;
-  z-index: 10;
-} */
-/* .gif1 {
-  position: absolute;
-  bottom: -240px;
-  right: 80px;
-  width: 15%;
-  height: auto;
-  z-index: 10;
-} */
+
 
 /* ///////////////////////// */
 .values_section {
@@ -92,6 +77,14 @@
   position: absolute;
   bottom: 10px;
   right: 20px;
+  opacity: 0.2;
+}
+.redStar {
+  width: 5%;
+  height: auto;
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
   opacity: 0.2;
 }
 
@@ -152,6 +145,12 @@
     width: 15%;
     bottom: 40px;
     right: 20px;
+    opacity: 0.2;
+  }
+  .redStar {
+    width: 15%;
+    bottom: 40px;
+    left: 20px;
     opacity: 0.2;
   }
 }

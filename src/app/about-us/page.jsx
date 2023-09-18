@@ -10,6 +10,7 @@ import FloatingBallons from "../../../public/images/DesignImages/ballons-unscree
 import Image from "next/image";
 import { Campaign, Favorite, Tv } from "@mui/icons-material";
 import {
+  AchievementCarousel,
   GalleryCarousel,
   TeachersCarousel,
 } from "../components/SwiperCarousels/Swiper";
@@ -23,6 +24,7 @@ import vision from "../../../public/svg/vision.svg";
 // Img Import //
 import blueStar from "../../../public/images/DesignImages/blueStar.png";
 import yellowStar from "../../../public/images/DesignImages/yellowStar.png";
+import redStar from "../../../public/images/DesignImages/redStar.png";
 import ballon from "../../../public/images/DesignImages/ballon.png";
 
 import Link from "next/link";
@@ -82,9 +84,10 @@ export default function AboutUs() {
         <Image src={blueStar} alt="star" className={styles.blueStar1} />
         <Image src={yellowStar} alt="star" className={styles.yellowStar} />
         <Image src={ballon} alt="star" className={styles.ballon} />
+        <Image src={redStar} alt="star" className={styles.redStar} />
         <Box sx={{ marginTop: "3rem" }}>
           <Typography
-            variant="h3"
+            variant="h4"
             fontWeight="bold"
             textAlign="center"
             color="#1c1489"
@@ -168,14 +171,24 @@ export default function AboutUs() {
               for excellent character and strong academic learning.
             </Typography>
           </Box>
+          
         </Box>
+
+        <br />
+        <br />
+          <Box sx={{width: {xs:"95%",md:"80%"}, margin: "0 auto"}} >
+          <AchievementCarousel />
+          </Box>
+          
+
+        
       </section>
 
       {/* ///////// Teachers Gallery /////////// */}
       <section className={styles.teachers_gallery}>
         <Box>
           <Typography
-            variant="h3"
+            variant="h4"
             fontWeight="bold"
             textAlign="center"
             color="#1c1489"

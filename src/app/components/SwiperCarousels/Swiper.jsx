@@ -10,11 +10,12 @@ import {
   EffectCube,
   EffectCards,
   Grid,
+  EffectCoverflow,
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 
-import styles from "./swiper.module.css"
+import styles from "./swiper.module.css";
 
 import Image from "next/image";
 
@@ -29,7 +30,20 @@ import port5 from "../../../../public/images/Homepage/port8.jpg";
 import port6 from "../../../../public/images/Homepage/portfolio1.jpg";
 import port7 from "../../../../public/images/Homepage/port7.jpg";
 
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+// SVG IMPORTS //
+import love from "../../../../public/svg/love.svg";
+import trophy from "../../../../public/svg/trophy.svg";
+import student from "../../../../public/svg/student.svg";
+import fteacher from "../../../../public/svg/fteacher.svg";
+
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Paper,
+  Typography,
+} from "@mui/material";
 
 export function HomeHero() {
   return (
@@ -44,13 +58,6 @@ export function HomeHero() {
       ]}
       effect={"fade"}
       grabCursor={true}
-      // cubeEffect={{
-      //   shadow: true,
-      //   slideShadows: true,
-      //   shadowOffset: 20,
-      //   shadowScale: 0.94,
-      // }}
-      // effect={"fade"}
       centeredSlides={true}
       autoplay={{
         delay: 3500,
@@ -208,17 +215,14 @@ export function GalleryCarousel() {
       modules={[Pagination, Grid]}
       grid={{
         rows: 2,
-        fill: "row"
+        fill: "row",
       }}
       // slidesPerView={3}
       pagination={{ clickable: true }}
       spaceBetween={30}
       // navigation={true}
-      lazy={true}
-      
-      
+      lazy="true"
       className="mySwiper"
-      
       // slidesPerView={2}
       breakpoints={{
         640: {
@@ -295,7 +299,6 @@ export function GalleryCarousel() {
           }}
         />
       </SwiperSlide>
-      
     </Swiper>
   );
 }
@@ -343,7 +346,7 @@ export function TeachersCarousel() {
               variant="body1"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
+              fontWeight="bold"
               // color="#ffffff"
             >
               GODWIN IKOUGHE
@@ -353,7 +356,7 @@ export function TeachersCarousel() {
               variant="body2"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
+              fontWeight="bold"
               // color="#ffffff"
             >
               School Head
@@ -380,7 +383,7 @@ export function TeachersCarousel() {
               variant="body1"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
+              fontWeight="bold"
               // color="#ffffff"
             >
               JULIANA NWOSU
@@ -390,7 +393,7 @@ export function TeachersCarousel() {
               variant="body2"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
+              fontWeight="bold"
               // color="#ffffff"
             >
               Deputy School Head
@@ -417,7 +420,7 @@ export function TeachersCarousel() {
               variant="body1"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
+              fontWeight="bold"
               // color="#ffffff"
             >
               MARIAN NEBEIFE
@@ -427,7 +430,7 @@ export function TeachersCarousel() {
               variant="body2"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
+              fontWeight="bold"
               // color="#ffffff"
             >
               MATH TEACHER
@@ -454,7 +457,7 @@ export function TeachersCarousel() {
               variant="body1"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
+              fontWeight="bold"
               // color="#ffffff"
             >
               MRS. YEMISI AJALA
@@ -464,7 +467,7 @@ export function TeachersCarousel() {
               variant="body2"
               textAlign="center"
               component="div"
-              // fontWeight="bold"
+              fontWeight="bold"
               // color="#ffffff"
             >
               BASIC SCIENCE & AFRICA TEACHER
@@ -473,5 +476,110 @@ export function TeachersCarousel() {
         </Card>
       </SwiperSlide>
     </Swiper>
+  );
+}
+
+export function AchievementCarousel() {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+        flexDirection: { xs: "column", md: "row" },
+        gap: { xs: "15px", md: "0" },
+      }}
+    >
+      <Paper
+        elevation={3}
+        sx={{
+          width: { xs: "95%", md: "20%" },
+          margin: { xs: "0 auto", md: "0" },
+          height: "40vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: "20px",
+        }}
+        className={styles.paper}
+      >
+        <Image src={love} alt="love" className={styles.card_svg} />
+        <Typography variant="body1" fontWeight="bold" gutterBottom>
+          150+
+        </Typography>
+        <Typography variant="body2" fontWeight="bold" gutterBottom>
+          FRANCHISES
+        </Typography>
+      </Paper>
+
+      <Paper
+        elevation={3}
+        sx={{
+          width: { xs: "95%", md: "20%" },
+          margin: { xs: "0 auto", md: "0" },
+          height: "40vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: "20px",
+        }}
+        className={styles.paper}
+      >
+        <Image src={trophy} alt="trophy" className={styles.card_svg} />
+        <Typography variant="body1" fontWeight="bold" gutterBottom>
+          50+
+        </Typography>
+        <Typography variant="body2" fontWeight="bold" gutterBottom>
+          CHILDREN TAKEN
+        </Typography>
+      </Paper>
+
+      <Paper
+        elevation={3}
+        sx={{
+          width: { xs: "95%", md: "20%" },
+          margin: { xs: "0 auto", md: "0" },
+          height: "40vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: "20px",
+        }}
+        className={styles.paper}
+      >
+        <Image src={student} alt="love" className={styles.card_svg} />
+        <Typography variant="body1" fontWeight="bold" gutterBottom>
+          120+
+        </Typography>
+        <Typography variant="body2" fontWeight="bold" gutterBottom>
+          CHILDREN
+        </Typography>
+      </Paper>
+
+      <Paper
+        elevation={3}
+        sx={{
+          width: { xs: "95%", md: "20%" },
+          margin: { xs: "0 auto", md: "0" },
+          height: "40vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: "20px",
+        }}
+        className={styles.paper}
+      >
+        <Image src={fteacher} alt="trophy" className={styles.card_svg} />
+        <Typography variant="body1" fontWeight="bold" gutterBottom>
+          50+
+        </Typography>
+        <Typography variant="body2" fontWeight="bold" gutterBottom>
+          STAFF & TEACHERS
+        </Typography>
+      </Paper>
+    </Box>
   );
 }
