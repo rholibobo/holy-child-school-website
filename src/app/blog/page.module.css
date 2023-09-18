@@ -54,7 +54,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  background-image: linear-gradient(#1c1464,#e130a7 );
+  background-image: linear-gradient(#1c1464, #e130a7);
   z-index: 10;
 }
 
@@ -341,7 +341,7 @@
   }
 
   .navbar {
-    width: 90%;
+    width: 100%;
   }
 
   .blogSection {
@@ -387,7 +387,7 @@
   }
 
   .navbar {
-    width: 90%;
+    width: 100%;
   }
 
   .latestBlog {
@@ -408,7 +408,7 @@
   }
 
   .navbar {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -425,6 +425,6 @@
   }
 
   .navbar {
-    width: 90%;
+    width: 100%;
   }
 }
