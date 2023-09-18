@@ -611,7 +611,6 @@ export default function Home() {
               width: "100%",
               height: "100vh",
               border: "0",
-              marginTop: "1rem",
             }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -619,8 +618,7 @@ export default function Home() {
         </Box>
       </div>
 
-      {/* ////// Section 8 //////////// */}
-      <div className={styles.section8}></div>
+      
     </main>
   );
 }

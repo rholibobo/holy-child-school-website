@@ -59,14 +59,14 @@
 }
 
 .blueStar1 {
-  width: 5%;
+  width: 3%;
   height: auto;
   position: absolute;
   left: 20px;
   opacity: 0.2;
 }
 .yellowStar {
-  width: 5%;
+  width: 3%;
   height: auto;
   position: absolute;
   top: 10px;
@@ -82,7 +82,7 @@
   opacity: 0.2;
 }
 .redStar {
-  width: 5%;
+  width: 3%;
   height: auto;
   position: absolute;
   bottom: 100px;
@@ -251,18 +251,15 @@
   margin: 0 auto;
 }
 
+/* /////////// Section 7 //////////// */
+
 .section7 {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background-color: #ffffff;
   position: relative;
 }
 
-.section8 {
-  width: 100%;
-  height: 10vh;
-  background-color: #ffffff;
-}
 
 /* ///////////// Media Queries //////////////// */
 
