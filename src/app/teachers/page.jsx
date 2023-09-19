@@ -17,7 +17,7 @@ import { TeachersCarousel } from "../components/Carousels/Carousels";
 
 export default function Teachers() {
   return (
-    <main className=' mb-10'>
+    <main >
       <section className='overflow-x-hidden'>
         <div className={styles.navbar}>
           <Header />
@@ -139,7 +139,7 @@ export default function Teachers() {
         </div>
       </section>
 
-      <section className='bg-[#1c1464]  mt-14'>
+      <section className='bg-[#828286]  mt-14'>
         <div className='max-width grid grid-rows-1 lg:grid-cols-2 items-center justify-between lg:gap-20 py-4'>
           {/* <div className='grid grid-cols-2 justify-center items-center py-5 gap-10'>
             <div className='flex items-center space-x-2 '>
@@ -190,6 +190,8 @@ export default function Teachers() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }

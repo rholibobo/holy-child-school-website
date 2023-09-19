@@ -14,56 +14,55 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <Box sx={{ width: "100%", height: "80vh" }}>
+    <Box>
       <Box
         sx={{
-          width: "80%",
           display: "flex",
-          justifyContent: "center",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
         }}
       >
-        <Typography
-          variant="h1"
-          color="GrayText"
-          fontWeight="bold"
-          sx={{ fontSize: "5rem" }}
-          gutterBottom
-        >
-          500
-        </Typography>
-        <Typography variant="body1"  color="red" gutterBottom>
-          Internal Server Error
-        </Typography>
-        <Typography variant="subtitle2" color="GrayText" gutterBottom>
-          Something went wrong (:
-        </Typography>
+        <Box>
+          <Typography
+            variant="h1"
+            color="GrayText"
+            fontWeight="bold"
+            sx={{ fontSize: "10rem" }}
+            gutterBottom
+          >
+            500
+            <Typography variant="body1" textAlign="center" color="red" gutterBottom>
+              Internal Server Error
+            </Typography>
+            <Typography variant="subtitle2" textAlign="center"  color="GrayText" gutterBottom>
+              Something went wrong (:
+            </Typography>
+          </Typography>
+        </Box>
 
-            <br />
-            <br />
+        <br />
+        
         <Box sx={{ display: "flex", gap: "100px" }}>
-        <Button
-          variant="outlined"
-          sx={{ textTransform: "capitalize" }}
-          onClick={
-            // Attempt to recover by trying to re-render the segment
-            () => reset()
-          }
-        >
-          Try again
-        </Button>
-        <Button
-          variant="outlined"
-          sx={{ textTransform: "capitalize" }}
-          onClick={() => router.push("/")}
-        >
-          Home
-        </Button>
+          <Button
+            variant="outlined"
+            sx={{ textTransform: "capitalize", border: "1px solid grey", color: "grey" }}
+            onClick={
+              // Attempt to recover by trying to re-render the segment
+              () => reset()
+            }
+          >
+            Try again
+          </Button>
+          <Button
+            variant="outlined"
+            sx={{ textTransform: "capitalize", border: "1px solid grey", color: "grey"  }}
+            onClick={() => router.push("/")}
+          >
+            Home
+          </Button>
+        </Box>
       </Box>
-      </Box>
-
-      
     </Box>
   );
 }
