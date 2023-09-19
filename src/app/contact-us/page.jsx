@@ -44,7 +44,7 @@ export default function ContactUs() {
 
                       <div className={styles.get_email}>
                         <h3 className={styles.text_em}> < Email /> Email </h3>
-                       <p> send us your  feedbacks through our email 
+                       <p> Send us your  feedbacks through our email 
                        </p>
                        <Link href="mailto:info@holychildpreparatory.org" className={styles.email_link}>
                        info@holychildpreparatory.org
