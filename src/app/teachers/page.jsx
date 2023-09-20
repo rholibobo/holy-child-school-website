@@ -17,10 +17,10 @@ import { TeachersCarousel } from "../components/Carousels/Carousels";
 export default function Teachers() {
   return (
     <main className=' mb-10'>
+      <div className={styles.navbar}>
+        <Header />
+      </div>
       <section className='overflow-x-hidden'>
-        <div className={styles.navbar}>
-          <Header />
-        </div>
         {/* ////////// SECTION 1 //////////// */}
         <div
           className={`${styles.section1} flex justify-center items-center py-20 lg:py-10 `}
@@ -29,12 +29,24 @@ export default function Teachers() {
             className={`${styles.section_container} flex justify-center items-center`}
           >
             <div className='max-width  flex justify-center items-center  mt-[9rem]   '>
-              <div className='grid grid-rows-1 lg:grid-cols-2 justify-between items-center lg:gap-x-[15rem]  w-full '>
-                <div className=' font-bold text-2xl lg:text-5xl text-white '>
-                  <h2>Teachers</h2>
+              <div className='grid grid-rows-1 lg:grid-cols-2 justify-between items-center gap-y-10  lg:gap-x-[15rem] lg:gap-y-0 w-full '>
+                <div className='  flex flex-col   space-y-6 '>
+                  <h2 className='font-bold text-2xl lg:text-5xl text-white'>
+                    Teachers
+                  </h2>
+                  <p className='text text-gray-100 font-medium text-3xl'>
+                    We are Looking to give our pupils quality education after
+                    all our teachers can make that happen.
+                  </p>
                 </div>
                 <div>
-                  <GiTeacher className='text-[13rem] text-blue-500' />
+                  <Image
+                    src='/images/DesignImages/teaching.svg'
+                    className='w-[900px]  h-full'
+                    width={100}
+                    height={100}
+                    alt='red star'
+                  />
                 </div>
               </div>
             </div>
@@ -45,7 +57,7 @@ export default function Teachers() {
       <section className='py-20 flex flex-col justify-center items-center space-y-9 relative overflow-x-hidden'>
         <Image
           src='/images/DesignImages/redstar.png'
-          className='w-20  h-20 absolute  left-[90%] top-[20%] opacity-25'
+          className='w-10  h-10 absolute  left-[90%] top-[20%] opacity-25'
           width={100}
           height={100}
           alt='red star'
@@ -53,7 +65,7 @@ export default function Teachers() {
 
         <Image
           src='/images/DesignImages/yellowStar.png'
-          className='w-20  h-20 absolute  right-[90%] top-[70%] opacity-25'
+          className='w-10  h-10 absolute  right-[90%] top-[70%] opacity-25'
           width={100}
           height={100}
           alt='red star'
@@ -66,19 +78,25 @@ export default function Teachers() {
           height={100}
           alt='red star'
         />
-        <h2 className='text-[#1c1489] font-bold  text-2xl text-center space-y-4 pb-8'>
+        <h2 className='text-[#1c1489] font-bold  text-2xl text-center  pb-12'>
           Who Are Our Teachers
         </h2>
-        <div className='max-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14 justify-between items-center my-5 z-50'>
-          <div className='w-[17rem] h-[19rem]  bg-blue-300 flex flex-col justify-center items-center rounded-sm hover:scale-125 transition duration-1000'>
-            <div className=' flex justify-center items-center w-16 h-16 rounded-full bg-blue-300 -mt-16'>
-              <HiAcademicCap className='text-4xl text-indigo-700' />
+        <div className='max-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14 justify-between items-center my-5 '>
+          <div className='w-[17rem] h-[19rem] teacherCardShadow  bg-white flex flex-col justify-center items-center rounded-sm hover:scale-125 transition duration-1000'>
+            <div className=' flex justify-center items-center w-16 h-16 rounded-full bg-white -mt-16'>
+              <Image
+                src='/images/DesignImages/qualified.svg'
+                className='w-40  h-40'
+                width={100}
+                height={100}
+                alt='red star'
+              />
             </div>
             <div className='flex flex-col justify-center items-center px-3  pt-20'>
-              <h2 className='mb-10 text-white text-base font-semibold'>
+              <h2 className='mb-10 text-black text-xl font-bold text-center'>
                 Qualified teachers
               </h2>
-              <p className='text-center text-gray-200'>
+              <p className='text-center text-black'>
                 We boast of qualified and competent teachers to give your child
                 qualitative teaching
               </p>
@@ -88,15 +106,21 @@ export default function Teachers() {
 
           {/* Second Box */}
 
-          <div className='w-[17rem] h-[19rem] bg-blue-500   flex flex-col justify-center items-center rounded-sm hover:scale-125 transition duration-1000'>
-            <div className=' flex justify-center items-center w-16 h-16 rounded-full bg-blue-500 -mt-16'>
-              <FaChalkboardTeacher className='text-4xl text-indigo-700' />
+          <div className='w-[17rem] h-[19rem]  bg-white teacherCardShadow   flex flex-col justify-center items-center rounded-sm hover:scale-125 transition duration-1000'>
+            <div className=' flex justify-center items-center w-16 h-16 rounded-full bg-white -mt-16'>
+              <Image
+                src='/images/DesignImages/competent.svg'
+                className='w-40  h-40'
+                width={100}
+                height={100}
+                alt='red star'
+              />
             </div>
-            <div className='flex flex-col justify-center items-center px-3 text-white pt-20'>
-              <h2 className='mb-10 text-white text-base font-semibold'>
+            <div className='flex flex-col justify-center items-center px-3  pt-20'>
+              <h2 className='mb-10 text-black text-xl font-bold text-center'>
                 Competent at their specialty
               </h2>
-              <p className='text-center text-gray-200'>
+              <p className='text-center text-black'>
                 No doubt with our teachers competence.They are topnotch.
               </p>
             </div>
@@ -105,13 +129,21 @@ export default function Teachers() {
 
           {/* Third Box */}
 
-          <div className='w-[17rem] h-[19rem] bg bg-blue-800 flex flex-col justify-center items-center rounded-sm hover:scale-125 transition duration-1000'>
-            <div className=' flex justify-center items-center w-16 h-16 rounded-full bg-blue-800 -mt-16'>
-              <BsFillAwardFill className='text-4xl text-indigo-400' />
+          <div className='w-[17rem] h-[19rem]  bg-white teacherCardShadow flex flex-col justify-center items-center rounded-sm hover:scale-125 transition duration-1000'>
+            <div className=' flex justify-center items-center w-16 h-16 rounded-full bg-white -mt-16'>
+              <Image
+                src='/images/DesignImages/award.svg'
+                className='w-40  h-40'
+                width={100}
+                height={100}
+                alt='red star'
+              />
             </div>
             <div className='flex flex-col justify-center items-center px-3  pt-20'>
-              <h2 className='mb-10 text-white'>Award Winning Teachers</h2>
-              <p className='text-center text-gray-200'>
+              <h2 className='mb-10 text-black text-xl font-bold text-center'>
+                Award Winning Teachers
+              </h2>
+              <p className='text-center text-black'>
                 Our teachers have won awards both within and outside the school.
               </p>
             </div>
@@ -126,13 +158,13 @@ export default function Teachers() {
           </h2>
 
           <div className=' max-width h-full relative py-4'>
-            <Image
+            {/* <Image
               src='/images/DesignImages/redstar.png'
               className='w-20  h-20 absolute  left-[90%] top-[20%]'
               width={100}
               height={100}
               alt='red star'
-            />
+            /> */}
             <TeachersCarousel />
           </div>
         </div>
