@@ -17,7 +17,7 @@ import { TeachersCarousel } from "../components/Carousels/Carousels";
 
 export default function Teachers() {
   return (
-    <main className=' mb-10'>
+    <main>
       <div className={styles.navbar}>
         <Header />
       </div>
@@ -171,45 +171,13 @@ export default function Teachers() {
         </div>
       </section>
 
-      <section className='bg-[#828286]  mt-14'>
+      <section className='bg-[#F3E7D8]  mt-14'>
         <div className='max-width grid grid-rows-1 lg:grid-cols-2 items-center justify-between lg:gap-20 py-4'>
-          {/* <div className='grid grid-cols-2 justify-center items-center py-5 gap-10'>
-            <div className='flex items-center space-x-2 '>
-              <div className='iconsDiv bg-[#FFA500] border border-[#FFA500] flex justify-center items-end w-fit pb-7'>
-                <FcGraduationCap className='text-3xl  text-white' />
-              </div>
-              <p className=' text-gray-200 text-base font-bold'>
-                Self-contained gifted programs
-              </p>
-            </div>
-            <div className='flex items-center space-x-2 '>
-              <div className='iconsDiv bg-[#FFA500] border border-[#FFA500] flex justify-center items-end w-fit pb-7'>
-                <FcGraduationCap className='text-3xl' />
-              </div>
-              <p className='w-1/2 text-gray-200 text-base font-bold'>
-                Extra Activities
-              </p>
-            </div>
-            <div className='flex items-center space-x-2 '>
-              <div className='iconsDiv  bg-[#FFA500] border border-[#FFA500] flex justify-center items-end w-fit pb-7'>
-                <FcGraduationCap className='text-3xl' />
-              </div>
-              <p className=' text-gray-200 text-base font-bold'>
-                Complete Tracking
-              </p>
-            </div>
-            <div className='flex items-center space-x-2 '>
-              <div className='iconsDiv bg-[#FFA500] border border-[#FFA500] justify-center items-end w-fit pb-7'>
-                <FcGraduationCap className='text-3xl' />
-              </div>
-              <p className=' text-gray-200 text-base font-bold'>
-                Individual Bus
-              </p>
-            </div>
-          </div> */}
+          
 
           <Quote />
-          <div className='lg:-mt-20'>
+          <Quote />
+          {/* <div className='lg:-mt-20'>
             <Image
               src='/images/DesignImages/cube-unscreen.gif'
               className=' w-full h-full obj object-cover '
@@ -219,7 +187,7 @@ export default function Teachers() {
               aria-hidden='true'
               alt='red star'
             />
-          </div>
+          </div> */}
         </div>
       </section>
 
