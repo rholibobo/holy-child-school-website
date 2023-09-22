@@ -38,7 +38,7 @@ export default function ({ handleCloseNavMenu }) {
           sx={{
             textTransform: "capitalize",
             color: "#ffffff",
-            ":hover": { color: "yellow", backgroundColor: "transparent" },
+            ":hover": { fontWeight: "bold", backgroundColor: "transparent" },
           }}
           color="inherit"
           className={pathname == "/" ? styles.active : ""}
@@ -52,7 +52,7 @@ export default function ({ handleCloseNavMenu }) {
           sx={{
             textTransform: "capitalize",
             color: "#ffffff",
-            ":hover": { color: "yellow", backgroundColor: "transparent" },
+            ":hover": { fontWeight: "bold", backgroundColor: "transparent" },
           }}
           color="inherit"
           className={pathname == "/about-us" ? styles.active : ""}
@@ -66,7 +66,7 @@ export default function ({ handleCloseNavMenu }) {
           sx={{
             textTransform: "capitalize",
             color: "#ffffff",
-            ":hover": { color: "yellow", backgroundColor: "transparent" },
+            ":hover": { fontWeight: "bold", backgroundColor: "transparent" },
           }}
           color="inherit"
           className={pathname == "/services" ? styles.active : ""}
@@ -80,7 +80,7 @@ export default function ({ handleCloseNavMenu }) {
           sx={{
             textTransform: "capitalize",
             color: "#ffffff",
-            ":hover": { color: "yellow", backgroundColor: "transparent" },
+            ":hover": { fontWeight: "bold", backgroundColor: "transparent" },
           }}
           color="inherit"
           disableFocusRipple={true}
@@ -98,7 +98,7 @@ export default function ({ handleCloseNavMenu }) {
         sx={{
           textTransform: "capitalize",
           color: "#ffffff",
-          ":hover": { color: "yellow", backgroundColor: "transparent" },
+          ":hover": { fontWeight: "bold", backgroundColor: "transparent" },
         }}
         color="inherit"
         className={pathname == "/blog" ? styles.active : ""}
