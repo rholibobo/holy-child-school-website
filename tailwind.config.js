@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        "10xl": "20px 20px 20px 20px rgba(0, 0, 0, 0.1)",
+      },
+    },
     borderWidth: {
       DEFAULT: "1px",
       0: "0",

@@ -369,7 +369,7 @@ export function TeachersCarousel() {
     {
       id: 2,
       image: Teacher2,
-      name: "Peter parker",
+      name: "Okon Ifot",
       area_of_discipline: "Commerce",
     },
     {

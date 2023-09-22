@@ -39,13 +39,12 @@ export default function ContactUs() {
        
                     <div className={styles.get_address}>
                     <h3 className={styles.text} > < LocationOn /> Address </h3> 
-                       <p> We are located at 
-                        Nza Street, Independence Layout  Enugu, Nigeria</p>
+                       <p> For inquiries, or to reach us in person, visit us at Nza Street, Independence Layout Enugu, Nigeria</p>
                     </div>
 
                       <div className={styles.get_email}>
                         <h3 className={styles.text_em}> < Email /> Email </h3>
-                       <p> Send us your  feedbacks through our email 
+                       <p> We're here to assist you. Share your thoughts, questions, or feedback at
                        </p>
                        <Link href="mailto:info@holychildpreparatory.org" className={styles.email_link}>
                        info@holychildpreparatory.org
@@ -55,7 +54,7 @@ export default function ContactUs() {
 
                       <div className={styles.get_number}>
                       <h4 className={styles.text_ph}> < LocalPhone /> Phone Number </h4>
-                        <p> You can call us on <br /> + 234 803 740 8466 <br /> + 234 701 790 7896 </p>
+                        <p>To call or chat with our team, contact us with +234 803 740 8466 or +234 701 790 7896   </p>
                       </div>
                      
                     </div>
@@ -96,14 +95,13 @@ export default function ContactUs() {
           <br /> <br />
           <input type="email" required  className={styles.input} placeholder="Email Address" />
         <br /> <br />
-          <textarea className={styles.input} placeholder="Message" name="" id="" cols="30" rows="5"></textarea>
+          <textarea className={styles.input} placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
 
-          <main className={styles.btn}>
+          <main className={styles.btn}> 
            <button type="button" className={styles.view_all_btn}>Submit</button> 
         </main>
          
          
-          
           
            </form>
          
