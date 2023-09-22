@@ -26,7 +26,6 @@
     margin: 0 auto;
     padding-top: 2rem;
   
-    /* position: relative; */
   }
   
   .navbar {
@@ -96,4 +95,35 @@
 }
 .image_two{
     width: 550px;
+}
+
+/* media query */
+
+
+@media screen and (max-width: 834px){
+  .service, .service_one, .service_two{
+   flex-direction: column;
+   margin-top: -20px;
+   /* margin-bottom: 20px; */
+}
+.text_one, .text_two, .text_three{
+  width: 100%;
+  padding-bottom: 35px;
+ 
+}
+.text_two{
+  padding-top: 10px;
+}
+.image, .image_one, .image_two{
+  /* width: 730px; */
+  width: 100%;
+  margin: 0 auto;
+}
+.service_one{
+  flex-direction: column-reverse;
+}
+.wrapper{
+  padding-top: 20px;
+}
+
 }
