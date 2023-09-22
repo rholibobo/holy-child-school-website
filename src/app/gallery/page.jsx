@@ -6,9 +6,14 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { FcExpand, FcCollapse } from "react-icons/fc";
 import Header from "../components/Header/Header";
-import imageUrl from "./data";
+import imageUrls from "./data";
+import {Swiper, SwiperSlide} from "swiper/react"
+import 'swiper/css'
+
 
 export default function Gallery() {
+  const [one, two, three, four, five, six, ...others] = imageUrls
+  const fewImages = [one, two, three, four, five, six]
   return (
     <main>
       <div className={styles.navbar}>
@@ -29,13 +34,19 @@ export default function Gallery() {
           </p>
         </div>
       </div>
-      <section>
-        {imageUrl.map((image, index) => {
-          <div className="grid grid-cols-2 gap-5">
-            <Image key={index} src={image} alt={image + index} />
-          </div>;
-        })}
-      </section>
+      <section className="p-3 my-4">
+      <div className="swiper-container">
+        <div className="swiper-wrapper">
+          { fewImages.map((image, index) => (
+            <div key={index} className="">
+              <Image src={image} alt={image + index} className="w-full" />
+            </div>
+          ))}
+        </div>
+        <div className="swiper-pagination"></div>
+      </div>
+    </section>
+
     </main>
   );
 }
