@@ -1,19 +1,25 @@
 "use client";
-import { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { FcExpand, FcCollapse } from "react-icons/fc";
 import Header from "../components/Header/Header";
 import imageUrls from "./data";
-import {Swiper, SwiperSlide} from "swiper/react"
-import 'swiper/css'
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { useEffect, useState } from "react";
+import imageUrl from "./data";
 
 export default function Gallery() {
-  const [one, two, three, four, five, six, ...others] = imageUrls
-  const fewImages = [one, two, three, four, five, six]
+  // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  // const updateScreenWidth = () => {
+  //   setScreenWidth(window.innerWidth);
+  // };
+  // useEffect(() => {
+  //   window.addEventListener("resize", updateScreenWidth);
+  //   return () => {
+  //     window.removeEventListener("resize", updateScreenWidth);
+  //   };
+  // }, []);
   return (
     <main>
       <div className={styles.navbar}>
@@ -35,18 +41,15 @@ export default function Gallery() {
         </div>
       </div>
       <section className="p-3 my-4">
-      <div className="swiper-container">
-        <div className="swiper-wrapper">
-          { fewImages.map((image, index) => (
-            <div key={index} className="">
-              <Image src={image} alt={image + index} className="w-full" />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {imageUrls.map((image, index) => (
+            <div key={index} className="w-full">
+              <Image src={image} alt={image + index} className="rounded-md" />
             </div>
           ))}
         </div>
-        <div className="swiper-pagination"></div>
-      </div>
-    </section>
-
+        <button>View More</button>
+      </section>
     </main>
   );
 }
