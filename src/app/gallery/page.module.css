@@ -7,7 +7,7 @@
   position: relative;
 }
 
-/* .section1::before {
+.section1::before {
   content: "PREP SCHOOL";
   font-family: "Titan One", cursive;
   color: antiquewhite;
@@ -19,7 +19,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.05;
-} */
+}
 
 .navbar {
   width: 100%;

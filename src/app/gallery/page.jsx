@@ -3,23 +3,25 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
-import imageUrls from "./data";
+import { staff } from "./data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import imageUrl from "./data";
+import Nav from "./nav";
 
 export default function Gallery() {
-  // const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  // const updateScreenWidth = () => {
-  //   setScreenWidth(window.innerWidth);
-  // };
-  // useEffect(() => {
-  //   window.addEventListener("resize", updateScreenWidth);
-  //   return () => {
-  //     window.removeEventListener("resize", updateScreenWidth);
-  //   };
-  // }, []);
+  const [student, setStudent] = useState(true);
+
+  const updateState = (val) => {
+    if (val === "student") {
+      setStudent(true);
+      console.log(val)
+    } else {
+      setStudent(false);
+      console.log(val)
+    }
+  };
   return (
     <main>
       <div className={styles.navbar}>
@@ -40,15 +42,29 @@ export default function Gallery() {
           </p>
         </div>
       </div>
+      <Nav onclick={updateState} />
       <section className="p-3 my-4">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {imageUrls.map((image, index) => (
-            <div key={index} className="w-full">
-              <Image src={image} alt={image + index} className="rounded-md" />
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {student
+            ? imageUrl.map((image, index) => (
+                <div key={index} className="w-full">
+                  <Image
+                    src={image}
+                    alt={image + index}
+                    className="rounded-sm"
+                  />
+                </div>
+              ))
+            : staff.map((image, index) => (
+                <div key={index} className="w-full">
+                  <Image
+                    src={image}
+                    alt={image + index}
+                    className="rounded-sm"
+                  />
+                </div>
+              ))}
         </div>
-        <button>View More</button>
       </section>
     </main>
   );
