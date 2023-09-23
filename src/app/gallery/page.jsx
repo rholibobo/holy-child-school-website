@@ -1,27 +1,20 @@
 "use client";
-import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer/footer";
-import { staff } from "./data";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import { useState } from "react";
-import imageUrl from "./data";
+import data from "./data";
 import Nav from "./nav";
+import { motion } from "framer-motion";
+import "animate.css";
 
 export default function Gallery() {
-  const [student, setStudent] = useState(true);
+  const [value, setValue] = useState("student");
 
   const updateState = (val) => {
-    if (val === "student") {
-      setStudent(true);
-      console.log(val)
-    } else {
-      setStudent(false);
-      console.log(val)
-    }
+    setValue(val);
   };
   return (
     <main>
@@ -30,9 +23,9 @@ export default function Gallery() {
       </div>
       <div className={styles.section1}>
         <div className="flex justify-center items-center p-5 h-full flex-col text-center text-white w-full">
-          <h1 className="font-bold uppercase text-[50px] mb-2">
+          <h11 className="font-bold uppercase text-[50px] mb-2 animate__backInLeft animate__slow">
             Gallery Section
-          </h1>
+          </h11>
           <p className="w-full md:w-1/2">
             Welcome to our school&apos;s Gallery section, where we proudly
             showcase the vibrant and creative spirit that defines our
@@ -44,28 +37,22 @@ export default function Gallery() {
         </div>
       </div>
       <Nav onclick={updateState} />
+
       <section className="p-3 my-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {student
-            ? imageUrl.map((image, index) => (
-                <div key={index} className="w-full">
-                  <Image
-                    src={image}
-                    alt={image + index}
-                    className="rounded-sm"
-                  />
-                </div>
-              ))
-            : staff.map((image, index) => (
-                <div key={index} className="w-full">
-                  <Image
-                    src={image}
-                    alt={image + index}
-                    className="rounded-sm"
-                  />
-                </div>
-              ))}
-        </div>
+        <motion.div
+          layout
+          transition={{ duration: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-4"
+        >
+          {data[value].map((image, index) => (
+            <Image
+              key={index}
+              src={image}
+              alt={`Image ${index}`}
+              className="rounded-sm hover:scale-90 cursor-pointer transition-all ease-in-out"
+            />
+          ))}
+        </motion.div>
       </section>
 
       <Footer />
