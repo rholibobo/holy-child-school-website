@@ -1,12 +1,10 @@
 .section1 {
   width: 100%;
   height: 100vh;
-  /* background-image: linear-gradient(#9d2a77, #e130a7); */
-  /* background-image: linear-gradient(#1c1464, #919497); */
-  /* background-image: linear-gradient(#3988d8, #c53cae); */
-  background-image: linear-gradient(#919497, #1c1464);
+  /* background-image: linear-gradient(#1c1464, #bb56e2); */
+  background: linear-gradient(#1faded, #e130a7);
+
   position: relative;
-  margin-top: -9rem;
 }
 
 .section1::before {
@@ -14,7 +12,6 @@
   font-family: "Titan One", cursive;
   color: antiquewhite;
   font-size: 15rem;
-  /* font-size: 100%; */
   font-weight: bold;
   line-height: 150px;
   position: absolute;
@@ -24,11 +21,6 @@
   opacity: 0.05;
 }
 
-.section_container {
-  width: 90%;
-  margin: 0 auto;
-}
-
 .navbar {
   width: 100%;
   margin: 0 auto;
@@ -36,6 +28,7 @@
   top: 0;
   left: 0;
   /* background-color: #000; */
-  background-image: linear-gradient(#1c1464, #201f1f);
+  background: linear-gradient(#1faded, #e130a7);
+  /* change the linear gradient of the above to reverse colours in line 7*/
   z-index: 10;
 }
