@@ -2,23 +2,24 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function Blob({ image, name, area_of_discipline }) {
   return (
-    <div className='flex flex-col  justify-center items-center'>
+    <div className="flex flex-col  justify-center items-center">
       <div
-        className={`rounded-md bg-blue-500 border-s-4 flex justify-center items-center  w-1/2  overflow-hidden `}
+        className={`rounded-md bg-blue-500 border-s-4 flex justify-center items-center  w-[75%]  overflow-hidden `}
       >
         <Image
           src={image}
-          className='w-full'
+          className="w-full"
           width={100}
           height={100}
-          alt='red star'
+          alt="red star"
         />
       </div>
-      <p className='text-lg font-semibold'>{name}</p>
-      <p className=' text-gray-500 font-medium text-base'>
+      <p className="text-lg font-semibold">{name}</p>
+      <p className=" text-gray-500 font-medium text-base">
         {area_of_discipline}
       </p>
     </div>
@@ -102,9 +103,23 @@ export function Quote() {
 
   const activequote = quotes[activeIndex];
   return (
-    <div className='py-10 px-4 border-l-2 border-l-blue-500 space-y-4'>
-      <p className='text-stone-800 text-base font-'>{activequote.quote}</p>
-      <p className='text-stone-800 font-light'>{activequote.author}</p>
-    </div>
+    <motion.div
+      initial={{ x: "100%" }} // Start position (right edge of the screen)
+      animate={{ x: "-100%" }} // End position (left edge of the screen)
+      transition={{ duration: 15, ease: "linear", repeat: Infinity }}
+      // style={{
+      //   width: "100px",
+      //   height: "100px",
+      //   background: "blue",
+      //   position: "absolute",
+      // }}
+    >
+      <div className="py-10 pl-4 border-l-2 border-l-blue-500 ">
+        <p className="text-[#1C1464] text-base font-medium">
+          {activequote.quote}
+        </p>
+        <p className="text-[#1C1464] text-lg font-light">{activequote.author}</p>
+      </div>
+    </motion.div>
   );
 }

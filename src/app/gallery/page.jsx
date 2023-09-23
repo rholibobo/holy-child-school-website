@@ -1,7 +1,9 @@
 "use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/footer";
 
 import "swiper/css";
 import { useState } from "react";
@@ -9,6 +11,7 @@ import data from "./data";
 import Nav from "./nav";
 import { motion } from "framer-motion";
 import "animate.css";
+
 
 export default function Gallery() {
   const [value, setValue] = useState("student");
