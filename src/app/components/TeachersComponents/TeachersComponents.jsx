@@ -103,8 +103,8 @@ export function Quote() {
   const activequote = quotes[activeIndex];
   return (
     <div className='py-10 px-4 border-l-3 border-l-blue-500 space-y-4'>
-      <p className='text-white text-xl font-semibold'>{activequote.quote}</p>
-      <p className='text-gray-200 font-light'>{activequote.author}</p>
+      <p className='text-white text-xl font-semibold py-3'>{activequote.quote}</p>
+      <p className='text-gray-200 font-light py-3'>{activequote.author}</p>
     </div>
   );
 }

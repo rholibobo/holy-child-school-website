@@ -112,9 +112,9 @@ export function MediaCard() {
         <CardContent sx={{ backgroundColor: "#ffffff" }}>
           <Typography
             gutterBottom
-            variant="body2"
-            textAlign="center"
-            component="div"
+            variant='body2'
+            textAlign='center'
+            component='div'
             // fontWeight="bold"
             // color="#ffffff"
           >
@@ -137,9 +137,9 @@ export function MediaCard() {
         <CardContent sx={{ backgroundColor: "#ffffff" }}>
           <Typography
             gutterBottom
-            variant="body2"
-            textAlign="center"
-            component="div"
+            variant='body2'
+            textAlign='center'
+            component='div'
             // fontWeight="bold"
             // color="#ffffff"
           >
@@ -162,9 +162,9 @@ export function MediaCard() {
         <CardContent sx={{ backgroundColor: "#ffffff" }}>
           <Typography
             gutterBottom
-            variant="body2"
-            textAlign="center"
-            component="div"
+            variant='body2'
+            textAlign='center'
+            component='div'
             // fontWeight="bold"
             // color="#ffffff"
           >
@@ -176,108 +176,107 @@ export function MediaCard() {
   );
 }
 // <Carousel
-    //   additionalTransfrom={0}
-    //   arrows
-    //   autoPlay
-    //   autoPlaySpeed={1000}
-    //   centerMode={false}
-    //   className=""
-    //   containerClass="container-with-dots"
-    //   dotListClass=""
-    //   draggable
-    //   focusOnSelect={false}
-    //   infinite={false}
-    //   itemClass=""
-    //   keyBoardControl
-    //   minimumTouchDrag={80}
-    //   pauseOnHover
-    //   renderArrowsWhenDisabled={false}
-    //   renderButtonGroupOutside={false}
-    //   renderDotsOutside={false}
-    //   responsive={{
-    //     desktop: {
-    //       breakpoint: {
-    //         max: 3000,
-    //         min: 1024,
-    //       },
-    //       items: 1,
-    //       partialVisibilityGutter: 40,
-    //     },
-    //     mobile: {
-    //       breakpoint: {
-    //         max: 464,
-    //         min: 0,
-    //       },
-    //       items: 1,
-    //       partialVisibilityGutter: 30,
-    //     },
-    //     tablet: {
-    //       breakpoint: {
-    //         max: 1024,
-    //         min: 464,
-    //       },
-    //       items: 1,
-    //       partialVisibilityGutter: 30,
-    //     },
-    //   }}
-    //   rewind
-    //   rewindWithAnimation={false}
-    //   rtl={false}
-    //   shouldResetAutoplay
-    //   showDots={false}
-    //   sliderClass=""
-    //   slidesToSlide={2}
-    //   swipeable
-    // >
-    //   <Box sx={{borderRadius: "10%",}}>
-    //     <Image
-    //       src={pix1}
-    //       alt="Carousel Image"
-    //       style={{
-    //         width: "100%",
-    //         height: "auto",
-    //         borderRadius: "10%",
-    //       }}
-    //     />
-    //   </Box>
-    //   <Box sx={{borderRadius: "10%",}}>
-    //     <Image
-    //       src={pix2}
-    //       alt="Carousel Image"
-    //       style={{
-    //         width: "100%",
-    //         height: "auto",
-    //         borderRadius: "10%",
-    //       }}
-    //     />
-    //   </Box>
-    //   <Box sx={{borderRadius: "10%",}}>
-    //     <Image
-    //       src={pix2}
-    //       alt="Carousel Image"
-    //       style={{
-    //         width: "100%",
-    //         height: "auto",
-    //         borderRadius: "10%",
-    //       }}
-    //     />
-    //   </Box>
-    //   <Box sx={{borderRadius: "10%",}}>
-    //     <Image
-    //       src={pix3}
-    //       alt="Carousel Image"
-    //       style={{
-    //         width: "100%",
-    //         height: "auto",
-    //         borderRadius: "10%",
-    //       }}
-    //     />
-    //   </Box>
-    // </Carousel>
+//   additionalTransfrom={0}
+//   arrows
+//   autoPlay
+//   autoPlaySpeed={1000}
+//   centerMode={false}
+//   className=""
+//   containerClass="container-with-dots"
+//   dotListClass=""
+//   draggable
+//   focusOnSelect={false}
+//   infinite={false}
+//   itemClass=""
+//   keyBoardControl
+//   minimumTouchDrag={80}
+//   pauseOnHover
+//   renderArrowsWhenDisabled={false}
+//   renderButtonGroupOutside={false}
+//   renderDotsOutside={false}
+//   responsive={{
+//     desktop: {
+//       breakpoint: {
+//         max: 3000,
+//         min: 1024,
+//       },
+//       items: 1,
+//       partialVisibilityGutter: 40,
+//     },
+//     mobile: {
+//       breakpoint: {
+//         max: 464,
+//         min: 0,
+//       },
+//       items: 1,
+//       partialVisibilityGutter: 30,
+//     },
+//     tablet: {
+//       breakpoint: {
+//         max: 1024,
+//         min: 464,
+//       },
+//       items: 1,
+//       partialVisibilityGutter: 30,
+//     },
+//   }}
+//   rewind
+//   rewindWithAnimation={false}
+//   rtl={false}
+//   shouldResetAutoplay
+//   showDots={false}
+//   sliderClass=""
+//   slidesToSlide={2}
+//   swipeable
+// >
+//   <Box sx={{borderRadius: "10%",}}>
+//     <Image
+//       src={pix1}
+//       alt="Carousel Image"
+//       style={{
+//         width: "100%",
+//         height: "auto",
+//         borderRadius: "10%",
+//       }}
+//     />
+//   </Box>
+//   <Box sx={{borderRadius: "10%",}}>
+//     <Image
+//       src={pix2}
+//       alt="Carousel Image"
+//       style={{
+//         width: "100%",
+//         height: "auto",
+//         borderRadius: "10%",
+//       }}
+//     />
+//   </Box>
+//   <Box sx={{borderRadius: "10%",}}>
+//     <Image
+//       src={pix2}
+//       alt="Carousel Image"
+//       style={{
+//         width: "100%",
+//         height: "auto",
+//         borderRadius: "10%",
+//       }}
+//     />
+//   </Box>
+//   <Box sx={{borderRadius: "10%",}}>
+//     <Image
+//       src={pix3}
+//       alt="Carousel Image"
+//       style={{
+//         width: "100%",
+//         height: "auto",
+//         borderRadius: "10%",
+//       }}
+//     />
+//   </Box>
+// </Carousel>
 // Homepage Hero Section Carousel
 export function HeroSectionCarousel() {
   return (
-    
     <Swiper spaceBetween={50} slidesPerView={1}>
       <SwiperSlide>
         {/* <Box>
@@ -336,7 +335,7 @@ const ButtonGroup = ({ next, previous, ...rest }) => {
     carouselState: { currentSlide },
   } = rest;
   return (
-    <div className='carousel-button-group absolute w-[80%] lg:w-full lg:top-1/2'>
+    <div className='carousel-button-group absolute w-[60%] lg:w-full lg:top-1/2'>
       <button
         className={`${
           currentSlide === 0 ? "disable" : ""
@@ -363,68 +362,74 @@ export function TeachersCarousel() {
     {
       id: 1,
       image: Teacher1,
-      name: "John Henry",
-      area_of_discipline: "Home economics",
+      name: "Godwin Ikoughe",
+      area_of_discipline: "School Head",
     },
     {
       id: 2,
-      image: Teacher2,
-      name: "Okon Ifot",
-      area_of_discipline: "Commerce",
+      image: Teacher3,
+      name: "Juliana Nwosu",
+      area_of_discipline: "Deputy School Head",
     },
     {
       id: 3,
-      image: Teacher3,
-      name: "David Living-Stone",
-      area_of_discipline: "Agricultural Science",
+      image: Teacher4,
+      name: "Marian Nebeife",
+      area_of_discipline: "Math Teacher",
     },
+
     {
       id: 4,
-      image: Teacher4,
-      name: "David Francis",
-      area_of_discipline: "Agricultural Science",
+      image: Teacher6,
+      name: "Mrs. Yemisi Ajala",
+      area_of_discipline: "Basic Science & Africa Teacher",
     },
+
     {
       id: 5,
-      image: Teacher5,
-      name: "Peter Andrew",
-      area_of_discipline: "Agricultural Science",
+      image: Teacher10,
+      name: "Florence Ngene",
+      area_of_discipline: "Social Studies Teacher",
     },
+
     {
       id: 6,
-      image: Teacher6,
-      name: "Peter Andrew",
-      area_of_discipline: "Agricultural Science",
+      image: Teacher2,
+      name: "Oluebube Ike",
+      area_of_discipline: "Classroom Teacher",
     },
+
     {
       id: 7,
-      image: Teacher7,
-      name: "Holy Cow",
-      area_of_discipline: "Agricultural Science",
+      image: Teacher5,
+      name: "Mrs. Peace Wilfred",
+      area_of_discipline: "Pre-nursery Teacher",
     },
     {
       id: 8,
-      image: Teacher8,
-      name: "Peter Andrew",
-      area_of_discipline: "Agricultural Science",
+      image: Teacher9,
+      name: "Uchechi Adiele",
+      area_of_discipline: " Pre-nursery Teacher",
     },
+
     {
       id: 9,
-      image: Teacher9,
-      name: "Peter Andrew",
-      area_of_discipline: "Agricultural Science",
+      image: Teacher7,
+      name: "Aninjoku Assumpta",
+      area_of_discipline: "Nursery 2 Teacher",
     },
     {
       id: 10,
-      image: Teacher10,
-      name: "Holy Shit",
-      area_of_discipline: "Agricultural Science",
+      image: Teacher8,
+      name: "I Am A Nameless Teacher 1",
+      area_of_discipline: "I Teach What hides in the belly of big fishes",
     },
+
     {
       id: 11,
       image: Teacher11,
-      name: "Peter Andrew",
-      area_of_discipline: "Agricultural Science",
+      name: "I Am A Nameless Teacher 2",
+      area_of_discipline: "I Teach Why politicians lie A lot ",
     },
   ];
 

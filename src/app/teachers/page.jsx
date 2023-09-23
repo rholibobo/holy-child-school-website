@@ -81,8 +81,8 @@ export default function Teachers() {
         <h2 className='text-[#1c1489] font-bold  text-2xl text-center  pb-12'>
           Who Are Our Teachers
         </h2>
-        <div className='max-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14 justify-between items-center my-5 '>
-          <div className='w-[17rem] h-[19rem] teacherCardShadow  bg-white flex flex-col justify-center items-center rounded-sm hover:scale-125 transition duration-1000'>
+        <div className='max-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-24 justify-between items-center my-5 '>
+          <div className='w-[17rem] h-[19rem] teacherCardShadow  bg-white flex flex-col justify-center items-center rounded-sm lg:hover:scale-125 transition duration-1000'>
             <div className=' flex justify-center items-center w-16 h-16 rounded-full bg-white -mt-16'>
               <Image
                 src='/images/DesignImages/qualified.svg'
@@ -153,60 +153,18 @@ export default function Teachers() {
       </section>
       <section className='grid grid-cols-1 justify-center items-center my-10 '>
         <div className=''>
-          <h2 className='text-center text-[#1c1489] font-bold  text-2xl'>
+          <h2 className='text-center text-[#1c1489] font-bold  text-2xl mb-10'>
             Our Team
           </h2>
 
           <div className=' max-width h-full relative py-4'>
-            {/* <Image
-              src='/images/DesignImages/redstar.png'
-              className='w-20  h-20 absolute  left-[90%] top-[20%]'
-              width={100}
-              height={100}
-              alt='red star'
-            /> */}
             <TeachersCarousel />
           </div>
         </div>
       </section>
 
-      <section className='bg-[#1c1464]  mt-14'>
+      <section className='bg-[#a09ad3]  mt-14'>
         <div className='max-width grid grid-rows-1 lg:grid-cols-2 items-center justify-between lg:gap-20 py-4'>
-          {/* <div className='grid grid-cols-2 justify-center items-center py-5 gap-10'>
-            <div className='flex items-center space-x-2 '>
-              <div className='iconsDiv bg-[#FFA500] border border-[#FFA500] flex justify-center items-end w-fit pb-7'>
-                <FcGraduationCap className='text-3xl  text-white' />
-              </div>
-              <p className=' text-gray-200 text-base font-bold'>
-                Self-contained gifted programs
-              </p>
-            </div>
-            <div className='flex items-center space-x-2 '>
-              <div className='iconsDiv bg-[#FFA500] border border-[#FFA500] flex justify-center items-end w-fit pb-7'>
-                <FcGraduationCap className='text-3xl' />
-              </div>
-              <p className='w-1/2 text-gray-200 text-base font-bold'>
-                Extra Activities
-              </p>
-            </div>
-            <div className='flex items-center space-x-2 '>
-              <div className='iconsDiv  bg-[#FFA500] border border-[#FFA500] flex justify-center items-end w-fit pb-7'>
-                <FcGraduationCap className='text-3xl' />
-              </div>
-              <p className=' text-gray-200 text-base font-bold'>
-                Complete Tracking
-              </p>
-            </div>
-            <div className='flex items-center space-x-2 '>
-              <div className='iconsDiv bg-[#FFA500] border border-[#FFA500] justify-center items-end w-fit pb-7'>
-                <FcGraduationCap className='text-3xl' />
-              </div>
-              <p className=' text-gray-200 text-base font-bold'>
-                Individual Bus
-              </p>
-            </div>
-          </div> */}
-
           <Quote />
           <div className='lg:-mt-20'>
             <Image
