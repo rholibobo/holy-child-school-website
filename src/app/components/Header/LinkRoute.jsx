@@ -18,6 +18,7 @@ export default function ({ handleCloseNavMenu }) {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -34,7 +35,11 @@ export default function ({ handleCloseNavMenu }) {
     >
       <Link href="/">
         <Button
-          sx={{ textTransform: "capitalize", color: "#ffffff", ":hover": {color: "yellow", backgroundColor: "transparent"} }}
+          sx={{
+            textTransform: "capitalize",
+            color: "#ffffff",
+            ":hover": { fontWeight: "bold", backgroundColor: "transparent" },
+          }}
           color="inherit"
           className={pathname == "/" ? styles.active : ""}
         >
@@ -44,7 +49,11 @@ export default function ({ handleCloseNavMenu }) {
 
       <Link href="/about-us">
         <Button
-          sx={{ textTransform: "capitalize", color: "#ffffff", ":hover": {color: "yellow", backgroundColor: "transparent"} }}
+          sx={{
+            textTransform: "capitalize",
+            color: "#ffffff",
+            ":hover": { fontWeight: "bold", backgroundColor: "transparent" },
+          }}
           color="inherit"
           className={pathname == "/about-us" ? styles.active : ""}
         >
@@ -54,7 +63,11 @@ export default function ({ handleCloseNavMenu }) {
 
       <Link href="/services">
         <Button
-          sx={{ textTransform: "capitalize", color: "#ffffff", ":hover": {color: "yellow", backgroundColor: "transparent"} }}
+          sx={{
+            textTransform: "capitalize",
+            color: "#ffffff",
+            ":hover": { fontWeight: "bold", backgroundColor: "transparent" },
+          }}
           color="inherit"
           className={pathname == "/services" ? styles.active : ""}
         >
@@ -64,7 +77,11 @@ export default function ({ handleCloseNavMenu }) {
 
       <Link href="/contact-us">
         <Button
-          sx={{ textTransform: "capitalize", color: "#ffffff", ":hover": {color: "yellow", backgroundColor: "transparent"} }}
+          sx={{
+            textTransform: "capitalize",
+            color: "#ffffff",
+            ":hover": { fontWeight: "bold", backgroundColor: "transparent" },
+          }}
           color="inherit"
           disableFocusRipple={true}
           className={pathname == "/contact-us" ? styles.active : ""}
@@ -78,7 +95,11 @@ export default function ({ handleCloseNavMenu }) {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        sx={{ textTransform: "capitalize", color: "#ffffff", ":hover": {color: "yellow", backgroundColor: "transparent"} }}
+        sx={{
+          textTransform: "capitalize",
+          color: "#ffffff",
+          ":hover": { fontWeight: "bold", backgroundColor: "transparent" },
+        }}
         color="inherit"
         className={pathname == "/blog" ? styles.active : ""}
       >
@@ -93,46 +114,58 @@ export default function ({ handleCloseNavMenu }) {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider={true}>
+        <MenuItem
+          sx={{ fontSize: "0.85rem" }}
+          onClick={handleClose}
+          divider={true}
+        >
           <Link href="/blog">
-            <Typography gutterBottom
+            <Typography
+              gutterBottom
               sx={{
                 textTransform: "capitalize",
                 color: "#000000",
                 fontSize: "0.85rem",
               }}
               color="inherit"
-              className={pathname == "/about-us" ? styles.active : ""}
             >
               Blog
             </Typography>
           </Link>
         </MenuItem>
-        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider={true}>
+        <MenuItem
+          sx={{ fontSize: "0.85rem" }}
+          onClick={handleClose}
+          divider={true}
+        >
           <Link href="/teachers">
-            <Typography gutterBottom
+            <Typography
+              gutterBottom
               sx={{
                 textTransform: "capitalize",
                 color: "#000000",
                 fontSize: "0.85rem",
               }}
               color="inherit"
-              className={pathname == "/teachers" ? styles.active : ""}
             >
               Meet Our Teachers
             </Typography>
           </Link>
         </MenuItem>
-        <MenuItem sx={{fontSize: "0.85rem"}} onClick={handleClose} divider={true}>
+        <MenuItem
+          sx={{ fontSize: "0.85rem" }}
+          onClick={handleClose}
+          divider={true}
+        >
           <Link href="/gallery">
-            <Typography gutterBottom
+            <Typography
+              gutterBottom
               sx={{
                 textTransform: "capitalize",
                 color: "#000000",
                 fontSize: "0.85rem",
               }}
               color="inherit"
-              className={pathname == "/gallery" ? styles.active : ""}
             >
               Gallery
             </Typography>

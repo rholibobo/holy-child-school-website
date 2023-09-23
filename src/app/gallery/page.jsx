@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
+
 import "swiper/css";
 import { useState } from "react";
 import data from "./data";
@@ -53,6 +54,8 @@ export default function Gallery() {
           ))}
         </motion.div>
       </section>
+
+      <Footer />
     </main>
   );
 }
