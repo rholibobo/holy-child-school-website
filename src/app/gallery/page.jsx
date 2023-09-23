@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/footer";
 import { staff } from "./data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -66,6 +67,8 @@ export default function Gallery() {
               ))}
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
