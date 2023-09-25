@@ -1,19 +1,19 @@
 .section1 {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(#46b0e1, #2d2478);
+  background-image: linear-gradient(  #46b0e1, #1c1486);
   position: relative;
-  margin-top: -9rem;
+  margin-top: -4rem;
 }
 
 .section1::before {
   content: "PREP SCHOOL";
   font-family: "Titan One", cursive;
   color: antiquewhite;
-  font-size: 15rem;
+  font-size: 14rem;
   /* font-size: 100%; */
   font-weight: bold;
-  line-height: 150px;
+  line-height: 170px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,7 +33,7 @@
   top: 0;
   left: 0;
   /* background-color: #000; */
-  background-image: linear-gradient(#1c1464, #000);
+  background-image: linear-gradient( #1c1464,  #46b0e1);
   z-index: 10;
 }
 

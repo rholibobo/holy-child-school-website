@@ -11,11 +11,6 @@ const theme = createTheme({
   },
 });
 
-// const inter = Inter({ subsets: ["latin"] });
-// const kanit = Kanit({
-//    weight: ["400", "700"],
-//    subsets: ["latin"]
-// });
 const poppins = Poppins({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -31,14 +26,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         <ThemeProvider theme={theme}>
-
           {children}
 
-          <Footer />
-        
+          
         </ThemeProvider>
-
-        
       </body>
     </html>
   );
