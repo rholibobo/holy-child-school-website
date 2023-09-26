@@ -2,13 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/footer";
-import { HiAcademicCap } from "react-icons/hi";
-import { FcGraduationCap } from "react-icons/fc";
-import { GiTeacher } from "react-icons/gi";
-import { FaChalkboardTeacher } from "react-icons/fa";
-import { BsFillAwardFill } from "react-icons/bs";
 
-//
 import {
   Blob,
   Quote,
@@ -37,7 +31,10 @@ export default function Teachers() {
                   </h2>
                   <p className='text text-gray-100 font-medium text-base'>
                     We are Looking to give our pupils quality education after
-                    all our teachers can make that happen.Quality education is the key that unlocks the door to endless possibilities, empowering your kids to shape a brighter future for themselves and society.
+                    all our teachers can make that happen.Quality education is
+                    the key that unlocks the door to endless possibilities,
+                    empowering your kids to shape a brighter future for
+                    themselves and society.
                   </p>
                 </div>
                 <div>
@@ -46,7 +43,7 @@ export default function Teachers() {
                     className='w-[400px]  h-full'
                     width={100}
                     height={100}
-                    alt='red star'
+                    alt='teacher description'
                   />
                 </div>
               </div>
@@ -62,6 +59,7 @@ export default function Teachers() {
           width={100}
           height={100}
           alt='red star'
+          aria-hidden='true'
         />
 
         <Image
@@ -69,16 +67,9 @@ export default function Teachers() {
           className='w-10  h-10 absolute  right-[90%] top-[70%] opacity-25'
           width={100}
           height={100}
-          alt='red star'
+          alt='yellow star'
+          aria-hidden='true'
         />
-
-        {/* <Image
-          src='/images/DesignImages/ballon.png'
-          className='w-20  h-20 absolute  right-[50%] top-[80%] opacity-25'
-          width={100}
-          height={100}
-          alt='red star'
-        /> */}
         <h2 className='text-[#1c1489] font-bold  text-4xl text-center pb-3'>
           Who Are Our Teachers
         </h2>
@@ -90,13 +81,14 @@ export default function Teachers() {
                 className='w-40  h-40'
                 width={100}
                 height={100}
-                alt='red star'
+                alt='qualified'
+                aria-hidden='true'
               />
             </div>
             <br />
             <div className='flex flex-col justify-center items-center px-3  '>
               <h2 className='mb-10 text-black text-xl font-bold text-center'>
-                Qualified 
+                Qualified
               </h2>
               <p className='text-center text-black text-sm'>
                 We boast of qualified and competent teachers to give your child
@@ -115,13 +107,14 @@ export default function Teachers() {
                 className='w-40  h-40'
                 width={100}
                 height={100}
-                alt='red star'
+                alt='competent'
+                aria-hidden='true'
               />
             </div>
             <br />
             <div className='flex flex-col justify-center items-center px-3  '>
               <h2 className='mb-10 text-black text-xl font-bold text-center'>
-                Competent 
+                Competent
               </h2>
               <p className='text-center text-black text-sm'>
                 No doubt with our teachers competence.They are topnotch.
@@ -139,7 +132,8 @@ export default function Teachers() {
                 className='w-40  h-40'
                 width={100}
                 height={100}
-                alt='red star'
+                alt='award'
+                aria-hidden='true'
               />
             </div>
             <br />
@@ -151,7 +145,7 @@ export default function Teachers() {
                 Our teachers have won awards both within and outside the school.
               </p>
             </div>
-            <div className='w-full h-[1px] bg-white my-2' />
+            {/* <div className='w-full h-[1px] bg-white my-2' /> */}
           </div>
         </div>
       </section>
@@ -167,23 +161,9 @@ export default function Teachers() {
         </div>
       </section>
 
-      <section className='bg-[#F8FBF8]  mt-14'>
-        <div className='max-width grid grid-rows-1 lg:grid-cols-2 items-center justify-between lg:gap-20 py-4'>
-          
-
+      <section className='bg-[#F8FBF8] py-10  mt-14 overflow-hidden'>
+        <div className='max-width  py-4'>
           <Quote />
-          {/* <Quote /> */}
-          {/* <div className='lg:-mt-20'>
-            <Image
-              src='/images/DesignImages/cube-unscreen.gif'
-              className=' w-full h-full obj object-cover '
-              width={100}
-              height={100}
-              quality={100}
-              aria-hidden='true'
-              alt='red star'
-            />
-          </div> */}
         </div>
       </section>
 
