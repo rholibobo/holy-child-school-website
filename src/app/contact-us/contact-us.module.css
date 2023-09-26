@@ -136,9 +136,9 @@
 
 .container{
   background-color: white;
-  height: 440px;
+ 
   width: 420px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-bottom: 20px;
   color: #363333;
   border-radius: 12px;
@@ -156,10 +156,10 @@
 }
 .form{
   width: 380px;
-  height: 280px;
+  /* height: 280px; */
   margin: 0 auto;
-  margin-top: 25px;
-  padding: 20px;
+  /* margin-top: 25px; */
+  padding-bottom: 20px;
 }
 .input{
   width: 350px;
@@ -171,6 +171,24 @@
   padding: 20px 15px;
   font-size: 12px;
   border-radius: 20px;
+  
+}
+.txtarea{
+  resize: none;
+  width: 350px;
+  height: 20vh;
+  background: transparent;
+  outline: none; 
+  color:#363333;
+  border: 1px solid #eee;
+  padding: 20px 15px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+.txtarea::placeholder{
+  color:#363333;
+font-size: 14px;
+font-weight: 400;
 }
 
 .view_all_btn{
@@ -179,9 +197,7 @@
   border: none;
   color: #ffffff;
   font-weight: bold;
-  border-radius: 30px 5px 15px 20px ;
-  border-bottom-right-radius: -10px 20px ;
-  border-top-right-radius: 30px 80px;
+  border-radius: 10px ;
   margin-left: 220px;
   margin-top: 27px;
 }
@@ -213,11 +229,12 @@ font-weight: 400;
     font-size: 16px;
   }
   .get_in_touch{
+    /* width: 95%; */
     height: fit-content;
   }
 
   .get_us{
-    width: 90%;
+    width: 95%;
     height: 400px;
     align-items: center;
     padding: 10px;
@@ -285,10 +302,9 @@ font-weight: 400;
     height: 650px;
     flex-direction: column;
     
-    
   }
   .get_address, .get_email, .get_number{
-    width: 70%;
+    width: 90%;
     height: 150px;
     padding: 8px;
     background-color:white; 
@@ -309,7 +325,7 @@ font-weight: 400;
   }
   .container{
     background-color: white;
-    height: 420px;
+    /* height: 420px; */
     width: 320px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -327,7 +343,7 @@ font-weight: 400;
   }
   .form{
     width: 85%;
-    height: 270px;
+    /* height: 270px; */
     margin: 0 auto;
     margin-top: 20px;
     padding-right: 25px;
@@ -397,7 +413,7 @@ font-weight: 400;
     
     .section1::before{
       content: "Prep School";
-      font-size: 7rem;
+      font-size: 6rem;
       line-height: 100px;
   
     }
