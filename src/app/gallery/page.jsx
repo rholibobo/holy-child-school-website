@@ -11,10 +11,35 @@ import data from "./data";
 import Nav from "./nav";
 import { motion } from "framer-motion";
 import "animate.css";
-
+import Modal from "./Modal";
 
 export default function Gallery() {
   const [value, setValue] = useState("student");
+  const [clickedImage, setClickedImage] = useState();
+  const [currentIndex, setcurrentIndex] = useState();
+
+  const handleClick = (imageSrc, index) => {
+    setcurrentIndex(index);
+    setClickedImage(imageSrc); //contains the src link to the clicked image
+  };
+
+  const handleCickRightNavigation = () => {
+    const totalLength = data[value].length;
+    if (currentIndex + 1 >= totalLength) {
+      //if the index is greater than the number of images we have in the array of images, set the current index to be the index of the first image on the array
+      setcurrentIndex(0);
+      const newUrl = data[value][0];
+      setClickedImage(newUrl);
+      return;
+    }
+    const newIndex = currentIndex + 1;
+    const newUrl = data[value].filter((item) => {
+      return data[value].indexOf(item) === newIndex;
+    });
+    const newItem = newUrl[0];
+    setClickedImage(newItem);
+    setcurrentIndex(newIndex);
+  };
 
   const updateState = (val) => {
     setValue(val);
@@ -39,13 +64,12 @@ export default function Gallery() {
           </p>
         </div>
       </div>
-      <Nav onclick={updateState} />
-
-      <section className="p-3 my-4">
+      <section className="py-3 px-4 lg:px-8 bg-[#e7e7eb]">
+        <Nav onclick={updateState} />
         <motion.div
           layout
           transition={{ duration: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-4"
+          className="mt-2 grid sm:grid-cols-2 md:grid-cols-3 gap-4 bg-white shadow-md p-2"
         >
           {data[value].map((image, index) => (
             <Image
@@ -53,9 +77,15 @@ export default function Gallery() {
               src={image}
               alt={`Image ${index}`}
               className="rounded-sm hover:scale-90 cursor-pointer transition-all ease-in-out"
+              onClick={() => handleClick(image, index)}
             />
           ))}
         </motion.div>
+        <Modal
+          clickedImg={clickedImage}
+          handleCickRightNavigation={handleCickRightNavigation}
+          setClickedImg={setClickedImage}
+        />
       </section>
 
       <Footer />
