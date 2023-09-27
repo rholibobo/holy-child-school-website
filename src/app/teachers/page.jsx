@@ -164,8 +164,8 @@ export default function Teachers() {
         </div>
       </section>
 
-      <section className='bg-[#F8FBF8] py-10  mt-14 overflow-hidden'>
-        <div className='max-width  py-4'>
+      <section className="bg-[#F8FBF8] ">
+        <div className="w-[95%] my-0 mx-auto">
           <Quote />
         </div>
       </section>

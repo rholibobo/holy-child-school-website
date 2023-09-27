@@ -212,15 +212,19 @@ export function MediaCardCarousel() {
 export function GalleryCarousel() {
   return (
     <Swiper
-      modules={[Pagination, Grid]}
+      modules={[Pagination, Grid, Autoplay]}
       grid={{
         rows: 2,
         fill: "row",
       }}
       // slidesPerView={3}
-      pagination={{ clickable: true }}
+      
       spaceBetween={30}
-      // navigation={true}
+      autoplay={{
+        delay: 3500,
+        disableOnInteraction: false,
+      }}
+      
       lazy="true"
       className="mySwiper"
       // slidesPerView={2}
