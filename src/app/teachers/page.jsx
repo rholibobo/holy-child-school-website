@@ -170,8 +170,8 @@ export default function Teachers() {
         </div>
       </section>
 
-      <section className="bg-[#F8FBF8]  mt-14">
-        <div>
+      <section className="bg-[#F8FBF8] ">
+        <div className="w-[95%] my-0 mx-auto">
           <Quote />
         </div>
       </section>
