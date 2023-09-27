@@ -335,11 +335,11 @@ const ButtonGroup = ({ next, previous, ...rest }) => {
     carouselState: { currentSlide },
   } = rest;
   return (
-    <div className='carousel-button-group absolute w-[60%] lg:w-full lg:top-1/2'>
+    <div className='carousel-button-group lg:absolute w-[70%] lg:w-full lg:top-1/2 py-5'>
       <button
         className={`${
           currentSlide === 0 ? "disable" : ""
-        } iconsDiv bg-[#1c1464] active:bg-gray-400 transition  duration-100 absolute right-full `}
+        } iconsDiv bg-[#1c1464] active:bg-gray-400 transition  duration-100 absolute right-[80%]  lg:right-full `}
         onClick={() => previous()}
       >
         <FcPrevious className='text-gray-200' />
@@ -348,7 +348,7 @@ const ButtonGroup = ({ next, previous, ...rest }) => {
       {/* Next button */}
 
       <button
-        className='iconsDiv bg-[#1c1464]  active:bg-gray-400 transition  duration-100 absolute left-full '
+        className='iconsDiv bg-[#1c1464]  active:bg-gray-400 transition  duration-100 absolute left-[80%] lg:left-full '
         onClick={() => next()}
       >
         <FcNext className='text-gray-200' />
