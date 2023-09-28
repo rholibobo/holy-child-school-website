@@ -43,6 +43,7 @@ export default function Gallery() {
 
   const updateState = (val) => {
     setValue(val);
+    console.log(val);
   };
   return (
     <main>
@@ -65,7 +66,7 @@ export default function Gallery() {
         </div>
       </div>
       <section className="py-3 px-4 lg:px-8 bg-[#e7e7eb]">
-        <Nav onclick={updateState} />
+        <Nav onclick={updateState} activeBtn = {value} />
         <motion.div
           layout
           transition={{ duration: 0.3 }}
