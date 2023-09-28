@@ -54,6 +54,8 @@ import {
   GalleryCarousel,
 } from "./components/SwiperCarousels/Swiper";
 
+
+
 export default function Home() {
   const isMobileView = useMediaQuery("(max-width:850px)");
 

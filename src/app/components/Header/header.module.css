@@ -18,7 +18,12 @@
 .portal_btn{
   /* padding: 0.7rem; */
   /* background-color: rgb(85, 85, 25);  */
-   border: 2px solid #ffffff;
+  background-color: #1faded;
+   border: 2px solid #1faded;
+}
+.portal_btn:hover{
+  background-color: #1f7bad;
+  border: 2px solid #1f7bad;
 }
 
 @media screen and (max-width: 821px) {
