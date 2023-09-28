@@ -23,7 +23,12 @@ export default function Gallery() {
     setClickedImage(imageSrc); //contains the src link to the clicked image
   };
 
-  const handleCickRightNavigation = () => {
+  const updateState = (val) => {
+    setValue(val);
+    console.log(val);
+  };
+
+  const handleRightNavigation = () => {
     const totalLength = data[value].length;
     if (currentIndex + 1 >= totalLength) {
       //if the index is greater than the number of images we have in the array of images, set the current index to be the index of the first image on the array
@@ -40,11 +45,22 @@ export default function Gallery() {
     setClickedImage(newItem);
     setcurrentIndex(newIndex);
   };
-
-  const updateState = (val) => {
-    setValue(val);
-    console.log(val);
+  const handleLeftNavigation = () => {
+    const totalLength = data[value].length;
+    if (currentIndex === 0) {
+      setcurrentIndex(totalLength - 1);
+      const newUrl = data[value][totalLength - 1]
+      setClickedImage(newUrl)
+    }
+    const newIndex = currentIndex - 1
+    const newUrl = data[value].filter((item) => {
+      return data[value].indexOf(item) === newIndex;
+    });
+    const newItem = newUrl[0];
+    setClickedImage(newItem);
+    setcurrentIndex(newIndex);
   };
+
   return (
     <main>
       <div className={styles.navbar}>
@@ -66,7 +82,7 @@ export default function Gallery() {
         </div>
       </div>
       <section className="py-3 px-4 lg:px-8 bg-[#e7e7eb]">
-        <Nav onclick={updateState} activeBtn = {value} />
+        <Nav onclick={updateState} activeBtn={value} />
         <motion.div
           layout
           transition={{ duration: 0.3 }}
@@ -84,8 +100,9 @@ export default function Gallery() {
         </motion.div>
         <Modal
           clickedImg={clickedImage}
-          handleCickRightNavigation={handleCickRightNavigation}
+          handleRightNavigation={handleRightNavigation}
           setClickedImg={setClickedImage}
+          handleLeftNavigation={handleLeftNavigation}
         />
       </section>
 
