@@ -336,6 +336,8 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
+           
           }}
         >
           <CardMedia
@@ -373,6 +375,7 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
           }}
         >
           <CardMedia
@@ -410,6 +413,7 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
           }}
         >
           <CardMedia
@@ -447,6 +451,7 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
           }}
         >
           <CardMedia
@@ -494,7 +499,7 @@ export function AchievementCarousel() {
       }}
     >
       <Paper
-        elevation={3}
+        // elevation={1}
         sx={{
           width: { xs: "95%", md: "20%" },
           margin: { xs: "0 auto", md: "0" },
@@ -517,7 +522,7 @@ export function AchievementCarousel() {
       </Paper>
 
       <Paper
-        elevation={3}
+        // elevation={1}
         sx={{
           width: { xs: "95%", md: "20%" },
           margin: { xs: "0 auto", md: "0" },
@@ -540,7 +545,7 @@ export function AchievementCarousel() {
       </Paper>
 
       <Paper
-        elevation={3}
+        // elevation={1}
         sx={{
           width: { xs: "95%", md: "20%" },
           margin: { xs: "0 auto", md: "0" },
@@ -563,7 +568,7 @@ export function AchievementCarousel() {
       </Paper>
 
       <Paper
-        elevation={3}
+        // elevation={1}
         sx={{
           width: { xs: "95%", md: "20%" },
           margin: { xs: "0 auto", md: "0" },

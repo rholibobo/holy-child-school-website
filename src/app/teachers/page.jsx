@@ -55,7 +55,7 @@ export default function Teachers() {
         </div>
       </section>
 
-      <section className="py-5 flex flex-col justify-center items-center space-y-9 relative ">
+      <section className="bg-[#f2f5f9] py-5 flex flex-col justify-center items-center space-y-9 relative ">
         <Image
           src="/images/DesignImages/redstar.png"
           className="w-10  h-10 absolute  left-[90%] top-[20%] opacity-25"
@@ -152,7 +152,7 @@ export default function Teachers() {
           </div>
         </div>
       </section>
-      <section className="grid grid-cols-1 justify-center items-center my-10 ">
+      <section className="bg-[#f2f5f9] grid grid-cols-1 justify-center items-center py-10 ">
         <div className="">
           <h2 className="text-center text-[#1c1489] font-bold  text-4xl pb-5">
             Our Team
@@ -164,8 +164,8 @@ export default function Teachers() {
         </div>
       </section>
 
-      <section className="bg-[#F8FBF8] ">
-        <div className="w-[95%] my-0 mx-auto">
+      <section className="bg-[#f2f5f9] py-[1.5rem] z-[-1]">
+        <div className="w-[95%] my-0 mx-auto ">
           <Quote />
         </div>
       </section>

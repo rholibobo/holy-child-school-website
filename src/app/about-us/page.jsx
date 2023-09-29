@@ -86,7 +86,7 @@ export default function AboutUs() {
         <Image src={yellowStar} alt="star" className={styles.yellowStar} />
         <Image src={ballon} alt="star" className={styles.ballon} />
         <Image src={redStar} alt="star" className={styles.redStar} />
-        <Box sx={{ marginTop: "3rem" }}>
+        <Box sx={{ paddingTop: "3rem" }}>
           <Typography
             variant="h4"
             fontWeight="bold"

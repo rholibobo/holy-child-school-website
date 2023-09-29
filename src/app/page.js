@@ -395,7 +395,7 @@ export default function Home() {
                   sx={{
                     fontWeight: "bold",
                     color: "#e130a7",
-                    boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                    boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px",
                     backgroundColor: "#ffffff",
                   }}
                   gutterBottom
@@ -411,7 +411,7 @@ export default function Home() {
                 sx={{
                   backgroundColor: "#ffffff",
                   padding: "1.5rem",
-                  boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                  boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px",
                   position: "inherit",
                   zIndex: "4",
                 }}
