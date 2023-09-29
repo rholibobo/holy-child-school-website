@@ -13,7 +13,7 @@
 .section1::before {
   content: "";
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   background-image: url("../../public/images/DesignImages/tile_bg2.jpg");
   background-color: #0e0747;
@@ -151,7 +151,7 @@
 .section3::before {
   content: "";
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   background-image: url("../../public/images/DesignImages/tile_bg3.jpg");
   background-color: #0e0747;
@@ -228,7 +228,7 @@
 /* ////////// Section 6 ///////////// */
 .section6 {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #1c1464;
   border-radius: 20px 20px 0 0;
   position: relative;
@@ -309,9 +309,9 @@
     height: auto;
     padding-bottom: 2rem;
   }
-  /* .section3::before {
-    display: none;
-  } */
+  .section3::before {
+    height: 100%;
+  }
   .section4_div {
     width: 90%;
     /* margin-top: 1rem; */
@@ -336,9 +336,9 @@
     margin-top: 2rem;
     padding-bottom: 2rem;
   }
-  /* .section6::before {
-    display: none;
-  } */
+  .section6::before {
+    height: 100%;
+  }
   .section8 {
     height: 20vh;
   }
