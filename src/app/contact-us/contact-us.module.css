@@ -102,7 +102,7 @@
   margin-top: 15px;
 }
 .get_address, .get_email, .get_number{
-  width: 25%;
+  width: 26%;
   height: 140px;
   padding: 14px;
   background-color:white; 
@@ -115,6 +115,18 @@
 -webkit-box-shadow: 1px 1px 8px 2px rgba(173,192,196,0.72);
 -moz-box-shadow: 1px 1px 8px 2px rgba(173,192,196,0.72);
 } 
+ .get_number:hover{
+  transform: scale(1.07);
+  transition: 1s;
+}
+ .get_email:hover{
+  transform: scale(1.07);
+  transition: 1s;
+}
+ .get_address:hover{
+  transform: scale(1.04);
+  transition: 1s;
+}
 .text, .text_em, .text_ph{
   color:#19125c;
   padding: 8px;
@@ -166,8 +178,8 @@
   height: 28px;
   background: transparent;
   outline: none; 
-  color:#363333;
-  border: 1px solid #eee;
+  color:#1f1d1d;
+  border: 1px solid #867f7f;
   padding: 20px 15px;
   font-size: 12px;
   border-radius: 20px;
@@ -180,7 +192,7 @@
   background: transparent;
   outline: none; 
   color:#363333;
-  border: 1px solid #eee;
+  border: 1px solid #494848;
   padding: 20px 15px;
   font-size: 12px;
   border-radius: 20px;
@@ -201,8 +213,13 @@ font-weight: 400;
   margin-left: 220px;
   margin-top: 27px;
 }
+.view_all_btn:hover{
+  background-color: #3529a0;
+  transform: scale(1.03);
+  transition: ease-in-out 1s;
+}
 .input::placeholder{
-color:#363333;
+color:#181616;
 font-size: 14px;
 font-weight: 400;
 }
@@ -218,8 +235,18 @@ font-weight: 400;
 }
 .assist_you{
   font-size: 30px;
-  font-weight: bold;
+ 
+  /* color: #1C1464; */
+  width: 500px;
+  /* background-color: red; */
+}
+.assist{
   color: #1C1464;
+  font-weight: bold;
+}
+.assist_text{
+  font-size: 16px;
+  color: #1f1d1d;
 }
 @media screen and (max-width: 835px) {
   .h1{

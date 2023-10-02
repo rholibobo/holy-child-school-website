@@ -53,6 +53,8 @@
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    margin-bottom:25px;
+
 
 }
 .text_one{
@@ -69,6 +71,8 @@
     justify-content: space-around;
     padding: 20px;
     margin-top: 40px;
+    background-color:#F3F5F9 ;
+    padding: 30px;
 
 }
 .text_two{
