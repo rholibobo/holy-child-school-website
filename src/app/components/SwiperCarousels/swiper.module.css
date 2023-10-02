@@ -7,6 +7,9 @@
     width: 40%;
     height: auto;
 }
+.paper{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; 
+}
 .paper:hover{
     /* background-color: #1c1464; */
     background-color: #1faded;

@@ -23,27 +23,42 @@ export default function Gallery() {
     setClickedImage(imageSrc); //contains the src link to the clicked image
   };
 
-  const handleCickRightNavigation = () => {
+  const updateState = (val) => {
+    setValue(val);
+    console.log(val);
+  };
+
+  const handleRightNavigation = () => {
     const totalLength = data[value].length;
-    if (currentIndex + 1 >= totalLength) {
-      //if the index is greater than the number of images we have in the array of images, set the current index to be the index of the first image on the array
-      setcurrentIndex(0);
-      const newUrl = data[value][0];
-      setClickedImage(newUrl);
-      return;
-    }
-    const newIndex = currentIndex + 1;
-    const newUrl = data[value].filter((item) => {
-      return data[value].indexOf(item) === newIndex;
-    });
-    const newItem = newUrl[0];
+    const newIndex = (currentIndex + 1) % totalLength; 
+    const newItem = data[value][newIndex];
     setClickedImage(newItem);
     setcurrentIndex(newIndex);
   };
+  /*
+ `totalLength` represents the total number of items in the array of images.
 
-  const updateState = (val) => {
-    setValue(val);
+`handleRightNavigation`
+    - `currentIndex + 1`: This calculates the next index by adding 1 to the current index.
+     - `% totalLength`: The modulo operator is used to ensure that the index remains within the valid range (0 to `totalLength - 1`).
+     - If the result of `(currentIndex + 1)` is greater than or equal to `totalLength`, the modulo operation wraps it back to 0, effectively creating a circular navigation. This means that if you reach the end of the array, it wraps around to the beginning.
+
+`handleLeftNavigation`
+     - `currentIndex - 1`: This calculates the previous index by subtracting 1 from the current index.
+     - `+ totalLength`: This is added to ensure that the result is a non-negative number. When `currentIndex` is 0, subtracting 1 would make it -1. Adding `totalLength` ensures it becomes `totalLength - 1`, which is the last valid index.
+     - `% totalLength`: Similar to the right navigation, the modulo operator ensures the index stays within the valid range.
+     - If the result of `(currentIndex - 1 + totalLength)` is negative (e.g., when at the beginning of the array), the modulo operation wraps it to the last index, creating circular navigation.
+ While the modulo operator is typically used to calculate remainders, in this context, it's used to create a looping effect when navigating through an array, ensuring that the index always stays within the valid range
+  */
+  const handleLeftNavigation = () => {
+    const totalLength = data[value].length;
+    const newIndex = (currentIndex - 1 + totalLength) % totalLength; 
+    const newItem = data[value][newIndex];
+    setClickedImage(newItem);
+    setcurrentIndex(newIndex);
   };
+  
+
   return (
     <main>
       <div className={styles.navbar}>
@@ -65,7 +80,7 @@ export default function Gallery() {
         </div>
       </div>
       <section className="py-3 px-4 lg:px-8 bg-[#e7e7eb]">
-        <Nav onclick={updateState} />
+        <Nav onclick={updateState} activeBtn={value} />
         <motion.div
           layout
           transition={{ duration: 0.3 }}
@@ -83,8 +98,9 @@ export default function Gallery() {
         </motion.div>
         <Modal
           clickedImg={clickedImage}
-          handleCickRightNavigation={handleCickRightNavigation}
+          handleRightNavigation={handleRightNavigation}
           setClickedImg={setClickedImage}
+          handleLeftNavigation={handleLeftNavigation}
         />
       </section>
 

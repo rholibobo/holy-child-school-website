@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
+import { Box, Button, Menu, MenuItem, Popover, Typography } from "@mui/material";
 import { ArrowRight, ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 
 import Link from "next/link";
@@ -23,6 +23,7 @@ export default function ({ handleCloseNavMenu }) {
     setAnchorEl(null);
   };
 
+
   return (
     <Box
       sx={{
@@ -32,6 +33,7 @@ export default function ({ handleCloseNavMenu }) {
         justifyContent: "space-between",
         fontSize: "1.2rem",
       }}
+      
     >
       <Link href="/">
         <Button
@@ -94,7 +96,8 @@ export default function ({ handleCloseNavMenu }) {
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
+        onMouseEnter={handleClick}
+        
         sx={{
           textTransform: "capitalize",
           color: "#ffffff",
@@ -110,16 +113,18 @@ export default function ({ handleCloseNavMenu }) {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
+        // MenuListProps={{
+        //   "aria-labelledby": "basic-button",
+        // }}
+        MenuListProps={{ onMouseLeave: handleClose }}
       >
-        <MenuItem
-          sx={{ fontSize: "0.85rem" }}
-          onClick={handleClose}
-          divider={true}
-        >
-          <Link href="/blog">
+        
+        <Link href="/blog">
+          <MenuItem
+            sx={{ fontSize: "0.85rem" }}
+            onClick={handleClose}
+            divider={true}
+          >
             <Typography
               gutterBottom
               sx={{
@@ -131,14 +136,14 @@ export default function ({ handleCloseNavMenu }) {
             >
               Blog
             </Typography>
-          </Link>
-        </MenuItem>
-        <MenuItem
-          sx={{ fontSize: "0.85rem" }}
-          onClick={handleClose}
-          divider={true}
-        >
-          <Link href="/teachers">
+          </MenuItem>
+        </Link>
+        <Link href="/teachers">
+          <MenuItem
+            sx={{ fontSize: "0.85rem" }}
+            onClick={handleClose}
+            divider={true}
+          >
             <Typography
               gutterBottom
               sx={{
@@ -150,14 +155,14 @@ export default function ({ handleCloseNavMenu }) {
             >
               Meet Our Teachers
             </Typography>
-          </Link>
-        </MenuItem>
-        <MenuItem
-          sx={{ fontSize: "0.85rem" }}
-          onClick={handleClose}
-          divider={true}
-        >
-          <Link href="/gallery">
+          </MenuItem>
+        </Link>
+        <Link href="/gallery">
+          <MenuItem
+            sx={{ fontSize: "0.85rem" }}
+            onClick={handleClose}
+            divider={true}
+          >
             <Typography
               gutterBottom
               sx={{
@@ -169,12 +174,12 @@ export default function ({ handleCloseNavMenu }) {
             >
               Gallery
             </Typography>
-          </Link>
-        </MenuItem>
+          </MenuItem>
+        </Link>
       </Menu>
       <Link href="#">
         <Button
-          sx={{ textTransform: "capitalize", color: "#ffffff" }}
+          sx={{ textTransform: "capitalize", color: "#ffffff"}}
           color="inherit"
           className={styles.portal_btn}
         >

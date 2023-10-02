@@ -4,31 +4,28 @@
   /* background-image: linear-gradient(#9d2a77, #e130a7); */
   /* background-image: linear-gradient(#1c1464, #919497); */
   /* background-image: linear-gradient(#919497, #1c1464); */
-  background-image: linear-gradient(#130c4e, #1c1464);
- 
+  /* background-image: linear-gradient(#130c4e, #1c1464); */
+
   position: relative;
-  padding-bottom: 3rem;
+  /* padding-bottom: 3rem; */
 }
 
 .section1::before {
-  content: "PREP SCHOOL";
-  font-family: "Titan One", cursive;
-  color: antiquewhite;
-  font-size: 15rem;
-  /* font-size: 100%; */
-  font-weight: bold;
-  line-height: 150px;
+  content: "";
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.05;
+  background-image: url("../../public/images/DesignImages/tile_bg2.jpg");
+  background-color: #0e0747;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 .section_container {
   width: 90%;
   margin: 0 auto;
-  
 }
 .navbar {
   width: 100%;
@@ -36,8 +33,9 @@
   position: sticky;
   top: 0;
   left: 0;
-  /* background-color: #000; */
-  background-image: linear-gradient(#1c1464, #130c4e);
+  background-color: rgba(24,12,122,0.95);
+  backdrop-filter: blur(5px);
+  /* background-image: linear-gradient(#1c1464, #130c4e); */
   z-index: 10;
 }
 
@@ -140,6 +138,7 @@
   margin-top: 5rem;
 }
 
+
 /* ////////// Section 3 ///////////// */
 .section3 {
   width: 100%;
@@ -149,36 +148,46 @@
   border-radius: 20px 20px 0 0;
 }
 
-
+.section3::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("../../public/images/DesignImages/tile_bg3.jpg");
+  background-color: #0e0747;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  /* z-index: -1; */
+}
 
 /* ////////// Section 4 ///////////// */
 .section4 {
   width: 100%;
   height: 100vh;
-  /* background-color: #919497; */
-  /* background-color: #ffffff; */
+  padding: 3rem 0;
   position: relative;
-  background-color: #f7f7f7;
-  opacity: 0.8;
-  background-image: radial-gradient(#131dd9 0.5px, transparent 0.5px),
-    radial-gradient(#131dd9 0.5px, #f7f7f7 0.5px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
+  /* background-color: #f7f7f7; */
+ 
+  
 }
 .section4::before {
   content: "";
   width: 100%;
-  height: 100%;
-  display: block;
-  background-image: url(../../public/HCLogo.png);
+  height: 100vh;
+  /* display: block; */
+  background-image: url("../../public/images/DesignImages/tile_bg4.jpg");
+  background-color: #f9fbfd;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
+  background-blend-mode: overlay;
   position: absolute;
   top: 0;
   left: 0;
-  filter: opacity(0.1);
-  z-index: 0;
+  /* filter: opacity(0.1); */
+  /* z-index: 0; */
 }
 
 .section4_div {
@@ -219,34 +228,47 @@
 /* ////////// Section 6 ///////////// */
 .section6 {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #1c1464;
   border-radius: 20px 20px 0 0;
+  position: relative;
   /* padding-bottom: 4rem; */
 }
 
-.ppImage{
+.section6::before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-image: url("../../public/images/DesignImages/tile_bg3.jpg");
+  background-color: #0e0747;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  z-index: 0;
+}
+
+.ppImage {
   width: 90%;
   height: auto;
 }
 
 @media screen and (max-width: 835px) {
-  .ppImage{
+  .ppImage {
     width: 95%;
     margin: 0 auto;
   }
 }
 
-
-
 /* /////////////////// Section 6.0 ////////// */
-.section6_0{
+.section6_0 {
   width: 100%;
   height: auto;
   padding: 3rem 0;
 }
 
-.svg_width{
+.svg_width {
   width: 30%;
   height: auto;
   margin: 0 auto;
@@ -261,7 +283,6 @@
   position: relative;
 }
 
-
 /* ///////////// Media Queries //////////////// */
 
 @media screen and (max-width: 850px) {
@@ -273,16 +294,8 @@
     width: 90%;
     height: auto;
   }
-  .section1::before {
-    content: "Prep School";
-    font-size: 7rem;
-    line-height: 100px;
-  }
-  .earthContainer {
-    display: none;
-    right: 250px;
-    top: 50px;
-  }
+  
+ 
   .section2 {
     height: auto;
   }
@@ -297,12 +310,12 @@
     padding-bottom: 2rem;
   }
   .section3::before {
-    display: none;
+    height: 100%;
   }
   .section4_div {
     width: 90%;
-    margin-top: 1rem;
-    padding-bottom: 3rem;
+    /* margin-top: 1rem; */
+    /* padding-bottom: 3rem; */
   }
   .section4_img {
     margin-top: 0rem;
@@ -311,7 +324,7 @@
   }
   .section5 {
     height: auto;
-    margin-top: 3rem;
+    margin-top: 5rem;
     padding-bottom: 2rem;
   }
   .section5_div {
@@ -324,12 +337,12 @@
     padding-bottom: 2rem;
   }
   .section6::before {
-    display: none;
+    height: 100%;
   }
   .section8 {
     height: 20vh;
   }
-  .svg_width{
+  .svg_width {
     margin: 0 auto;
   }
 }
@@ -347,54 +360,4 @@
   }
 }
 
-/* @media screen and (max-width: 600px) {
-  .section1::before {
-    content: "Prep School";
-    font-size: 7rem;
-    line-height: 100px;
-  }
 
-  .navbar {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 426px) {
-  .section1::before {
-    content: "Prep School";
-    font-size: 5rem;
-    line-height: 100px;
-  }
-  .section1::after {
-    height: 7.5vh;
-    /* bottom: -10px; 
-  }
-  
-}
-@media screen and (max-width: 376px) {
-  .section1::before {
-    content: "Prep School";
-    font-size: 5rem;
-    line-height: 100px;
-  }
-  .section1::after {
-    height: 6.7vh;
-    z-index: 0;
-    /* bottom: -8px; 
-  }
-  
-}
-@media screen and (max-width: 321px) {
-  .section1::before {
-    content: "Prep School";
-    font-size: 5rem;
-    line-height: 100px;
-  }
-  .section1::after {
-    height: 5.7vh;
-    z-index: 0;
-    /* bottom: -8px;
-  }
-  .navbar {
-    width: 90%;
-  }
-} */

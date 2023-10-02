@@ -1,9 +1,8 @@
 "use client";
-import Footer from "./components/Footer/footer";
-import "./globals.css";
-import { Poppins, Kanit } from "next/font/google";
 
+import "./globals.css";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { Poppins } from "next/font/google";
 
 const theme = createTheme({
   typography: {
@@ -14,22 +13,22 @@ const theme = createTheme({
 const poppins = Poppins({
   weight: ["400", "700"],
   subsets: ["latin"],
+  display: 'swap',
 });
 
-export const metadata = {
-  title: "Holy Child School",
-  description: "Holy Child School Website",
-};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Holy Child School</title>
+        <meta name="description" content="Holy Child School Website" />
+      </head>
       <body className={poppins.className}>
         <ThemeProvider theme={theme}>
           {children}
-
-          
         </ThemeProvider>
+        {/* {children} */}
       </body>
     </html>
   );

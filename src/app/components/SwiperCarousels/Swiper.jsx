@@ -212,15 +212,19 @@ export function MediaCardCarousel() {
 export function GalleryCarousel() {
   return (
     <Swiper
-      modules={[Pagination, Grid]}
+      modules={[Pagination, Grid, Autoplay]}
       grid={{
         rows: 2,
         fill: "row",
       }}
       // slidesPerView={3}
-      pagination={{ clickable: true }}
+      
       spaceBetween={30}
-      // navigation={true}
+      autoplay={{
+        delay: 3500,
+        disableOnInteraction: false,
+      }}
+      
       lazy="true"
       className="mySwiper"
       // slidesPerView={2}
@@ -332,6 +336,8 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
+           
           }}
         >
           <CardMedia
@@ -369,6 +375,7 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
           }}
         >
           <CardMedia
@@ -406,6 +413,7 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
           }}
         >
           <CardMedia
@@ -443,6 +451,7 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
           }}
         >
           <CardMedia
@@ -490,7 +499,7 @@ export function AchievementCarousel() {
       }}
     >
       <Paper
-        elevation={3}
+        // elevation={1}
         sx={{
           width: { xs: "95%", md: "20%" },
           margin: { xs: "0 auto", md: "0" },
@@ -513,7 +522,7 @@ export function AchievementCarousel() {
       </Paper>
 
       <Paper
-        elevation={3}
+        // elevation={1}
         sx={{
           width: { xs: "95%", md: "20%" },
           margin: { xs: "0 auto", md: "0" },
@@ -536,7 +545,7 @@ export function AchievementCarousel() {
       </Paper>
 
       <Paper
-        elevation={3}
+        // elevation={1}
         sx={{
           width: { xs: "95%", md: "20%" },
           margin: { xs: "0 auto", md: "0" },
@@ -559,7 +568,7 @@ export function AchievementCarousel() {
       </Paper>
 
       <Paper
-        elevation={3}
+        // elevation={1}
         sx={{
           width: { xs: "95%", md: "20%" },
           margin: { xs: "0 auto", md: "0" },

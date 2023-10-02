@@ -54,6 +54,8 @@ import {
   GalleryCarousel,
 } from "./components/SwiperCarousels/Swiper";
 
+
+
 export default function Home() {
   const isMobileView = useMediaQuery("(max-width:850px)");
 
@@ -144,6 +146,7 @@ export default function Home() {
             // alignItems: "center",
             justifyContent: "space-between",
             flexDirection: { xs: "column", md: "row" },
+            
             // position: "relative",
           }}
         >
@@ -151,6 +154,7 @@ export default function Home() {
             sx={{
               width: { xs: "90%", md: "50%" },
               marginTop: { xs: "2rem", md: "5rem" },
+             
             }}
           >
             <Typography variant="h4" fontWeight="bold" gutterBottom>
@@ -291,7 +295,10 @@ export default function Home() {
               <ViewAllButton />
             </Link>
           </Box>
+          
           <div className={styles.section2_img}></div>
+          
+          
         </Box>
       </div>
 
@@ -310,6 +317,7 @@ export default function Home() {
               sx={{
                 marginTop: { xs: "4rem", md: "7rem" },
                 width: { xs: "90%", md: "40%" },
+                zIndex: "5",
               }}
             >
               <Typography variant="h3" sx={{ color: "#ffffff" }} gutterBottom>
@@ -387,7 +395,7 @@ export default function Home() {
                   sx={{
                     fontWeight: "bold",
                     color: "#e130a7",
-                    boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                    boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px",
                     backgroundColor: "#ffffff",
                   }}
                   gutterBottom
@@ -403,7 +411,7 @@ export default function Home() {
                 sx={{
                   backgroundColor: "#ffffff",
                   padding: "1.5rem",
-                  boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                  boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px",
                   position: "inherit",
                   zIndex: "4",
                 }}
@@ -534,6 +542,7 @@ export default function Home() {
           sx={{
             width: { xs: "95%", md: "70%" },
             margin: "0 auto",
+            
           }}
         >
           <Box
@@ -541,6 +550,8 @@ export default function Home() {
               display: "flex",
               justifyContent: "space-between",
               flexDirection: { xs: "column", md: "row" },
+              position:"inherit",
+              
             }}
           >
             <Box
@@ -556,6 +567,8 @@ export default function Home() {
                 justifyContent: "space-around",
                 color: "#1c1464",
                 padding: "2rem",
+                zIndex: "5",
+                order: {xs: "2", md: "1"},
               }}
             >
               <Box>
@@ -591,6 +604,8 @@ export default function Home() {
                 height: { sm: "auto", md: "40vh" },
                 // backgroundColor: "#81d742",
                 marginTop: { xs: "2rem", md: "2rem" },
+                zIndex: "5",
+                order: {xs: "1", md: "2"},
               }}
             >
               <Image
