@@ -266,15 +266,24 @@ font-weight: 400;
   .know_about{
     flex-direction: column;
   }
+  .container{
+    margin-top: 12px;
+    width: 500px;
+  }
   .section1{
     height: fit-content;
   }
   .parent_container{
-    width: 47%;
-    margin-top: 4.5%;
+    width: 40%;
+    margin-top: 3%;
   
   }
-
+  .input{
+    width: 380px;
+  }
+  .txtarea{
+    width: 380px; 
+  }
 }
 
 @media screen and (max-width: 620px) {
@@ -344,6 +353,9 @@ font-weight: 400;
     color: #363333;
     border-radius: 12px;
   }
+  .txtarea{
+    width: 240px; 
+  }
   .about{
     text-align: center;
     color:#1C1464;
@@ -361,6 +373,7 @@ font-weight: 400;
     padding-right: 25px;
   }
   .assist_you{
+    width: 100%;
   font-size: 25px;
   margin-top: 10px;
   }
@@ -380,9 +393,9 @@ font-weight: 400;
   }
   
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 360px){
   .section1{
-    height: 50vh;
+    height: 33vh;
   }
   .get_in_touch{
     height: fit-content;
@@ -395,12 +408,13 @@ font-weight: 400;
   }
   .assist_you{
     font-size: 20px;
+    width: 100%;
     }
   .container{
     width: 280px;
   }
   .input{
-    width: 200px;
+    width: 240px;
     height: 30px;
     padding-right: 10px;
 
@@ -420,11 +434,15 @@ font-weight: 400;
     margin-top: 10px;
   }
 }
-
+@media screen and (max-width: 320px){
+  .section1{
+    height: 50vh;
+  }
+}
   @media screen and (max-width: 600px) {
     
     .section1::before{
-      content: "Prep School";
+      content: "";
       font-size: 6rem;
       line-height: 100px;
   
