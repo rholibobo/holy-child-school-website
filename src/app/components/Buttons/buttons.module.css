@@ -1,7 +1,7 @@
 /* Enroll Now Button */
 .enroll_now_btn {
   padding: 0.8rem 1.5rem;
-  background-color: #1faded;
+  background-color: #1381b4;
   /* background-color: #fff200; */
   /* background-image: linear-gradient(to right, #1faded, #fff200); */
   border: none;
@@ -15,6 +15,12 @@
   position: relative;
   z-index: 3;
 }
+.enroll_now_btn:hover{
+  background-color:  #1c98d1;
+  transform: scale(1.03);
+  transition: ease-in-out 1s;
+}
+
 .enroll_yourchild_btn {
   padding: 1rem 1.5rem;
   background-color: #3c134d;
@@ -38,14 +44,24 @@
   font-weight: bold;
   border-radius: 10px;
 }
+.view_all_btn:hover{
+  background-color: #3529a0;
+  transform: scale(1.03);
+  transition: ease-in-out 1s;
+}
 
 .view_all_whitebtn {
   padding: 0.7rem 1.5rem;
-  background-color: #ffffff;
+  background-color: #fff7f7;
   border: none;
   font-weight: bold;
   cursor: pointer;
   border-radius: 10px;
+}
+.view_all_whitebtn:hover{
+  background-color: #fafaff;
+  transform: scale(1.03);
+  transition: ease-in-out 1s;
 }
 
 .carousel_left_btn {
