@@ -31,13 +31,9 @@ import Teacher9 from "../../../../public/images/Teachers/12345.jpeg";
 import Teacher10 from "../../../../public/images/Teachers/123456.jpeg";
 import Teacher11 from "../../../../public/images/Teachers/wed.jpeg";
 
-//
-
 import { Blob } from "../TeachersComponents/TeachersComponents";
 import { FcNext } from "react-icons/fc";
 import { FcPrevious } from "react-icons/fc";
-// import { teachersData } from "@/app/teachers/teachersData";
-
 // import { CarouselRightButton, CarouselLeftButton } from "../Carousels/";
 import { CarouselLeftButton, CarouselRightButton } from "../Buttons/AllButtons";
 import { Box } from "@mui/material";
@@ -330,33 +326,6 @@ export function HeroSectionCarousel() {
 
 // Teachers Carousel starts here
 
-const ButtonGroup = ({ next, previous, ...rest }) => {
-  const {
-    carouselState: { currentSlide },
-  } = rest;
-  return (
-    <div className='carousel-button-group lg:absolute w-[70%] lg:w-full lg:top-1/2 py-5'>
-      <button
-        className={`${
-          currentSlide === 0 ? "disable" : ""
-        } iconsDiv bg-[#1c1464] active:bg-gray-400 transition  duration-100 absolute right-[80%]  lg:right-full `}
-        onClick={() => previous()}
-      >
-        <FcPrevious className='text-gray-200' />
-      </button>
-
-      {/* Next button */}
-
-      <button
-        className='iconsDiv bg-[#1c1464]  active:bg-gray-400 transition  duration-100 absolute left-[80%] lg:left-full '
-        onClick={() => next()}
-      >
-        <FcNext className='text-gray-200' />
-      </button>
-    </div>
-  );
-};
-
 export function TeachersCarousel() {
   const TeachersData = [
     {
@@ -434,71 +403,39 @@ export function TeachersCarousel() {
   ];
 
   const content = TeachersData.map((teacher) => (
-    <Blob
-      key={teacher.id}
-      image={teacher.image}
-      name={teacher.name}
-      area_of_discipline={teacher.area_of_discipline}
-    />
+    <SwiperSlide>
+      <Blob
+        key={teacher.id}
+        image={teacher.image}
+        name={teacher.name}
+        area_of_discipline={teacher.area_of_discipline}
+      />
+    </SwiperSlide>
   ));
 
   return (
-    <div className='relative'>
-      <Carousel
-        additionalTransfrom={0}
-        autoPlaySpeed={3000}
-        centerMode={false}
-        className=''
-        containerClass='container'
-        dotListClass=''
-        draggable
-        focusOnSelect={false}
-        infinite={true}
-        itemClass=''
-        keyBoardControl
-        minimumTouchDrag={80}
-        pauseOnHover
-        renderDotsOutside={false}
-        arrows={false}
-        renderButtonGroupOutside={true}
-        customButtonGroup={<ButtonGroup />}
-        responsive={{
-          desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024,
-            },
-            items: 3,
-            partialVisibilityGutter: 40,
-          },
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0,
-            },
-            items: 1,
-            partialVisibilityGutter: 30,
-          },
-          tablet: {
-            breakpoint: {
-              max: 1024,
-              min: 464,
-            },
-            items: 2,
-            partialVisibilityGutter: 30,
-          },
-        }}
-        rewind={true}
-        rewindWithAnimation={true}
-        rtl={false}
-        shouldResetAutoplay
-        showDots={false}
-        sliderClass=''
-        slidesToSlide={1}
-        swipeable
-      >
-        {content}
-      </Carousel>
-    </div>
+    <Swiper
+      spaceBetween={50}
+      // slidesPerView={4}
+      scrollbar={{ draggable: true }}
+      onSlideChange={() => console.log("slide change")}
+      onSwiper={(swiper) => console.log(swiper)}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      }}
+    >
+      {content}
+    </Swiper>
   );
 }

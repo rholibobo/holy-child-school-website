@@ -148,7 +148,6 @@ export default function Teachers() {
                 Our teachers have won awards both within and outside the school.
               </p>
             </div>
-            {/* <div className='w-full h-[1px] bg-white my-2' /> */}
           </div>
         </div>
       </section>
