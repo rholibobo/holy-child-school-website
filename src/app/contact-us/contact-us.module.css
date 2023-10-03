@@ -91,7 +91,7 @@
   margin-top: 15px;
 }
 .get_address, .get_email, .get_number{
-  width: 25%;
+  width: 26%;
   height: 140px;
   padding: 14px;
   background-color:white; 
@@ -102,6 +102,18 @@
   /* border: none; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 } 
+ .get_number:hover{
+  transform: scale(1.07);
+  transition: 1s;
+}
+ .get_email:hover{
+  transform: scale(1.07);
+  transition: 1s;
+}
+ .get_address:hover{
+  transform: scale(1.04);
+  transition: 1s;
+}
 .text, .text_em, .text_ph{
   color:#19125c;
   padding: 8px;
@@ -151,8 +163,8 @@
   height: 28px;
   background: transparent;
   outline: none; 
-  color:#363333;
-  border: 1px solid #eee;
+  color:#1f1d1d;
+  border: 1px solid #867f7f;
   padding: 20px 15px;
   font-size: 12px;
   border-radius: 20px;
@@ -165,7 +177,7 @@
   background: transparent;
   outline: none; 
   color:#363333;
-  border: 1px solid #eee;
+  border: 1px solid #494848;
   padding: 20px 15px;
   font-size: 12px;
   border-radius: 20px;
@@ -186,8 +198,13 @@ font-weight: 400;
   margin-left: 220px;
   margin-top: 27px;
 }
+.view_all_btn:hover{
+  background-color: #3529a0;
+  transform: scale(1.03);
+  transition: ease-in-out 1s;
+}
 .input::placeholder{
-color:#363333;
+color:#181616;
 font-size: 14px;
 font-weight: 400;
 }
@@ -203,8 +220,18 @@ font-weight: 400;
 }
 .assist_you{
   font-size: 30px;
-  font-weight: bold;
+ 
+  /* color: #1C1464; */
+  width: 500px;
+  /* background-color: red; */
+}
+.assist{
   color: #1C1464;
+  font-weight: bold;
+}
+.assist_text{
+  font-size: 16px;
+  color: #1f1d1d;
 }
 @media screen and (max-width: 835px) {
   .h1{
@@ -239,15 +266,24 @@ font-weight: 400;
   .know_about{
     flex-direction: column;
   }
+  .container{
+    margin-top: 12px;
+    width: 500px;
+  }
   .section1{
     height: fit-content;
   }
   .parent_container{
-    width: 47%;
-    margin-top: 4.5%;
+    width: 40%;
+    margin-top: 3%;
   
   }
-
+  .input{
+    width: 380px;
+  }
+  .txtarea{
+    width: 380px; 
+  }
 }
 
 @media screen and (max-width: 620px) {
@@ -317,6 +353,9 @@ font-weight: 400;
     color: #363333;
     border-radius: 12px;
   }
+  .txtarea{
+    width: 240px; 
+  }
   .about{
     text-align: center;
     color:#1C1464;
@@ -334,6 +373,7 @@ font-weight: 400;
     padding-right: 25px;
   }
   .assist_you{
+    width: 100%;
   font-size: 25px;
   margin-top: 10px;
   }
@@ -353,9 +393,9 @@ font-weight: 400;
   }
   
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 360px){
   .section1{
-    height: 50vh;
+    height: 33vh;
   }
   .get_in_touch{
     height: fit-content;
@@ -368,12 +408,13 @@ font-weight: 400;
   }
   .assist_you{
     font-size: 20px;
+    width: 100%;
     }
   .container{
     width: 280px;
   }
   .input{
-    width: 200px;
+    width: 240px;
     height: 30px;
     padding-right: 10px;
 
@@ -393,11 +434,15 @@ font-weight: 400;
     margin-top: 10px;
   }
 }
-
+@media screen and (max-width: 320px){
+  .section1{
+    height: 50vh;
+  }
+}
   @media screen and (max-width: 600px) {
     
     .section1::before{
-      content: "Prep School";
+      content: "";
       font-size: 6rem;
       line-height: 100px;
   

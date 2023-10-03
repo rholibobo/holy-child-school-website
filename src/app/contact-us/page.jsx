@@ -97,9 +97,10 @@ export default function ContactUs() {
 
       {/* contact-form  */}
 
-      <div className={styles.know_about}>
+      <div className={styles.know_about}> 
         <div className={styles.assist_you}>
-          <h1>How Can We Assist You?</h1>
+          <h1 className={styles.assist}>How Can We Assist You?</h1>
+          <p className={styles.assist_text}>Connect with us today! Fill out our contact form for inquiries, feedback, or just to say hello. We value your input and look forward to hearing from you!</p>
         </div>
         {/* contact form */}
         <div className={styles.container}>

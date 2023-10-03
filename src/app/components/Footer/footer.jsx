@@ -66,7 +66,7 @@ const Footer = () => {
             About Us
           </Link>
           <Link className="hover:text-[#329999] w-fit " href="/teachers">
-            Meeet Our Teachers
+            Meet Our Teachers
           </Link>
           <Link className="hover:text-[#329999] w-fit " href="/services">
             Services
