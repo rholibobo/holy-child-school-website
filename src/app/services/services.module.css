@@ -106,6 +106,15 @@
 
 
 @media screen and (max-width: 834px){
+  /* .section1 {
+    width: 100%;
+    height: auto;
+  } */
+  .section_container {
+    margin-top: 2rem;
+    width: 90%;
+    height: auto;
+  }
   .service, .service_one, .service_two{
    flex-direction: column;
    margin-top: -20px;
