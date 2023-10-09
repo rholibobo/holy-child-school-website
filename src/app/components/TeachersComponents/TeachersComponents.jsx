@@ -134,7 +134,7 @@ export function Quote() {
         <SwiperSlide>
           <BiSolidQuoteAltLeft className={styles.icon} />
 
-          <BiSolidQuoteAltRight className={styles.icon1} />
+          {/* <BiSolidQuoteAltRight className={styles.icon1} /> */}
 
           <div className={styles.container} key={quote.id}>
             <p className="text-[#000] text-center text-base font-medium mb-2">
