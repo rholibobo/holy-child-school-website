@@ -26,23 +26,14 @@
   z-index: -1;
 }
 
-
-
-/* .section_container {
-  width: 80%;
-  margin: 0 auto;
-} */
-
-
 .navbar {
   width: 100%;
   margin: 0 auto;
   position: sticky;
   top: 0;
   left: 0;
-  background-color: rgba(24,12,122,0.95);
+  background-color: rgba(24, 12, 122, 0.95);
   backdrop-filter: blur(5px);
-  /* background-image: linear-gradient(#1c1464, #130c4e); */
   z-index: 10;
 }
 
@@ -292,21 +283,6 @@
     font-size: 46px;
   }
 
-  /* .section1::before {
-    content: "Prep School";
-    font-size: 8rem;
-    line-height: 100px;
-  } */
-
-  /* .section1::after {
-    height: 11.5vh;
-    display: none;
-    /* bottom: -5px; 
-  } */
-
-
-
-
   .itemsContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -318,7 +294,6 @@
 
 @media screen and (max-width: 600px) {
   .section1::before {
-    content: "Prep School";
     font-size: 7rem;
     line-height: 100px;
   }
@@ -360,7 +335,6 @@
 
 @media screen and (max-width: 426px) {
   .section1::before {
-    content: "Prep School";
     font-size: 5rem;
     line-height: 100px;
   }
@@ -385,7 +359,6 @@
 
 @media screen and (max-width: 376px) {
   .section1::before {
-    content: "Prep School";
     font-size: 5rem;
     line-height: 100px;
   }
@@ -402,7 +375,6 @@
 
 @media screen and (max-width: 321px) {
   .section1::before {
-    content: "Prep School";
     font-size: 5rem;
     line-height: 100px;
   }

@@ -24,6 +24,8 @@ const BlogPosts = () => {
   // Function to handle page change
   const handlePageChange = (page) => {
     setCurrentPage(page);
+
+    window.scrollTo(0, 450);
   };
 
   return (

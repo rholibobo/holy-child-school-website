@@ -1,4 +1,3 @@
-import BusGif from "./components/gifs/bus/bus";
 import LoadingGif from "./components/gifs/loading/page";
 
 export default function Loading() {

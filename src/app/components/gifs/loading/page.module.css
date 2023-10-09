@@ -1,7 +1,7 @@
 /* GifBackgroundSection.module.css */
 .gifBackground {
   position: relative;
-  width: 200px;
+  width: 400px;
   height: 200px;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../../../../../public/images/DesignImages/loading.gif') center center / cover no-repeat;
+  background: url('../../../../../public/images/DesignImages/loading-2.gif') center center / cover no-repeat;
   z-index: -1;
 }
 
@@ -31,8 +31,8 @@
 @media screen and (max-width: 500px) {
   .gifBackground {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     overflow: hidden;
   }
 }

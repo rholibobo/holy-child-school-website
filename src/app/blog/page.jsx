@@ -23,9 +23,6 @@ const page = () => {
             <div className={styles.vidContainer}>
               <GifBackgroundSection />
             </div>
-            {/* <div className={styles.busContainer}>
-              <BusGif />
-            </div> */}
           </div>
         </div>
       </div>
