@@ -27,20 +27,20 @@
   font-weight: 600;
 }
 
-.description {
-
+/* .description {
   padding-left: 5px;
-}
+} */
 
-.metaContainer {
+/* .metaContainer {
   color: #555;
   font-weight: 500;
   font-size: 16px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 20px;
   margin-bottom: 10px;
-}
+} */
 
 .metaContainer span {
   color: #1faded;
@@ -52,13 +52,13 @@
   color: #555;
   margin: 15px auto;
   padding: 10px;
-  text-align: justify;
 }
 
 
 .blogContent h2 {
   font-size: 30px;
   font-weight: 500;
+  margin-top: 25px;
   margin-bottom: 10px;
 }
 
@@ -81,6 +81,12 @@
 @media screen and (max-width: 500px) {
   .blogTitle {
     font-size: 24px;
+  }
+
+  .blogContent h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
   }
 
 }
