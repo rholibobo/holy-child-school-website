@@ -1,33 +1,34 @@
 import React from "react";
-import styles from "./page.module.css";
+import styles from "../posts.module.css";
 
 import blogData from "../../../components/blogPosts/blogData.json";
 import Image from "next/image";
 import RecentsPosts from "@/app/components/recentPosts/recents";
-import BlogHero from "@/app/components/blogHero/blogHero";
 
 const page = () => {
   const postIdToFetch = 1;
   const desiredPost = blogData.find((post) => post.id === postIdToFetch);
 
   return (
-    <main>
-      <section>
-        <BlogHero />
-      </section>
+    <main className="max-w-[1000px] mx-auto">
+      <div className="px-5 pt-10">
+        <h1 className={styles.blogTitle}>{desiredPost.title}</h1>
+        <div className="flex flex-col pt-4 lg:flex-row justify-between">
+          <p className={styles.description}>{desiredPost.description}</p>
+          <div className="flex pt-3 lg:pt-0 gap-10">
+            <p>
+              Author:
+              <span className="text-[#1faded]">{desiredPost.author}</span>
+            </p>
+            <p>
+              Date: <span className="text-[#1faded]">{desiredPost.date}</span>
+            </p>
+          </div>
+        </div>
+      </div>
       <section className={styles.main}>
         <section className={styles.blogPost}>
           <article>
-            <h1 className={styles.blogTitle}>{desiredPost.title}</h1>
-            <div className={styles.metaContainer}>
-              <p className={styles.description}>{desiredPost.description}</p>
-              <p>
-                Author: <span>{desiredPost.author}</span>
-              </p>
-              <p>
-                Date: <span>{desiredPost.date}</span>
-              </p>
-            </div>
             <Image
               src={desiredPost.imagePath}
               alt={desiredPost.title}

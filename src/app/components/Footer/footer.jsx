@@ -10,7 +10,7 @@ import { FaFax } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className=" bg-[#1c1464] text-white ">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  justify-center align-middle text-white p-5 sm:p-10 gap-5">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  justify-center align-middle text-white p-5 sm:p-10 gap-5">
         <div className="flex p-4 rounded-[10px] hover:bg-[#140e46] flex-col max-w-[500px]">
           <h1 className="text-3xl font-semibold mb-5">About Us</h1>
           <p>
