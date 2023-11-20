@@ -6,6 +6,7 @@
   position: relative;
   /* margin-top: -3rem; */
   padding-bottom: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .section1::before {

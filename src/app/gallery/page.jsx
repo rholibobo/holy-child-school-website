@@ -66,9 +66,9 @@ export default function Gallery() {
       </div>
       <div className={styles.section1}>
         <div className="flex justify-center items-center p-5 h-full flex-col text-center text-white w-full">
-          <h11 className="font-bold uppercase text-[50px] mb-2 animate__backInLeft animate__slow">
+          <h1 className="font-bold uppercase text-[50px] mb-2 animate__backInLeft animate__slow">
             Gallery Section
-          </h11>
+          </h1>
           <p className="w-full md:w-1/2">
             Welcome to our school&apos;s Gallery section, where we proudly
             showcase the vibrant and creative spirit that defines our
