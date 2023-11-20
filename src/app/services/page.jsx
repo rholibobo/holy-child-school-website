@@ -16,11 +16,11 @@ export default function AboutUs() {
       <section className={styles.section1}>
         <div className={styles.section_container}>
           <Box sx={{ marginTop: { xs: "1rem", md: "4rem" } }}>
-            <Box>
+            <Box className={styles.heroText}>
               <Typography
                 variant="h2"
                 sx={{ fontWeight: "bold", color: "#ffffff" }}
-                textAlign="center"
+                // textAlign="center"
                 gutterBottom
               >
                 Our Services
@@ -29,9 +29,9 @@ export default function AboutUs() {
 
               <Typography
                 variant="body1"
-                sx={{ color: "#ffffff" }}
+                sx={{ color: "#ffffff", }}
                 gutterBottom
-                textAlign={{ xs: "left", md: "center" }}
+                textAlign={{ xs: "left", md: "left" }}
               >
                 At Holy Child, we're dedicated to nurturing student potential.
                 Our core values of excellence, inclusivity, innovation, and

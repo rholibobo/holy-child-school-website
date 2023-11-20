@@ -1,18 +1,64 @@
-.swiper{
-    display: flex;
-    justify-content: space-between;
+.swiper {
+  display: flex;
+  justify-content: space-between;
 }
 
-.card_svg{
-    width: 40%;
-    height: auto;
+.card_svg {
+  width: 40%;
+  height: auto;
 }
-.paper{
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; 
+.paper {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
-.paper:hover{
-    /* background-color: #1c1464; */
-    background-color: #1faded;
-    color: #ffffff;
-    transition: .7s ease-in-out;
+.paper:hover {
+  /* background-color: #1c1464; */
+  background-color: #1faded;
+  color: #ffffff;
+  transition: 0.7s ease-in-out;
 }
+
+.swiper_container{
+    width: 100%;
+    height: 100vh;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    background-color: #3b3b40;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.bg1{
+    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2747.JPG);
+}
+.bg2{
+    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2695.JPG);
+}
+.bg3{
+    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2690.JPG);
+}
+.bg4{
+    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2816.JPG);
+}
+.bg5{
+    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2832.JPG);
+}
+.bg6{
+    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2794.JPG);
+}
+.hero_text{
+   width: 90%;
+   margin: 0 auto;
+
+}
+.btn{
+    position: absolute;
+}
+
+

@@ -17,12 +17,9 @@ import "swiper/css/bundle";
 
 import styles from "./swiper.module.css";
 
-import Image from "next/image";
+import imageData from "./image-data";
 
-/////// iMAGE IMPORTs ////
-import pix1 from "../../../../public/images/HomePage/port2.jpg";
-import pix2 from "../../../../public/images/HomePage/port5.jpg";
-import pix3 from "../../../../public/images/HomePage/port6.jpg";
+import Image from "next/image";
 
 import port3 from "../../../../public/images/Homepage/port3.jpg";
 import port4 from "../../../../public/images/Homepage/port4.jpg";
@@ -68,42 +65,49 @@ export function HomeHero() {
       pagination={{ clickable: true }}
       // navigation={true}
     >
-      <SwiperSlide>
-        <Image
-          src={pix1}
-          alt="Carousel Image"
-          sizes="100vw"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src={pix2}
-          alt="Carousel Image"
-          sizes="100vw"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src={pix3}
-          alt="Carousel Image"
-          sizes="100vw"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        />
-      </SwiperSlide>
+      {imageData["homeHero"].map((image, i) => (
+        <SwiperSlide key={i}>
+          <Image
+            src={image}
+            alt="Carousel Image"
+            style={{
+              width: "100%",
+              height: "100vh",
+              
+            }}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }
+
+const SwiperClass = () => {
+  return (
+    <div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      {/* <!-- Your content goes here --> */}
+    </div>
+    {/* <!-- Add more slides as needed --> */}
+  </div>
+  {/* <!-- Add Pagination --> */}
+  <div class="swiper-pagination"></div>
+</div>
+  )
+}
+  
+
+
+
+// var swiper = new Swiper('.swiper-container', {
+//   slidesPerView: 1,
+//   spaceBetween: 30,
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+// });
 
 export function MediaCardCarousel() {
   return (
@@ -218,13 +222,12 @@ export function GalleryCarousel() {
         fill: "row",
       }}
       // slidesPerView={3}
-      
+
       spaceBetween={30}
       autoplay={{
         delay: 3500,
         disableOnInteraction: false,
       }}
-      
       lazy="true"
       className="mySwiper"
       // slidesPerView={2}
@@ -238,71 +241,24 @@ export function GalleryCarousel() {
           spaceBetween: 40,
         },
         1024: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 50,
         },
       }}
     >
-      <SwiperSlide>
-        <Image
-          src={port3}
-          alt="Gallery Image1"
-          sizes="100vw"
-          loading="lazy"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src={port4}
-          alt="Gallery Image1"
-          sizes="100vw"
-          loading="lazy"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src={port5}
-          alt="Gallery Image1"
-          sizes="100vw"
-          loading="lazy"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src={port6}
-          alt="Gallery Image1"
-          sizes="100vw"
-          loading="lazy"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image
-          src={port7}
-          alt="Gallery Image1"
-          sizes="100vw"
-          loading="lazy"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        />
-      </SwiperSlide>
+      {imageData["homeGallery"].map((image, i) => (
+        <SwiperSlide key={i}>
+          <Image
+            src={image}
+            alt="Gallery Image1"
+            loading="lazy"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }
@@ -315,7 +271,7 @@ export function TeachersCarousel() {
       navigation={true}
       lazy={true}
       // spaceBetween={50}
-      // slidesPerView={2}
+      // slidesPerView={3}
       breakpoints={{
         640: {
           slidesPerView: 1,
@@ -336,8 +292,7 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
-            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
-           
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px",
           }}
         >
           <CardMedia
@@ -375,7 +330,7 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
-            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px",
           }}
         >
           <CardMedia
@@ -413,7 +368,7 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
-            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px",
           }}
         >
           <CardMedia
@@ -451,7 +406,7 @@ export function TeachersCarousel() {
           sx={{
             width: "100%",
             borderRadius: "10%",
-            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px"
+            boxShadow: "rgba(0, 0, 0, 0.1) 0px 1px 2px 0px",
           }}
         >
           <CardMedia
@@ -592,5 +547,3 @@ export function AchievementCarousel() {
     </Box>
   );
 }
-
-
