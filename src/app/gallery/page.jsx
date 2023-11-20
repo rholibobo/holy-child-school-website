@@ -65,7 +65,7 @@ export default function Gallery() {
         <Header />
       </div>
       <div className={styles.section1}>
-        <div className="flex justify-center items-center p-5 h-full flex-col text-center text-white w-full">
+        <div className="flex justify-center items-start p-5 h-full flex-col  text-white w-full bg-black bg-opacity-50">
           <h1 className="font-bold uppercase text-[50px] mb-2 animate__backInLeft animate__slow">
             Gallery Section
           </h1>
