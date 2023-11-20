@@ -30,6 +30,14 @@ import image29 from "../../../public/images/HolyChildPhotos/DSC_2747.JPG";
 import image30 from "../../../public/images/HolyChildPhotos/DSC_2749.JPG";
 import image31 from "../../../public/images/HolyChildPhotos/DSC_2753.JPG";
 import image32 from "../../../public/images/HolyChildPhotos/DSC_2779.JPG";
+import image33 from "../../../public/images/HolyChildPhotos/DSC_2785.JPG";
+import image34 from "../../../public/images/HolyChildPhotos/DSC_2794.JPG";
+import image35 from "../../../public/images/HolyChildPhotos/DSC_2799.JPG";
+import image36 from "../../../public/images/HolyChildPhotos/DSC_2809.JPG";
+import image37 from "../../../public/images/HolyChildPhotos/DSC_2816.JPG";
+import image38 from "../../../public/images/HolyChildPhotos/DSC_2832.JPG";
+import image39 from "../../../public/images/HolyChildPhotos/DSC_2850.JPG";
+import image40 from "../../../public/images/HolyChildPhotos/DSC_2863.JPG";
 
 
 import staff1 from '../../../public/images/Teacher-Training/teacher1.jpg'
@@ -64,7 +72,12 @@ const data = {
     image8,
     image9,
     image10,
-    image12
+    image12,
+    image13,
+    image14,
+    image15,
+    image16,
+    
   ],
   staff: [
     staff1,
