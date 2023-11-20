@@ -53,14 +53,14 @@ const Modal = (props) => {
             onClick={handleRightNavigation}
             whileHover={{ scale: 1.1 }}
           >
-            <FaArrowRightLong />
+            <FaArrowRightLong className="text-blue-800" />
           </motion.span>
           <motion.span
             className="p-2 text-[2.5rem] md:text-[3rem] left-2 bottom-[13rem] cursor-pointer absolute md:left-6 hover:bg-gray-300 transition-colors duration-300"
             onClick={handleLeftNavigation}
             whileHover={{ scale: 1.1 }}
           >
-            <FaArrowLeftLong />
+            <FaArrowLeftLong className="text-blue-800" />
           </motion.span>
         </motion.div>
       )}
