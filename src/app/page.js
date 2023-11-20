@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 import ProprietorImage from "../../public/images/HomePage/pp.jpg";
-import Kids from "../../public/images/HomePage/kids1.jpg";
+import Kids from "../../public/images/HolyChildPhotos/DSC_2690.JPG";
 
 // SVG IMPORTS //
 import values from "../../public/svg/value.svg";
@@ -23,6 +23,7 @@ import { useMediaQuery } from "@mui/material";
 /////// Components ////////////
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/footer";
+import SwiperHomeHeroComponent from "./components/SwiperCarousels/SwiperHomeHero";
 import {
   EnrollNowButton,
   ViewAllButton,
@@ -54,8 +55,6 @@ import {
   GalleryCarousel,
 } from "./components/SwiperCarousels/Swiper";
 
-
-
 export default function Home() {
   const isMobileView = useMediaQuery("(max-width:850px)");
 
@@ -65,76 +64,11 @@ export default function Home() {
       <div className={styles.navbar}>
         <Header />
       </div>
-      <div className={styles.section1}>
-        <div className={styles.section_container}>
-          <Box sx={{ display: "flex" }}>
-            <Box
-              sx={{
-                width: { xs: "100%", md: "50%" },
-                marginTop: { xs: "2rem", md: "6rem" },
-                position: "relative",
-              }}
-            >
-              <Box>
-                <div>
-                  <Typography
-                    variant="h6"
-                    sx={{ fontWeight: "bold", color: "#1faded" }}
-                    gutterBottom
-                  >
-                    {" "}
-                    WELCOME TO{" "}
-                    <span>
-                      <Typography
-                        variant="h2"
-                        sx={{ fontWeight: "bold", color: "#ffffff" }}
-                        gutterBottom
-                      >
-                        {" "}
-                        HOLY CHILD ACADEMY{" "}
-                      </Typography>
-                    </span>{" "}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ color: "#ffffff" }}
-                    gutterBottom
-                  >
-                    An Institution with a strong reputation for academic
-                    Learning
-                  </Typography>
-                  <br />
-                  <Link href="#">
-                    <EnrollNowButton />
-                  </Link>
-                </div>
-              </Box>
-              <br />
-              <div className={styles.earthContainer}>
-                <Earth />
-              </div>
-            </Box>
-
-            <Box
-              sx={{
-                width: "50%",
-                maxWidth: "50%",
-                maxHeight: "auto",
-                minHeight: "0",
-                minWidth: "0",
-                display: { xs: "none", md: "block" },
-                marginTop: "3rem",
-              }}
-            >
-              <HomeHero />
-            </Box>
-          </Box>
-        </div>
-      </div>
+      <SwiperHomeHeroComponent />
 
       {/* /////// Section 2 /////////////// */}
       <div className={styles.section2}>
-      <Image src={blueStar} alt="star" className={styles.blueStar1} />
+        <Image src={blueStar} alt="star" className={styles.blueStar1} />
         <Image src={yellowStar} alt="star" className={styles.yellowStar} />
         <Image src={ballon} alt="star" className={styles.ballon} />
         <Image src={redStar} alt="star" className={styles.redStar} />
@@ -146,7 +80,7 @@ export default function Home() {
             // alignItems: "center",
             justifyContent: "space-between",
             flexDirection: { xs: "column", md: "row" },
-            
+
             // position: "relative",
           }}
         >
@@ -154,7 +88,6 @@ export default function Home() {
             sx={{
               width: { xs: "90%", md: "50%" },
               marginTop: { xs: "2rem", md: "5rem" },
-             
             }}
           >
             <Typography variant="h4" fontWeight="bold" gutterBottom>
@@ -295,10 +228,8 @@ export default function Home() {
               <ViewAllButton />
             </Link>
           </Box>
-          
+
           <div className={styles.section2_img}></div>
-          
-          
         </Box>
       </div>
 
@@ -406,7 +337,7 @@ export default function Home() {
                   </Typography>
                 </Typography>
               </Box>
-              <br />
+              {/* <br /> */}
               <Box
                 sx={{
                   backgroundColor: "#ffffff",
@@ -474,7 +405,6 @@ export default function Home() {
 
           <Box
             sx={{
-              
               display: "flex",
               justifyContent: "space-between",
               flexDirection: { xs: "column", md: "row" },
@@ -492,7 +422,11 @@ export default function Home() {
                 Our Core Value
               </Typography>
 
-              <Typography variant="subtitle2" textAlign={{ xs: "center", md: "center" }} gutterBottom>
+              <Typography
+                variant="subtitle2"
+                textAlign={{ xs: "center", md: "center" }}
+                gutterBottom
+              >
                 Good character and a love for leisure reading. Objectives: to
                 raise children who not only fear God but are able to hold their
                 own in any circumstance.
@@ -510,7 +444,11 @@ export default function Home() {
                 Our Belief
               </Typography>
 
-              <Typography variant="subtitle2" textAlign={{ xs: "center", md: "center" }} gutterBottom>
+              <Typography
+                variant="subtitle2"
+                textAlign={{ xs: "center", md: "center" }}
+                gutterBottom
+              >
                 Talent is not enough. Brilliance must be match by good
                 character.
               </Typography>
@@ -527,7 +465,11 @@ export default function Home() {
                 Our Vision
               </Typography>
 
-              <Typography variant="subtitle2" textAlign={{ xs: "center", md: "center" }} gutterBottom>
+              <Typography
+                variant="subtitle2"
+                textAlign={{ xs: "center", md: "center" }}
+                gutterBottom
+              >
                 To become a first rate educational institution with a reputation
                 for excellent character and strong academic learning.
               </Typography>
@@ -542,7 +484,6 @@ export default function Home() {
           sx={{
             width: { xs: "95%", md: "70%" },
             margin: "0 auto",
-            
           }}
         >
           <Box
@@ -550,8 +491,7 @@ export default function Home() {
               display: "flex",
               justifyContent: "space-between",
               flexDirection: { xs: "column", md: "row" },
-              position:"inherit",
-              
+              position: "inherit",
             }}
           >
             <Box
@@ -568,7 +508,7 @@ export default function Home() {
                 color: "#1c1464",
                 padding: "2rem",
                 zIndex: "5",
-                order: {xs: "2", md: "1"},
+                order: { xs: "2", md: "1" },
               }}
             >
               <Box>
@@ -605,7 +545,7 @@ export default function Home() {
                 // backgroundColor: "#81d742",
                 marginTop: { xs: "2rem", md: "2rem" },
                 zIndex: "5",
-                order: {xs: "1", md: "2"},
+                order: { xs: "1", md: "2" },
               }}
             >
               <Image
@@ -635,8 +575,6 @@ export default function Home() {
       </div>
 
       <Footer />
-
-      
     </main>
   );
 }

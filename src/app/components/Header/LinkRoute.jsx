@@ -1,7 +1,14 @@
 "use client";
 import { useState } from "react";
 
-import { Box, Button, Menu, MenuItem, Popover, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Menu,
+  MenuItem,
+  Popover,
+  Typography,
+} from "@mui/material";
 import { ArrowRight, ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 
 import Link from "next/link";
@@ -23,9 +30,9 @@ export default function ({ handleCloseNavMenu }) {
     setAnchorEl(null);
   };
 
-
   return (
     <Box
+    
       sx={{
         width: "100%",
         padding: "1rem 0",
@@ -33,7 +40,6 @@ export default function ({ handleCloseNavMenu }) {
         justifyContent: "space-between",
         fontSize: "1.2rem",
       }}
-      
     >
       <Link href="/">
         <Button
@@ -87,6 +93,8 @@ export default function ({ handleCloseNavMenu }) {
           color="inherit"
           disableFocusRipple={true}
           className={pathname == "/contact-us" ? styles.active : ""}
+          
+          
         >
           Contact Us
         </Button>
@@ -116,9 +124,9 @@ export default function ({ handleCloseNavMenu }) {
         // MenuListProps={{
         //   "aria-labelledby": "basic-button",
         // }}
+        
         MenuListProps={{ onMouseLeave: handleClose }}
       >
-        
         <Link href="/blog">
           <MenuItem
             sx={{ fontSize: "0.85rem" }}
@@ -179,7 +187,7 @@ export default function ({ handleCloseNavMenu }) {
       </Menu>
       <Link href="#">
         <Button
-          sx={{ textTransform: "capitalize", color: "#ffffff"}}
+          sx={{ textTransform: "capitalize", color: "#ffffff" }}
           color="inherit"
           className={styles.portal_btn}
         >

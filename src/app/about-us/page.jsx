@@ -41,11 +41,11 @@ export default function AboutUs() {
         <div className={styles.section_container}>
 
           <Box sx={{ marginTop: { xs: "1rem", md: "4rem" } }}>
-            <Box>
+            <Box className={styles.heroText}>
               <Typography
                 variant="h2"
                 sx={{ fontWeight: "bold", color: "#ffffff" }}
-                textAlign="center"
+                // textAlign="center"
                 gutterBottom
               >
                 About Us
@@ -56,7 +56,7 @@ export default function AboutUs() {
                 variant="body1"
                 sx={{ color: "#ffffff" }}
                 gutterBottom
-                textAlign={{ xs: "left", md: "center" }}
+                textAlign={{ xs: "left", md: "left" }}
               >
                 Holy Child Preparatory School was birthed out of a passion to
                 improve the quality of basic Education in South Eastern Nigeria.
