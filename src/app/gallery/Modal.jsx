@@ -41,11 +41,11 @@ const Modal = (props) => {
           <div className="bg-white p-2 rounded-lg text-center w-full sm:w-[65%] md:w-[75%] lg:w-[50%]">
             <Image src={clickedImg} className="dismiss" alt="Bigger Image" />
             <motion.span
-              className="dismiss absolute top-8 md:top-5 lg:top-4 right-6 rounded-full text-[2.5rem] md:text-[2.7rem] cursor-pointer hover:bg-gray-300 transition-colors duration-300"
+              className="dismiss absolute top-8 bg-black md:top-5 lg:top-4 right-6 text-[2.5rem] md:text-[2.7rem] cursor-pointer hover:bg-gray-300 transition-colors duration-300"
               onClick={handleClick}
               whileHover={{ scale: 1.1 }}
             >
-              <AiFillCloseCircle className="dismiss text-red-800" />
+              <AiFillCloseCircle className="dismiss text-white" />
             </motion.span>
           </div>
           <motion.span
