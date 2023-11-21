@@ -32,7 +32,7 @@ const SwiperHomeHeroComponent = () => {
           delay: 3500,
           disableOnInteraction: false,
         }}
-        className="mySwiper"
+        // className="mySwiper"
       >
         <SwiperSlide>
           <div className={`${styles.bg} ${styles.bg1}`}>
@@ -63,7 +63,7 @@ const SwiperHomeHeroComponent = () => {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{width: "40%", color: "#ffffff" }}
+                sx={{width: {xs:"90%", md: "40%"}, color: "#ffffff" }}
                 gutterBottom
               >
                 An Institution with a strong reputation for academic Learning
@@ -100,7 +100,7 @@ const SwiperHomeHeroComponent = () => {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{width: "40%", color: "#ffffff" }}
+                sx={{width: {xs:"90%", md: "40%"}, color: "#ffffff" }}
                 gutterBottom
               >
                 We unlock the potential in your child and unleash the brilliance in them.
@@ -137,7 +137,7 @@ const SwiperHomeHeroComponent = () => {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ color: "#ffffff" }}
+                sx={{width: {xs:"90%", md: "40%"}, color: "#ffffff" }}
                 gutterBottom
               >
                 An institution famous for nuturing young minds and raising leaders for the future
@@ -174,7 +174,7 @@ const SwiperHomeHeroComponent = () => {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ width:"40%", color: "#ffffff" }}
+                sx={{ width: {xs:"90%", md: "40%"}, color: "#ffffff" }}
                 gutterBottom
               >
                 We inspire a life long love for learning and development in every child.
@@ -211,7 +211,7 @@ const SwiperHomeHeroComponent = () => {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{width: "40%", color: "#ffffff" }}
+                sx={{width: {xs:"90%", md: "40%"}, color: "#ffffff" }}
                 gutterBottom
               >
                 We offer quality and excellent education to your child and ward making them the best among their peers.
@@ -248,7 +248,7 @@ const SwiperHomeHeroComponent = () => {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{width: "40%", color: "#ffffff" }}
+                sx={{width: {xs:"90%", md: "40%"}, color: "#ffffff" }}
                 gutterBottom
               >
                 Our curriculum is up to date to ensure your child receives the best in a serene and absolutely lovable environment

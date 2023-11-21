@@ -1,6 +1,6 @@
 .section1 {
   width: 100%;
-  height: auto;
+  height: 95vh;
   position: relative;
   
 }
@@ -35,7 +35,7 @@
 @media screen and (max-width: 850px) {
   .section1 {
     width: 100%;
-    height: auto;
+    height: 90vh;
   }
   .section_container {
     width: 90%;

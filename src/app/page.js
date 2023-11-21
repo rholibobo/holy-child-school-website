@@ -270,7 +270,7 @@ export default function Home() {
             </Box>
             <Box
               sx={{
-                width: { xs: "100%", md: "40%" },
+                width: { xs: "95%", md: "40%" },
                 maxWidth: "100%",
                 maxHeight: "auto",
                 // minHeight: "0",
