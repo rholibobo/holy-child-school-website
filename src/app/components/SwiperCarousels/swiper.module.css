@@ -17,48 +17,52 @@
   transition: 0.7s ease-in-out;
 }
 
-.swiper_container{
-    width: 100%;
-    height: 100vh;
+.swiper_container {
+  width: 100%;
+  height: 100vh;
 }
 
 .bg {
-    width: 100%;
-    height: 100vh;
-    background-color: #3b3b40;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
-    position: relative;
-    display: flex;
-    align-items: center;
+  /* width: 100%; */
+  height: 95vh;
+  background-color: #3b3b40;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
-.bg1{
-    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2747.JPG);
-}
-.bg2{
-    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2695.JPG);
-}
-.bg3{
-    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2690.JPG);
-}
-.bg4{
-    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2816.JPG);
-}
-.bg5{
-    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2832.JPG);
-}
-.bg6{
-    background-image: url(../../../../public/images/HolyChildPhotos/DSC_2794.JPG);
-}
-.hero_text{
-   width: 90%;
-   margin: 0 auto;
-
-}
-.btn{
-    position: absolute;
+@media screen and (max-width: 850px) {
+    .bg{
+        height: 90vh;
+        background-size: cover;
+    }
 }
 
-
+.bg1 {
+  background-image: url(../../../../public/images/HolyChildPhotos/DSC_2747.JPG);
+}
+.bg2 {
+  background-image: url(../../../../public/images/HolyChildPhotos/DSC_2695.JPG);
+}
+.bg3 {
+  background-image: url(../../../../public/images/HolyChildPhotos/DSC_2690.JPG);
+}
+.bg4 {
+  background-image: url(../../../../public/images/HolyChildPhotos/DSC_2794.JPG);
+}
+.bg5 {
+  background-image: url(../../../../public/images/HolyChildPhotos/DSC_2832.JPG);
+}
+.bg6 {
+  background-image: url(../../../../public/images/HolyChildPhotos/DSC_2674.JPG);
+}
+.hero_text {
+  width: 90%;
+  margin: 0 auto;
+}
+.btn {
+  position: absolute;
+}

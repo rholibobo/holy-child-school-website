@@ -26,9 +26,9 @@ export default function ContactUs() {
             </p>
           </div>
           {/* image */}
-          <div className={styles.parent_container}>
+          {/* <div className={styles.parent_container}>
             <img src="/images/DesignImages/phone.png" alt="My Contact Image" />
-          </div>
+          </div> */}
         </section>
       </div>
 
