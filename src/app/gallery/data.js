@@ -75,9 +75,7 @@ const data = {
     image12,
     image13,
     image14,
-    image15,
-    image16,
-    
+    image15,    
   ],
   staff: [
     staff1,
