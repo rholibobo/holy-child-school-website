@@ -20,9 +20,9 @@ const page = () => {
           <div className={styles.blogHeader}>
             <h1>Explore Holychild's Blog</h1>
             <h2>Discover More Beyond the Classroom</h2>
-            <div className={styles.vidContainer}>
+            {/* <div className={styles.vidContainer}>
               <GifBackgroundSection />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
