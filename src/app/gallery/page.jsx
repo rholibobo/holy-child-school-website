@@ -101,8 +101,8 @@ export default function Gallery() {
           <div className="flex justify-center items-center">
             <button
               onClick={() => {
-                updateData();
-                setLoadMore(true);
+                updateData()
+                setLoadMore(true)
               }}
               className="border-black border mx-auto my-5 p-2 text-center"
             >
