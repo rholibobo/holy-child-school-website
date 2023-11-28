@@ -96,4 +96,12 @@ const data = {
     staff16,
     ]
 }
+
+export const updateData = () => {
+  
+  const newStudentImages = [image16, image17, image18, image19, image20];
+
+  data.student = [...data.student, ...newStudentImages];
+};
+
 export default data

@@ -12,11 +12,15 @@ import Nav from "./nav";
 import { motion } from "framer-motion";
 import "animate.css";
 import Modal from "./Modal";
+import updateData from './data'
 
 export default function Gallery() {
   const [value, setValue] = useState("student");
   const [clickedImage, setClickedImage] = useState();
   const [currentIndex, setcurrentIndex] = useState();
+  const [loadMore, setLoadMore] = useState(false)
+
+ 
 
   const handleClick = (imageSrc, index) => {
     setcurrentIndex(index);
