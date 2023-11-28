@@ -95,8 +95,8 @@ export default function Gallery() {
             />
           ))}
         </motion.div>
-        <div>
-          <button className="border-black border mx-auto my-4 p-2 text-center">
+        <div className="flex justify-center items-center">
+          <button className="border-black border mx-auto my-5 p-2 text-center">
             Load More
           </button>
         </div>
