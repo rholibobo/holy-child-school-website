@@ -30,7 +30,7 @@ export default function Gallery() {
 
   const handleRightNavigation = () => {
     const totalLength = data[value].length;
-    const newIndex = (currentIndex + 1) % totalLength; 
+    const newIndex = (currentIndex + 1) % totalLength;
     const newItem = data[value][newIndex];
     setClickedImage(newItem);
     setcurrentIndex(newIndex);
@@ -52,12 +52,11 @@ export default function Gallery() {
   */
   const handleLeftNavigation = () => {
     const totalLength = data[value].length;
-    const newIndex = (currentIndex - 1 + totalLength) % totalLength; 
+    const newIndex = (currentIndex - 1 + totalLength) % totalLength;
     const newItem = data[value][newIndex];
     setClickedImage(newItem);
     setcurrentIndex(newIndex);
   };
-  
 
   return (
     <main>
@@ -96,6 +95,11 @@ export default function Gallery() {
             />
           ))}
         </motion.div>
+        <div>
+          <button className="border-black border mx-auto my-4 p-2 text-center">
+            Load More
+          </button>
+        </div>
         <Modal
           clickedImg={clickedImage}
           handleRightNavigation={handleRightNavigation}
