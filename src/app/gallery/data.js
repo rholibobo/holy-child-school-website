@@ -75,9 +75,7 @@ const data = {
     image12,
     image13,
     image14,
-    image15,
-    image16,
-    
+    image15,    
   ],
   staff: [
     staff1,
@@ -98,4 +96,12 @@ const data = {
     staff16,
     ]
 }
+
+export const updateData = () => {
+  
+  const newStudentImages = [image16, image17, image18, image19, image20, image21];
+
+  data.student = [...data.student, ...newStudentImages];
+};
+
 export default data

@@ -12,11 +12,13 @@ import Nav from "./nav";
 import { motion } from "framer-motion";
 import "animate.css";
 import Modal from "./Modal";
+import { updateData } from "./data";
 
 export default function Gallery() {
   const [value, setValue] = useState("student");
   const [clickedImage, setClickedImage] = useState();
   const [currentIndex, setcurrentIndex] = useState();
+  const [loadMore, setLoadMore] = useState(false);
 
   const handleClick = (imageSrc, index) => {
     setcurrentIndex(index);
@@ -30,7 +32,7 @@ export default function Gallery() {
 
   const handleRightNavigation = () => {
     const totalLength = data[value].length;
-    const newIndex = (currentIndex + 1) % totalLength; 
+    const newIndex = (currentIndex + 1) % totalLength;
     const newItem = data[value][newIndex];
     setClickedImage(newItem);
     setcurrentIndex(newIndex);
@@ -52,12 +54,11 @@ export default function Gallery() {
   */
   const handleLeftNavigation = () => {
     const totalLength = data[value].length;
-    const newIndex = (currentIndex - 1 + totalLength) % totalLength; 
+    const newIndex = (currentIndex - 1 + totalLength) % totalLength;
     const newItem = data[value][newIndex];
     setClickedImage(newItem);
     setcurrentIndex(newIndex);
   };
-  
 
   return (
     <main>
@@ -96,6 +97,19 @@ export default function Gallery() {
             />
           ))}
         </motion.div>
+        {!loadMore && (
+          <div className="flex justify-center items-center">
+            <button
+              onClick={() => {
+                updateData()
+                setLoadMore(true)
+              }}
+              className="border-black border mx-auto my-5 p-2 text-center"
+            >
+              Load More
+            </button>
+          </div>
+        )}
         <Modal
           clickedImg={clickedImage}
           handleRightNavigation={handleRightNavigation}
