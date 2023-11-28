@@ -99,7 +99,7 @@ const data = {
 
 export const updateData = () => {
   
-  const newStudentImages = [image16, image17, image18, image19, image20, image21, image22];
+  const newStudentImages = [image16, image17, image18, image19, image20, image21];
 
   data.student = [...data.student, ...newStudentImages];
 };
