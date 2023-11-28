@@ -12,7 +12,7 @@ import Nav from "./nav";
 import { motion } from "framer-motion";
 import "animate.css";
 import Modal from "./Modal";
-import updateData from './data'
+import {updateData} from './data'
 
 export default function Gallery() {
   const [value, setValue] = useState("student");
@@ -100,7 +100,7 @@ export default function Gallery() {
           ))}
         </motion.div>
         <div className="flex justify-center items-center">
-          <button className="border-black border mx-auto my-5 p-2 text-center">
+          <button onClick={()=>updateData()} className="border-black border mx-auto my-5 p-2 text-center">
             Load More
           </button>
         </div>
